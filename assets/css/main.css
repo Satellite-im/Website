@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
+body {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+.simplebar-content {
+  height: 100%;
+}
+
+.link-hover {
+  @apply underline outline-none;
+  text-decoration-color: transparent;
+  transition-property: text-decoration;
+  @apply duration-300 ease-linear;
+
+  &:hover,
+  &:focus {
+    text-decoration-color: white;
+  }
+}
+
+.spotlight-hero {
+  transform: translate(-42%, -42%);
+}
+
+.hero-illustration {
+  transform: scale(1.4) translate(20%, -10%);
+}
+
+.partner-multicoin-capital,
+.partner-ideo-colab,
+.partner-framework,
+.partner-solana,
+.partner-jacket-river,
+.partner-knobs {
+  transform: scale(0.8);
+}
+
+.partner-textile {
+  transform: scale(0.45);
+}
+
+.divider {
+  position: absolute;
+  width: calc(100% + 2rem);
+  height: 5rem;
+  left: 50%;
+  border-bottom-left-radius: 50% 70%;
+  border-bottom-right-radius: 50% 70%;
+  transform: translate(-50%, -1px);
+  @apply bg-obsidian-shard;
+}
+
+.spotlight-slogan {
+  transform: scale(1.25) translate(-30%, 2%);
+  opacity: 0.8;
+}
+
+.divider-section-slogan {
+  width: calc(100vw + 2rem + (15rem * 2));
+  border-top-left-radius: 50% 70%;
+  border-top-right-radius: 50% 70%;
+  transform: translate(-50%, calc(-100% + 1px));
+}
