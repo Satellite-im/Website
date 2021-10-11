@@ -74,5 +74,37 @@
         "description": "Your data goes straight to your friends, nobody tracking in the middle."
       }
     }
-  }
+  },
+  "section_early_access": {
+    "title": "Early Access",
+    "description": {
+      "one": "Satellite is nearing our early access beta! If you'd like to get started ahead of the curve you can join our mailing list and get notified of releases. You can give Satellite a try right now but expect some bugs and please understand it is not representative of our final product.",
+      "two": "Satellite installs as a PWA which makes it very easy to get started, just navigate to https://app.satellite.im on your phone to get started."
+    }
+  },
+  "try_release": "Try Pre-Release",
+  "section_team": {
+    "title": "Our Team",
+    "description": "Satellite is full of passionate open-source developers as well as our in house team which both work hard to build a different kind of chat platform.",
+    "team": {
+      "matt_occupation": "President & Lead Developer",
+      "manuel_occupation": "Blockchain Developer",
+      "kathy_occupation": "Front-End Developer",
+      "lauren_occupation": "Digital Design",
+      "jason_occupation": "Front-End Developer",
+      "chris_occupation": "Software engineer",
+      "dina_occupation": "Art director",
+      "tom_occupation": "[occupation]",
+      "jerome_occupation": "[occupation]"
+    }
+  },
+  "footer": {
+    "nav": {
+      "app": "The App",
+      "careers": "Careers",
+      "contact_us": "Contact Us"
+    },
+    "copyright": "© 2021 Satellite.im. All rights reserved."
+  },
+  "github": "GitHub"
 }

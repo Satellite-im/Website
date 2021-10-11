@@ -9,7 +9,6 @@ module.exports = {
     colors: {
       white: '#FFFFFF',
       'burj-khalifa-fountain': '#D4DEE7',
-      'aircraft-white': '#EDF2F6',
       'extraordinary-abundance-of-tinge': '#E6E6E6',
       'obsidian-shard': '#040415',
       'patriot-blue': '#35365C',
