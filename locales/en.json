@@ -1,0 +1,110 @@
+{
+  "satellite_logo": "Satellite logo",
+  "app_illustration": "App illustration",
+  "section_hero": {
+    "nav_items": {
+      "features": "Key Features",
+      "about": "About",
+      "access": "Early Access",
+      "team": "Team"
+    },
+    "title": "Multiplatform Messaging, Trackers Not Included.",
+    "description": "Satellite gives you peace of mind with end-to-end encryption without sacrificing quality.",
+    "partners": {
+      "multicoin_capital": "Multicoin Capital",
+      "ideo_colab": "IDEO CoLab",
+      "framework": "Framework",
+      "solana": "Solana",
+      "jacket_river": "Jacket River",
+      "knobs": "KNOBS"
+    }
+  },
+  "sign_up": "Sign Up",
+  "open_in_browser": "Open in Browser",
+  "our_partners": "Our Partners",
+  "section_meet": {
+    "title": "Meet Satellite",
+    "features": {
+      "chat": "Feature Rich Chat",
+      "encryption": "E2E Encryption",
+      "cross_platform": "Cross-Platform",
+      "payments": "Painless Payments"
+    }
+  },
+  "section_slogan": {
+    "title": "Connect, anytime, anywhere.",
+    "no_compromises": {
+      "title": "No Compromises",
+      "description": {
+        "one": "Satellite is built using serverless technology with peer 2 peer workflows. Everything is encrypted so your data only gets read by who you intend it to. We store files on a distributed network so redundancy comes built in along with large file storage.",
+        "two": "All these things come without compromises to your experience."
+      }
+    },
+    "multi_platform": {
+      "title": "Multi-Platform",
+      "description": "Chat from anywhere, from desktop and beyond Satellite has you covered. Satellite is also built to be offline-first so whether you have a good connection or not you can be sure you get your message out there! Our mobile app installs as a PWA during Early Access so setup is quick, and you get updates immediately."
+    }
+  },
+  "try_alpha": "Try the Alpha",
+  "section_features": {
+    "title": "Key Features",
+    "features": {
+      "installation": {
+        "title": "Easy Installation",
+        "description": "Satellite installs with one click."
+      },
+      "chat": {
+        "title": "Multi Platform chat",
+        "description": "Chat anywhere with our cross platform app."
+      },
+      "sharing": {
+        "title": "Easy File sharing",
+        "description": "Share up to 10GB files instantly with friends."
+      },
+      "payments": {
+        "title": "Built-in Payments",
+        "description": "Send money between friends instantly."
+      },
+      "streaming": {
+        "title": "High Quality Streaming",
+        "description": "Stream at up to 4k"
+      },
+      "serverless": {
+        "title": "Serverless",
+        "description": "Your data goes straight to your friends, nobody tracking in the middle."
+      }
+    }
+  },
+  "section_early_access": {
+    "title": "Early Access",
+    "description": {
+      "one": "Satellite is nearing our early access beta! If you'd like to get started ahead of the curve you can join our mailing list and get notified of releases. You can give Satellite a try right now but expect some bugs and please understand it is not representative of our final product.",
+      "two": "Satellite installs as a PWA which makes it very easy to get started, just navigate to https://app.satellite.im on your phone to get started."
+    }
+  },
+  "try_release": "Try Pre-Release",
+  "section_team": {
+    "title": "Our Team",
+    "description": "Satellite is full of passionate open-source developers as well as our in house team which both work hard to build a different kind of chat platform.",
+    "team": {
+      "matt_occupation": "President & Lead Developer",
+      "manuel_occupation": "Blockchain Developer",
+      "kathy_occupation": "Front-End Developer",
+      "lauren_occupation": "Digital Design",
+      "jason_occupation": "Front-End Developer",
+      "chris_occupation": "Software engineer",
+      "dina_occupation": "Art director",
+      "tom_occupation": "[occupation]",
+      "jerome_occupation": "[occupation]"
+    }
+  },
+  "footer": {
+    "nav": {
+      "app": "The App",
+      "careers": "Careers",
+      "contact_us": "Contact Us"
+    },
+    "copyright": "© 2021 Satellite.im. All rights reserved."
+  },
+  "github": "GitHub"
+}
