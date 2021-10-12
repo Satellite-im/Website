@@ -137,4 +137,7 @@ export default {
     },
     fallbackBreakpoint: 'lg',
   },
+  image: {
+    netlify: {},
+  },
 }

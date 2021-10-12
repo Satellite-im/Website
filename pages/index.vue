@@ -7,6 +7,7 @@
             src="/images/section-hero-spotlight.png"
             class="spotlight-hero"
             alt="spotlight"
+            provider="netlify"
           />
           <header class="flex items-center w-full h-24">
             <div class="flex items-center w-full h-12">
@@ -14,6 +15,7 @@
                 src="/images/logo.png"
                 :alt="$t('satellite_logo')"
                 class="w-44 z-10"
+                provider="netlify"
               />
               <nav class="relative w-full h-full px-16 text-white">
                 <ul class="flex absolute bottom-0 mb-1.5">
@@ -64,6 +66,7 @@
                     src="/images/shadow-button-green.png"
                     class="absolute w-96 transform -translate-y-3 scale-150"
                     alt="shadow"
+                    provider="netlify"
                   />
                   <a
                     href="#"
@@ -122,6 +125,7 @@
                 src="/images/section-hero-illustration.png"
                 :alt="$t('app_illustration')"
                 class="hero-illustration"
+                provider="netlify"
               />
             </div>
           </div>
@@ -140,6 +144,7 @@
                     :src="partner.logo"
                     :class="`partner-${partner.key}`"
                     :alt="partner.key"
+                    provider="netlify"
                   />
                 </a>
               </li>
@@ -172,6 +177,7 @@
                     :src="`/images/section-meet-feature-${slogan.key}.png`"
                     class="w-full"
                     :alt="slogan.label"
+                    provider="netlify"
                   />
                 </div>
                 <p class="text-xl font-medium text-obsidian-shard">
@@ -186,6 +192,7 @@
             src="/images/section-slogan-spotlight.png"
             class="spotlight-slogan z-10"
             alt="spotlight"
+            provider="netlify"
           />
           <h2 class="mt-20 text-4xl text-center text-white">
             {{ $t('section_slogan.title') }}
@@ -202,6 +209,7 @@
                 scale-95
               "
               :alt="$t('app_illustration')"
+              provider="netlify"
             />
           </div>
           <div
@@ -235,6 +243,7 @@
                       z-10
                     "
                     :alt="$t('section_slogan.no_compromises.title')"
+                    provider="netlify"
                   />
                 </div>
                 <div class="flex flex-col justify-center w-full py-20 pl-56">
@@ -262,6 +271,7 @@
                       src="/images/shadow-button-green.png"
                       class="absolute w-96 transform -translate-y-3 scale-150"
                       alt="shadow"
+                      provider="netlify"
                     />
                     <a
                       href="#"
@@ -301,6 +311,7 @@
                       z-10
                     "
                     :alt="$t('section_slogan.multi_platform.title')"
+                    provider="netlify"
                   />
                 </div>
               </div>
@@ -312,6 +323,7 @@
             src="/images/section-features-spotlight.png"
             class="spotlight-features"
             alt="spotlight"
+            provider="netlify"
           />
           <h2 class="mt-10 text-4xl text-center text-white">
             {{ $t('section_features.title') }}
@@ -365,6 +377,7 @@
                 src="images/section_features_illustration.png"
                 :alt="$t('section_features.features.sharing.title')"
                 class="transform translate-y-5"
+                provider="netlify"
               />
             </div>
           </div>
@@ -392,6 +405,7 @@
                     z-10
                   "
                   :alt="$t('section_slogan.no_compromises.title')"
+                  provider="netlify"
                 />
               </div>
               <div class="flex flex-col justify-center w-full py-20 pl-56">
@@ -410,6 +424,7 @@
                       src="/images/shadow-button-green.png"
                       class="absolute w-96 transform -translate-y-3 scale-150"
                       alt="shadow"
+                      provider="netlify"
                     />
                     <a
                       href="#"
@@ -507,6 +522,7 @@
                   src="/images/section-team-shape.svg"
                   class="absolute section-team-shape"
                   alt="shape"
+                  provider="netlify"
                 />
                 <button
                   :class="`
@@ -595,6 +611,7 @@
                         :src="teamMember.image"
                         class="w-64 h-64"
                         :alt="teamMember.name"
+                        provider="netlify"
                       />
                       <h2
                         class="
@@ -642,6 +659,7 @@
                   src="/images/footer-spotlight.png"
                   class="scale-75 transform -translate-y-16"
                   alt="spotlight"
+                  provider="netlify"
                 />
               </div>
             </div>
@@ -654,6 +672,7 @@
                 src="/images/logo.png"
                 :alt="$t('satellite_logo')"
                 class="w-60 z-10"
+                provider="netlify"
               />
               <nav class="ml-20 transform translate-y-3">
                 <ul class="flex items-center">
