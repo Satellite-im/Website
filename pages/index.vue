@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     <main class="w-full h-screen bg-obsidian-shard overflow-hidden">
-      <simplebar class="absolute w-full h-full">
+      <simplebar ref="simplebar" class="absolute w-full h-full">
         <div class="w-full px-40 overflow-hidden z-10">
           <nuxt-img
-            src="/section-hero-spotlight.png"
+            src="/images/section-hero-spotlight.png"
             class="spotlight-hero"
             alt="spotlight"
           />
           <header class="flex items-center w-full h-24">
             <div class="flex items-center w-full h-12">
               <nuxt-img
-                src="/logo.png"
+                src="/images/logo.png"
                 :alt="$t('satellite_logo')"
                 class="w-44 z-10"
               />
@@ -28,9 +28,9 @@
                       align-middle
                     "
                   >
-                    <a :href="item.href" class="py-1 link-hover">
+                    <button class="link-hover" @click="scroll(item.anchor)">
                       {{ item.label }}
-                    </a>
+                    </button>
                   </li>
                 </ul>
               </nav>
@@ -61,7 +61,7 @@
               <div class="flex items-center flex-wrap mt-12">
                 <div class="relative w-44 h-12 mt-4 mr-6">
                   <nuxt-img
-                    src="/shadow-button-green.png"
+                    src="/images/shadow-button-green.png"
                     class="absolute w-96 transform -translate-y-3 scale-150"
                     alt="shadow"
                   />
@@ -119,7 +119,7 @@
             </div>
             <div class="relative w-[46.875rem] flex-shrink-0">
               <nuxt-img
-                src="/section-hero-illustration.png"
+                src="/images/section-hero-illustration.png"
                 :alt="$t('app_illustration')"
                 class="hero-illustration"
               />
@@ -169,7 +169,7 @@
               >
                 <div class="flex justify-center items-center w-48 h-48">
                   <nuxt-img
-                    :src="`/section-meet-feature-${slogan.key}.png`"
+                    :src="`/images/section-meet-feature-${slogan.key}.png`"
                     class="w-full"
                     :alt="slogan.label"
                   />
@@ -181,9 +181,9 @@
             </ul>
           </div>
         </div>
-        <div class="relative w-full pt-10 z-10 overflow-hidden">
+        <div id="about" class="relative w-full pt-10 z-10 overflow-hidden">
           <nuxt-img
-            :src="`/section-slogan-spotlight.png`"
+            src="/images/section-slogan-spotlight.png"
             class="spotlight-slogan z-10"
             alt="spotlight"
           />
@@ -192,7 +192,7 @@
           </h2>
           <div class="relative w-[80.79rem] h-[60.09rem] m-auto z-10">
             <nuxt-img
-              :src="`/section-slogan-illustration.png`"
+              src="/images/section-slogan-illustration.png"
               class="
                 w-full
                 h-full
@@ -225,7 +225,7 @@
               <div class="flex relative w-full">
                 <div class="flex justify-center items-center py-20">
                   <nuxt-img
-                    :src="`/section-slogan-no-compromises.png`"
+                    src="/images/section-slogan-no-compromises.png"
                     class="
                       w-[43.75rem]
                       transform
@@ -259,7 +259,7 @@
                   </p>
                   <div class="relative w-44 h-12 mt-14 mr-6">
                     <nuxt-img
-                      src="/shadow-button-green.png"
+                      src="/images/shadow-button-green.png"
                       class="absolute w-96 transform -translate-y-3 scale-150"
                       alt="shadow"
                     />
@@ -291,7 +291,7 @@
                 </div>
                 <div class="flex justify-center items-center py-20">
                   <nuxt-img
-                    :src="`/section-slogan-multi-platform.png`"
+                    src="/images/section-slogan-multi-platform.png"
                     class="
                       w-[43.75rem]
                       transform
@@ -307,9 +307,9 @@
             </div>
           </div>
         </div>
-        <div class="relative w-full pt-20 z-10 overflow-hidden">
+        <div id="features" class="relative w-full pt-20 z-10 overflow-hidden">
           <nuxt-img
-            :src="`/section-features-spotlight.png`"
+            src="/images/section-features-spotlight.png"
             class="spotlight-features"
             alt="spotlight"
           />
@@ -362,7 +362,7 @@
               "
             >
               <nuxt-img
-                :src="`/section_features_illustration.png`"
+                src="images/section_features_illustration.png"
                 :alt="$t('section_features.features.sharing.title')"
                 class="transform translate-y-5"
               />
@@ -379,10 +379,10 @@
               to-burj-khalifa-fountain
             "
           >
-            <div class="flex relative w-full">
+            <div id="access" class="flex relative w-full">
               <div class="flex justify-center items-center py-20">
                 <nuxt-img
-                  :src="`/section_team_early_access.png`"
+                  src="/images/section_team_early_access.png"
                   class="
                     w-[43.75rem]
                     transform
@@ -407,7 +407,7 @@
                 <div class="flex items-center flex-wrap mt-12">
                   <div class="relative w-44 h-12 mt-4 mr-6">
                     <nuxt-img
-                      src="/shadow-button-green.png"
+                      src="/images/shadow-button-green.png"
                       class="absolute w-96 transform -translate-y-3 scale-150"
                       alt="shadow"
                     />
@@ -464,7 +464,7 @@
                 </div>
               </div>
             </div>
-            <div class="max-w-[45%] mt-40">
+            <div id="team" class="max-w-[45%] mt-20 py-20">
               <div class="w-full">
                 <h3 class="text-4xl text-obsidian-shard">
                   {{ $t('section_team.title') }}
@@ -504,7 +504,7 @@
             <div class="relative">
               <div v-if="swiper" class="flex absolute right-0">
                 <nuxt-img
-                  src="/section-team-shape.svg"
+                  src="/images/section-team-shape.svg"
                   class="absolute section-team-shape"
                   alt="shape"
                 />
@@ -639,7 +639,7 @@
             <div class="relative w-full h-[10rem] mt-56">
               <div class="divider-footer">
                 <nuxt-img
-                  src="/footer-spotlight.png"
+                  src="/images/footer-spotlight.png"
                   class="scale-75 transform -translate-y-16"
                   alt="spotlight"
                 />
@@ -651,7 +651,7 @@
           <div class="flex justify-between items-center">
             <div class="flex items-center">
               <nuxt-img
-                src="/logo.png"
+                src="/images/logo.png"
                 :alt="$t('satellite_logo')"
                 class="w-60 z-10"
               />
@@ -719,14 +719,14 @@
 import simplebar from 'simplebar-vue'
 import Swiper from 'swiper/swiper-bundle'
 
-import StatStream from '~/assets/images/stat-stream.svg?inline'
-import StatChat from '~/assets/images/stat-chat.svg?inline'
-import StatFileShares from '~/assets/images/stat-file-shares.svg?inline'
+import StatStream from '~/static/images/stat-stream.svg?inline'
+import StatChat from '~/static/images/stat-chat.svg?inline'
+import StatFileShares from '~/static/images/stat-file-shares.svg?inline'
 
-import Twitter from '~/assets/icons/twitter.svg?inline'
-import Linkedin from '~/assets/icons/linkedin.svg?inline'
-import Github from '~/assets/icons/github.svg?inline'
-import Arrow from '~/assets/icons/arrow.svg?inline'
+import Twitter from '~/static/icons/twitter.svg?inline'
+import Linkedin from '~/static/icons/linkedin.svg?inline'
+import Github from '~/static/icons/github.svg?inline'
+import Arrow from '~/static/icons/arrow.svg?inline'
 
 import 'simplebar/dist/simplebar.min.css'
 import 'swiper/swiper-bundle.css'
@@ -746,56 +746,56 @@ export default {
     return {
       navItems: [
         {
-          key: 'features',
-          label: this.$t('section_hero.nav_items.features'),
-          href: '#',
-        },
-        {
           key: 'about',
           label: this.$t('section_hero.nav_items.about'),
-          href: '#',
+          anchor: '#about',
+        },
+        {
+          key: 'features',
+          label: this.$t('section_hero.nav_items.features'),
+          anchor: '#features',
         },
         {
           key: 'access',
           label: this.$t('section_hero.nav_items.access'),
-          href: '#',
+          anchor: '#access',
         },
         {
           key: 'team',
           label: this.$t('section_hero.nav_items.team'),
-          href: '#',
+          anchor: '#team',
         },
       ],
       partners: [
         {
           key: 'multicoin-capital',
-          logo: '/partner-multicoin-capital.svg',
+          logo: '/images/partner-multicoin-capital.svg',
           link: 'https://multicoin.capital/',
         },
         {
           key: 'ideo-colab',
-          logo: '/partner-ideo-colab.svg',
+          logo: '/images/partner-ideo-colab.svg',
           link: 'https://www.ideocolab.com/',
         },
-        { key: 'framework', logo: '/partner-framework.svg', link: '' },
+        { key: 'framework', logo: '/images/partner-framework.svg', link: '' },
         {
           key: 'solana',
-          logo: '/partner-solana.svg',
+          logo: '/images/partner-solana.svg',
           link: 'https://solana.com/',
         },
         {
           key: 'textile',
-          logo: '/partner-textile.svg',
+          logo: '/images/partner-textile.svg',
           link: 'https://www.textile.io/',
         },
         {
           key: 'jacket-river',
-          logo: '/partner-jacket-river.svg',
+          logo: '/images/partner-jacket-river.svg',
           link: 'https://www.jacketriver.com/',
         },
         {
           key: 'knobs',
-          logo: '/partner-knobs.svg',
+          logo: '/images/partner-knobs.svg',
           link: 'https://knobs.it/en/knobs-en/',
         },
       ],
@@ -861,7 +861,7 @@ export default {
       team: [
         {
           key: 'matt',
-          image: '/team_matt.png',
+          image: '/images/team_matt.png',
           name: 'Matt Wisniewski',
           occupation: this.$t('section_team.team.matt_occupation'),
           socials: [
@@ -873,35 +873,35 @@ export default {
         },
         {
           key: 'manuel',
-          image: '/team_manuel.png',
+          image: '/images/team_manuel.png',
           name: 'Manuel Tumiati',
           occupation: this.$t('section_team.team.manuel_occupation'),
           socials: [{ key: 'github', link: 'https://github.com/iltumio' }],
         },
         {
           key: 'kathy',
-          image: '/team_kathy.png',
+          image: '/images/team_kathy.png',
           name: 'Kathy Chan',
           occupation: this.$t('section_team.team.kathy_occupation'),
           socials: [{ key: 'github', link: 'https://github.com/KemoPaw' }],
         },
         {
           key: 'lauren',
-          image: '/team_lauren.png',
+          image: '/images/team_lauren.png',
           name: 'Lauren Harrington',
           occupation: this.$t('section_team.team.lauren_occupation'),
           socials: [{ key: 'github', link: '' }],
         },
         {
           key: 'jason',
-          image: '/team_jason.png',
+          image: '/images/team_jason.png',
           name: 'Jason Panay',
           occupation: this.$t('section_team.team.jason_occupation'),
           socials: [{ key: 'github', link: 'https://github.com/jpanay' }],
         },
         {
           key: 'chris',
-          image: '/team_chris.png',
+          image: '/images/team_chris.png',
           name: 'Chris',
           occupation: this.$t('section_team.team.chris_occupation'),
           socials: [
@@ -913,32 +913,35 @@ export default {
         },
         {
           key: 'dina',
-          image: '/team_dina.png',
+          image: '/images/team_dina.png',
           name: 'Dina',
           occupation: this.$t('section_team.team.dina_occupation'),
           socials: [{ key: 'github', link: '' }],
         },
         {
           key: 'tom',
-          image: '/team_tom.png',
+          image: '/images/team_tom.png',
           name: 'Tom',
           occupation: this.$t('section_team.team.tom_occupation'),
           socials: [{ key: 'github', link: '' }],
         },
         {
           key: 'jerome',
-          image: '/team_jerome.png',
+          image: '/images/team_jerome.png',
           name: 'Jerome',
           occupation: this.$t('section_team.team.jerome_occupation'),
           socials: [{ key: 'github', link: '' }],
         },
       ],
+      simplebar: null,
       swiper: null,
       slidesPerView: 4,
     }
   },
   mounted() {
     const vm = this
+
+    this.simplebar = vm.$refs.simplebar.scrollElement
 
     this.swiper = new Swiper(vm.$refs.swiper, {
       slidesPerView: this.slidesPerView,
@@ -954,6 +957,16 @@ export default {
     next() {
       if (this.swiper.activeIndex !== this.team.length - this.slidesPerView) {
         this.swiper.slideNext()
+      }
+    },
+    scroll(anchorId) {
+      const anchor = document.querySelector(anchorId)
+
+      if (anchor) {
+        this.simplebar.scrollTo({
+          top: anchor.getBoundingClientRect().top,
+          behavior: 'smooth',
+        })
       }
     },
   },

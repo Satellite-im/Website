@@ -95,7 +95,7 @@ export default {
       },
     ],
   },
-  css: ['~/assets/css/main.css'],
+  css: ['~/styles/main.css'],
   plugins: [],
   components: true,
   buildModules: [
@@ -120,9 +120,6 @@ export default {
     UserAgent: '*',
     Disallow: '/',
   },
-  image: {
-    dir: 'assets/images',
-  },
   viewport: {
     breakpoints: {
       xs: 320,
@@ -138,7 +135,6 @@ export default {
       mobile: 'xs',
       tablet: 'md',
     },
-
     fallbackBreakpoint: 'lg',
   },
 }
