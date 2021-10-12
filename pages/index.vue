@@ -738,10 +738,9 @@
 import simplebar from 'simplebar-vue'
 import Swiper from 'swiper/swiper-bundle'
 
-import StatStream from '~/static/images/stat-stream.svg?inline'
-import StatChat from '~/static/images/stat-chat.svg?inline'
-import StatFileShares from '~/static/images/stat-file-shares.svg?inline'
-
+import StatStream from '~/static/icons/stat-stream.svg?inline'
+import StatChat from '~/static/icons/stat-chat.svg?inline'
+import StatFileShares from '~/static/icons/stat-file-shares.svg?inline'
 import Twitter from '~/static/icons/twitter.svg?inline'
 import Linkedin from '~/static/icons/linkedin.svg?inline'
 import Github from '~/static/icons/github.svg?inline'
