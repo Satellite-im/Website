@@ -127,11 +127,12 @@ export default {
       md: 768,
       lg: 1024,
       xl: 1280,
-      '2xl': 1536,
+      '2xl': 1480,
+      '3xl': 1600,
     },
 
     defaultBreakpoints: {
-      desktop: 'lg',
+      desktop: 'xl',
       mobile: 'xs',
       tablet: 'md',
     },

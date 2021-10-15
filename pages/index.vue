@@ -2,14 +2,14 @@
   <div id="app">
     <main class="w-full h-screen bg-obsidian-shard overflow-hidden">
       <simplebar ref="simplebar" class="absolute w-full h-full">
-        <div class="w-full px-40 overflow-hidden z-10">
+        <div class="w-full overflow-hidden z-10">
           <nuxt-img
             src="/images/section-hero-spotlight.png"
             class="spotlight-hero"
             alt="spotlight"
             provider="netlify"
           />
-          <header class="flex items-center w-full h-24">
+          <header class="flex items-center w-full h-24 px-40">
             <div class="flex items-center w-full h-12">
               <nuxt-img
                 src="/images/logo.png"
@@ -38,16 +38,9 @@
               </nav>
             </div>
           </header>
-          <div class="flex justify-between py-28">
+          <div class="flex justify-between py-28 pl-40">
             <div
-              class="
-                flex flex-col
-                justify-center
-                w-full
-                max-w-[46.875rem]
-                min-h-[38.75rem]
-                2xl:pb-24
-              "
+              class="flex flex-col justify-center max-w-[42.1875rem] 2xl:pr-4"
             >
               <h1 class="text-6xl text-white">
                 {{ $t('section_hero.title') }}
@@ -55,12 +48,12 @@
               <p class="mt-6 text-lg text-justify text-accolade">
                 {{ $t('section_hero.description') }}
               </p>
-              <div class="flex justify-between items-center flex-wrap mt-6">
-                <StatStream class="w-16 mt-4 mr-4" />
-                <StatChat class="w-44 mt-4 mr-4" />
-                <StatFileShares class="w-24 mt-4 mr-4" />
+              <div class="flex justify-between items-center flex-wrap">
+                <StatStream class="w-16 mt-10 mr-10" />
+                <StatChat class="w-44 mt-10 mr-10" />
+                <StatFileShares class="w-24 mt-10" />
               </div>
-              <div class="flex items-center flex-wrap mt-12">
+              <div class="flex items-center mt-12">
                 <div class="relative w-44 h-12 mt-4 mr-6">
                   <nuxt-img
                     src="/images/shadow-button-green.png"
@@ -69,7 +62,9 @@
                     provider="netlify"
                   />
                   <a
-                    href="#"
+                    href="https://satellite.us1.list-manage.com/subscribe?u=271ef1cd37ac53b33d0c41e8a&id=7f7b767432"
+                    target="_blank"
+                    rel="noreferrer"
                     class="
                       absolute
                       flex
@@ -94,7 +89,9 @@
                   </a>
                 </div>
                 <a
-                  href="#"
+                  href="https://satellite.one/"
+                  target="_blank"
+                  rel="noreferrer"
                   class="
                     flex
                     justify-center
@@ -120,7 +117,7 @@
                 </a>
               </div>
             </div>
-            <div class="relative w-[46.875rem] flex-shrink-0">
+            <div class="relative w-[43.75rem] 2xl:w-[46.875rem] flex-shrink-0">
               <nuxt-img
                 src="/images/section-hero-illustration.png"
                 :alt="$t('app_illustration')"
@@ -129,7 +126,7 @@
               />
             </div>
           </div>
-          <div class="w-full text-white">
+          <div class="w-full text-white mt-40 px-40">
             <h2 class="text-lg">
               {{ $t('our_partners').toUpperCase() }}
             </h2>
@@ -139,7 +136,12 @@
                 :key="partner.key"
                 class="flex justify-center w-1/4 my-10"
               >
-                <a :href="partner.link" target="_blank" rel="noreferrer">
+                <a
+                  :href="partner.link"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="partner"
+                >
                   <nuxt-img
                     :src="partner.logo"
                     :class="`partner-${partner.key}`"
@@ -194,7 +196,7 @@
             alt="spotlight"
             provider="netlify"
           />
-          <h2 class="mt-20 text-4xl text-center text-white">
+          <h2 class="mt-20 text-4xl text-center text-white z-10">
             {{ $t('section_slogan.title') }}
           </h2>
           <div class="relative w-[80.79rem] h-[60.09rem] m-auto z-10">
@@ -206,7 +208,8 @@
                 transform
                 -translate-x-20
                 translate-y-5
-                scale-95
+                scale-90
+                2xl:scale-95
               "
               :alt="$t('app_illustration')"
               provider="netlify"
@@ -246,7 +249,16 @@
                     provider="netlify"
                   />
                 </div>
-                <div class="flex flex-col justify-center w-full py-20 pl-56">
+                <div
+                  class="
+                    flex flex-col
+                    justify-center
+                    w-full
+                    py-20
+                    pl-44
+                    2xl:pl-56
+                  "
+                >
                   <h3 class="text-4xl text-obsidian-shard">
                     {{ $t('section_slogan.no_compromises.title') }}
                   </h3>
@@ -259,7 +271,16 @@
                 </div>
               </div>
               <div class="flex relative w-full">
-                <div class="flex flex-col justify-center w-full py-20 pr-56">
+                <div
+                  class="
+                    flex flex-col
+                    justify-center
+                    w-full
+                    py-20
+                    pr-44
+                    2xl:pr-56
+                  "
+                >
                   <h3 class="text-4xl text-obsidian-shard">
                     {{ $t('section_slogan.multi_platform.title') }}
                   </h3>
@@ -275,6 +296,8 @@
                     />
                     <a
                       href="#"
+                      target="_blank"
+                      rel="noreferrer"
                       class="
                         absolute
                         flex
@@ -328,12 +351,12 @@
           <h2 class="mt-10 text-4xl text-center text-white">
             {{ $t('section_features.title') }}
           </h2>
-          <div class="flex justify-center relative mt-20">
+          <div class="flex justify-center relative mt-20 px-40">
             <ul class="flex flex-col">
               <li
                 v-for="feature in features"
                 :key="feature.key"
-                :class="`flex items-center w-full min-w-[28.125rem] max-w-[37.5rem] h-28 mt-5 pl-20 pr-5 rounded-lg ${
+                :class="`flex items-center w-full min-w-[28.125rem] max-w-[37.5rem] h-24 mt-5 pl-20 pr-5 rounded-lg ${
                   feature.isActive
                     ? 'bg-gradient-to-l from-white to-burj-khalifa-fountain'
                     : ''
@@ -368,7 +391,8 @@
                 flex
                 justify-center
                 items-center
-                w-[43.75rem]
+                w-[37.5rem]
+                2xl:w-[43.75rem]
                 pl-20
                 flex-shrink-0
               "
@@ -376,7 +400,13 @@
               <nuxt-img
                 src="images/section_features_illustration.png"
                 :alt="$t('section_features.features.sharing.title')"
-                class="transform translate-y-5"
+                class="
+                  transform
+                  translate-y-24
+                  2xl:translate-y-5
+                  scale-[1.2]
+                  2xl:scale-110
+                "
                 provider="netlify"
               />
             </div>
@@ -408,7 +438,16 @@
                   provider="netlify"
                 />
               </div>
-              <div class="flex flex-col justify-center w-full py-20 pl-56">
+              <div
+                class="
+                  flex flex-col
+                  justify-center
+                  w-full
+                  py-20
+                  pl-44
+                  2xl:pl-56
+                "
+              >
                 <h3 class="text-4xl text-obsidian-shard">
                   {{ $t('section_early_access.title') }}
                 </h3>
@@ -427,7 +466,9 @@
                       provider="netlify"
                     />
                     <a
-                      href="#"
+                      href="https://satellite.us1.list-manage.com/subscribe?u=271ef1cd37ac53b33d0c41e8a&id=7f7b767432"
+                      target="_blank"
+                      rel="noreferrer"
                       class="
                         absolute
                         flex
@@ -453,6 +494,8 @@
                   </div>
                   <a
                     href="#"
+                    target="_blank"
+                    rel="noreferrer"
                     class="
                       flex
                       justify-center
@@ -566,7 +609,6 @@
                     items-center
                     w-20
                     h-20
-                    mr-5
                     rounded-full
                     bg-white
                     transition
@@ -665,7 +707,7 @@
             </div>
           </div>
         </div>
-        <footer class="relative pb-40 px-72">
+        <footer class="relative pb-40 px-40 2xl:px-72">
           <div class="flex justify-between items-center">
             <div class="flex items-center">
               <nuxt-img
@@ -677,24 +719,36 @@
               <nav class="ml-20 transform translate-y-3">
                 <ul class="flex items-center">
                   <li class="mr-14">
-                    <a href="#" class="text-sm text-white link-hover">{{
-                      $t('footer.nav.app')
-                    }}</a>
+                    <a
+                      href="https://satellite.one/"
+                      target="_blank"
+                      rel="noreferrer"
+                      class="text-sm text-white link-hover"
+                      >{{ $t('footer.nav.app') }}</a
+                    >
                   </li>
                   <li class="mr-14">
-                    <a href="#" class="text-sm text-white link-hover">{{
-                      $t('footer.nav.careers')
-                    }}</a>
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noreferrer"
+                      class="text-sm text-white link-hover"
+                      >{{ $t('footer.nav.careers') }}</a
+                    >
                   </li>
                   <li class="mr-14">
-                    <a href="#" class="text-sm text-white link-hover">{{
-                      $t('footer.nav.contact_us')
-                    }}</a>
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noreferrer"
+                      class="text-sm text-white link-hover"
+                      >{{ $t('footer.nav.contact_us') }}</a
+                    >
                   </li>
                 </ul>
               </nav>
             </div>
-            <ul class="flex items-center">
+            <ul class="flex items-center transform translate-y-2">
               <li class="flex justify-center items-center w-10 mr-5 social">
                 <a
                   href="https://twitter.com/satellite_im"
@@ -714,7 +768,7 @@
                   ><Linkedin class="w-6 h-6"
                 /></a>
               </li>
-              <li class="flex justify-center items-center w-10 mr-5 social">
+              <li class="flex justify-center items-center w-10 social">
                 <a
                   href="https://github.com/Satellite-im"
                   target="_blank"
@@ -795,7 +849,11 @@ export default {
           logo: '/images/partner-ideo-colab.svg',
           link: 'https://www.ideocolab.com/',
         },
-        { key: 'framework', logo: '/images/partner-framework.svg', link: '' },
+        {
+          key: 'framework',
+          logo: '/images/partner-framework.svg',
+          link: 'https://framework.ventures/',
+        },
         {
           key: 'solana',
           logo: '/images/partner-solana.svg',
@@ -953,7 +1011,7 @@ export default {
       ],
       simplebar: null,
       swiper: null,
-      slidesPerView: 4,
+      slidesPerView: 1,
     }
   },
   mounted() {
@@ -963,6 +1021,17 @@ export default {
 
     this.swiper = new Swiper(vm.$refs.swiper, {
       slidesPerView: this.slidesPerView,
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+        1480: {
+          slidesPerView: 4,
+        },
+      },
       allowTouchMove: false,
     })
   },

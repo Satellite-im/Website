@@ -17,6 +17,15 @@ module.exports = {
       'spandex-green': '#33B257',
       'retro-blue': '#2D61F7',
     },
+    screens: {
+      xs: '320px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1480px',
+      '3xl': '1600px',
+    },
     fontFamily: {
       sans: ['DM Sans', 'sans-serif'],
     },
