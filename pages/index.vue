@@ -4,20 +4,32 @@
       <simplebar ref="simplebar" class="absolute w-full h-full">
         <div class="w-full overflow-hidden z-10">
           <nuxt-img
-            src="/images/section-hero-spotlight.png"
-            class="spotlight-hero"
+            src="/images/page-start-spotlight.png"
+            class="absolute transform translate-y-[-35%] translate-x-[-35%]"
             alt="spotlight"
             provider="netlify"
           />
-          <header class="flex items-center w-full h-24 px-40">
-            <div class="flex items-center w-full h-12">
+          <header class="flex items-center w-full h-24 px-10 md:px-20 lg:px-40">
+            <div
+              class="
+                flex
+                justify-between
+                lg:justify-start
+                items-center
+                w-full
+                h-12
+              "
+            >
               <nuxt-img
                 src="/images/logo.png"
                 :alt="$t('satellite_logo')"
                 class="w-44 z-10"
                 provider="netlify"
               />
-              <nav class="relative w-full h-full px-16 text-white">
+              <nav
+                v-if="$viewport.isGreaterThan('md')"
+                class="relative w-full h-full px-16 text-white"
+              >
                 <ul class="flex absolute bottom-0 mb-1.5">
                   <li
                     v-for="item in navItems"
@@ -36,28 +48,189 @@
                   </li>
                 </ul>
               </nav>
+              <button v-if="$viewport.isLessThan('lg')" @click="openSidebar()">
+                <Menu class="w-8 h-8 fill-current text-white" />
+              </button>
             </div>
           </header>
-          <div class="flex justify-between py-28 pl-40">
+          <div
+            v-if="isSidebarOpen && $viewport.isLessThan('lg')"
+            class="fixed top-0 left-0 w-full h-full z-10"
+          >
             <div
-              class="flex flex-col justify-center max-w-[42.1875rem] 2xl:pr-4"
+              class="absolute w-full h-full opacity-90 bg-black sidebar-overlay"
+              @click="closeSidebar()"
+            ></div>
+            <aside
+              class="
+                absolute
+                top-0
+                right-0
+                w-10/12
+                max-w-sm
+                h-full
+                px-10
+                md:px-20
+                bg-gradient-to-r
+                from-white
+                to-burj-khalifa-fountain
+                sidebar
+              "
             >
-              <h1 class="text-6xl text-white">
+              <header class="flex items-center w-full h-24">
+                <button class="ml-auto" @click="closeSidebar()">
+                  <Close class="w-8 h-8 fill-current text-obsidian-shard" />
+                </button>
+              </header>
+              <simplebar class="h-[calc(100vh-(6rem*2))] text-obsidian-shard">
+                <ul class="flex flex-col">
+                  <li v-for="item in navItems" :key="item.key" class="mt-5">
+                    <button
+                      class="link-hover black"
+                      @click=";[closeSidebar(), scroll(item.anchor)]"
+                    >
+                      {{ item.label }}
+                    </button>
+                  </li>
+                </ul>
+                <ul class="flex flex-col mt-5">
+                  <li class="mt-5">
+                    <a
+                      href="https://satellite.one/"
+                      target="_blank"
+                      rel="noreferrer"
+                      class="link-hover black"
+                      >{{ $t('footer.nav.app') }}</a
+                    >
+                  </li>
+                  <li class="mt-5">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noreferrer"
+                      class="link-hover black"
+                      >{{ $t('footer.nav.careers') }}</a
+                    >
+                  </li>
+                  <li class="mt-5">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noreferrer"
+                      class="link-hover black"
+                      >{{ $t('footer.nav.contact_us') }}</a
+                    >
+                  </li>
+                </ul>
+              </simplebar>
+              <footer class="flex items-center w-full h-24">
+                <ul class="flex justify-between items-center w-full">
+                  <li
+                    class="
+                      flex
+                      justify-center
+                      items-center
+                      w-10
+                      transition
+                      duration-300
+                      ease-linear
+                      hover:invert-[0.4]
+                    "
+                  >
+                    <a
+                      href="https://twitter.com/satellite_im"
+                      target="_blank"
+                      rel="noreferrer"
+                      class="flex justify-center items-center w-full"
+                    >
+                      <Twitter
+                        class="w-5 h-5 fill-current text-obsidian-shard"
+                      />
+                    </a>
+                  </li>
+                  <li
+                    class="
+                      flex
+                      justify-center
+                      items-center
+                      w-10
+                      transition
+                      duration-300
+                      ease-linear
+                      hover:invert-[0.4]
+                    "
+                  >
+                    <a
+                      href="https://www.linkedin.com/company/satellite-im"
+                      target="_blank"
+                      rel="noreferrer"
+                      class="flex justify-center items-center w-full"
+                      ><Linkedin
+                        class="w-5 h-5 fill-current text-obsidian-shard"
+                    /></a>
+                  </li>
+                  <li
+                    class="
+                      flex
+                      justify-center
+                      items-center
+                      w-10
+                      transition
+                      duration-300
+                      ease-linear
+                      hover:invert-[0.4]
+                    "
+                  >
+                    <a
+                      href="https://github.com/Satellite-im"
+                      target="_blank"
+                      rel="noreferrer"
+                      class="flex justify-center items-center w-full"
+                      ><Github class="w-5 h-5 fill-current text-obsidian-shard"
+                    /></a>
+                  </li>
+                </ul>
+              </footer>
+            </aside>
+          </div>
+          <div
+            class="
+              flex
+              justify-between
+              py-14
+              md:py-28
+              px-10
+              md:px-20 md:pl-20
+              lg:pr-0 lg:pl-40
+            "
+          >
+            <div
+              class="
+                flex flex-col
+                justify-center
+                w-full
+                lg:w-[42.1875rem]
+                flex-shrink-0
+                xl:flex-shrink xl:max-w-2xl
+                2xl:pr-4
+              "
+            >
+              <h1 class="text-4xl md:text-6xl text-white">
                 {{ $t('section_hero.title') }}
               </h1>
-              <p class="mt-6 text-lg text-justify text-accolade">
+              <p class="mt-6 md:text-lg text-justify text-accolade">
                 {{ $t('section_hero.description') }}
               </p>
               <div class="flex justify-between items-center flex-wrap">
-                <StatStream class="w-16 mt-10 mr-10" />
-                <StatChat class="w-44 mt-10 mr-10" />
-                <StatFileShares class="w-24 mt-10" />
+                <StatStream class="w-12 md:w-16 mt-10 mr-10" />
+                <StatChat class="w-36 md:w-44 mt-10 mr-10" />
+                <StatFileShares class="w-20 md:w-24 mt-10" />
               </div>
               <div class="flex items-center mt-12">
-                <div class="relative w-44 h-12 mt-4 mr-6">
+                <div class="relative w-40 h-10 md:w-44 md:h-12 mt-4 mr-6">
                   <nuxt-img
                     src="/images/shadow-button-green.png"
-                    class="absolute w-96 transform -translate-y-3 scale-150"
+                    class="absolute w-96 transform -translate-y-4 scale-[1.55]"
                     alt="shadow"
                     provider="netlify"
                   />
@@ -74,7 +247,8 @@
                       h-full
                       rounded-3xl
                       bg-cool-green
-                      text-white
+                      text-white text-sm
+                      md:text-base
                       font-bold
                       text-center
                       transition
@@ -96,12 +270,14 @@
                     flex
                     justify-center
                     items-center
-                    w-52
-                    h-12
+                    w-48
+                    h-10
+                    md:w-52 md:h-12
                     mt-4
                     rounded-3xl
                     bg-white
-                    text-retro-blue
+                    text-retro-blue text-sm
+                    md:text-base
                     font-bold
                     text-center
                     transition
@@ -117,30 +293,79 @@
                 </a>
               </div>
             </div>
-            <div class="relative w-[43.75rem] 2xl:w-[46.875rem] flex-shrink-0">
+            <div
+              class="
+                relative
+                w-[43.75rem]
+                2xl:w-[46.875rem]
+                flex-shrink-0
+                -z-10
+              "
+            >
               <nuxt-img
+                src="/images/section-hero-spotlight.png"
+                :alt="$t('app_illustration')"
+                class="
+                  absolute
+                  right-0
+                  transform
+                  scale-[1.2]
+                  md:scale-[1.4]
+                  -translate-y-1/4 -translate-x-1/4
+                  md:translate-y-[-20%] md:translate-x-[-20%]
+                  lg:translate-y-[-15%] lg:translate-x-[-15%]
+                  xl:translate-y-[-10%] xl:translate-x-[12%]
+                  2xl:translate-y-[-10%] 2xl:translate-x-[2%]
+                "
+                provider="netlify"
+              />
+              <nuxt-img
+                v-if="$viewport.isGreaterThan('lg')"
                 src="/images/section-hero-illustration.png"
                 :alt="$t('app_illustration')"
-                class="hero-illustration"
+                class="
+                  absolute
+                  right-0
+                  transform
+                  scale-[1.075]
+                  translate-y-[-20%] translate-x-[5%]
+                  2xl:translate-y-[-20%] 2xl:translate-x-[-5%]
+                "
                 provider="netlify"
               />
             </div>
           </div>
-          <div class="w-full text-white mt-40 px-40">
-            <h2 class="text-lg">
+          <div
+            class="w-full text-white mt-20 2xl:mt-40 px-10 md:px-20 lg:px-40"
+          >
+            <h2 class="text-lg md:text-xl">
               {{ $t('our_partners').toUpperCase() }}
             </h2>
             <ul class="flex justify-center items-center flex-wrap w-full mt-4">
               <li
                 v-for="partner in partners"
                 :key="partner.key"
-                class="flex justify-center w-1/4 my-10"
+                class="
+                  flex
+                  justify-center
+                  w-1/2
+                  sm:w-1/3
+                  lg:w-1/4
+                  my-5
+                  md:my-10
+                "
               >
                 <a
                   :href="partner.link"
                   target="_blank"
                   rel="noreferrer"
-                  class="partner"
+                  class="
+                    transition
+                    duration-300
+                    ease-linear
+                    hover:brightness-0 hover:invert
+                    flex-shrink-0
+                  "
                 >
                   <nuxt-img
                     :src="partner.logo"
@@ -153,68 +378,173 @@
             </ul>
           </div>
         </div>
-        <div class="divider"></div>
+        <div
+          class="
+            absolute
+            left-1/2
+            h-40
+            transform
+            -translate-x-1/2 -translate-y-8
+            sm:translate-y-[-1px]
+            bg-obsidian-shard
+            divider
+          "
+        ></div>
         <div
           class="
             w-full
             pt-40
-            px-40
+            px-10
+            md:px-20
+            lg:px-40
             bg-gradient-to-r
             from-white
             to-burj-khalifa-fountain
           "
         >
           <div class="w-full py-20">
-            <h2 class="text-4xl text-center text-obsidian-shard">
+            <h2 class="text-3xl md:text-4xl text-center text-obsidian-shard">
               {{ $t('section_meet.title') }}
             </h2>
-            <ul class="flex justify-center items-center flex-wrap w-full mt-4">
+            <ul class="flex justify-center items-center flex-wrap w-full">
               <li
                 v-for="slogan in slogans"
                 :key="slogan.key"
-                class="flex flex-col justify-center items-center w-1/4 my-10"
+                class="
+                  flex flex-col
+                  justify-center
+                  items-center
+                  w-full
+                  sm:w-1/2
+                  xl:w-1/4
+                  mt-20
+                "
               >
-                <div class="flex justify-center items-center w-48 h-48">
+                <div
+                  class="
+                    flex
+                    justify-center
+                    items-center
+                    w-36
+                    h-36
+                    md:w-48 md:h-48
+                  "
+                >
                   <nuxt-img
                     :src="`/images/section-meet-feature-${slogan.key}.png`"
-                    class="w-full"
+                    class="w-full transform -translate-x-4"
                     :alt="slogan.label"
                     provider="netlify"
                   />
                 </div>
-                <p class="text-xl font-medium text-obsidian-shard">
+                <p
+                  class="
+                    text-lg
+                    md:text-xl
+                    text-center
+                    font-medium
+                    text-obsidian-shard
+                  "
+                >
                   {{ slogan.label }}
                 </p>
               </li>
             </ul>
           </div>
         </div>
-        <div id="about" class="relative w-full pt-10 z-10 overflow-hidden">
-          <nuxt-img
-            src="/images/section-slogan-spotlight.png"
-            class="spotlight-slogan z-10"
-            alt="spotlight"
-            provider="netlify"
-          />
-          <h2 class="mt-20 text-4xl text-center text-white z-10">
-            {{ $t('section_slogan.title') }}
-          </h2>
-          <div class="relative w-[80.79rem] h-[60.09rem] m-auto z-10">
+        <div id="about" class="relative w-full pt-40 z-10 overflow-hidden">
+          <div
+            v-if="$viewport.isLessThan('md')"
+            class="
+              relative
+              w-[21.78rem]
+              h-[34.23rem]
+              sm:w-[27.23rem] sm:h-[42.79rem]
+              m-auto
+              mb-20
+              sm:mb-4
+              z-10
+            "
+          >
+            <div
+              class="
+                absolute
+                top-1/2
+                transform
+                translate-x-[-60%]
+                -translate-y-1/2
+              "
+            >
+              <nuxt-img
+                src="/images/section-slogan-spotlight.png"
+                class="scale-[3.5] transform translate-y-[40%]"
+                alt="spotlight"
+                provider="netlify"
+              />
+            </div>
+            <nuxt-img
+              src="/images/section-slogan-illustration-mobile.png"
+              class="relative w-full h-full"
+              :alt="$t('app_illustration')"
+              provider="netlify"
+            />
+          </div>
+          <div
+            v-if="$viewport.isGreaterThan('sm')"
+            class="
+              relative
+              w-[49.11rem]
+              h-[36.52rem]
+              lg:w-[64.63rem] lg:h-[48.07rem]
+              2xl:w-[80.79rem] 2xl:h-[60.09rem]
+              m-auto
+              mb-24
+              lg:mb-16
+              2xl:mb-0
+              z-10
+            "
+          >
+            <div class="absolute transform translate-x-[-50%]">
+              <nuxt-img
+                src="/images/section-slogan-spotlight.png"
+                class="scale-[1.65] transform translate-y-16 lg:translate-y-24"
+                alt="spotlight"
+                provider="netlify"
+              />
+            </div>
             <nuxt-img
               src="/images/section-slogan-illustration.png"
               class="
+                relative
                 w-full
                 h-full
                 transform
-                -translate-x-20
+                -translate-x-10
                 translate-y-5
-                scale-90
-                2xl:scale-95
               "
               :alt="$t('app_illustration')"
               provider="netlify"
             />
           </div>
+          <h2
+            class="
+              absolute
+              top-0
+              w-full
+              px-10
+              md:px-20
+              lg:px-40
+              m-auto
+              text-3xl
+              md:text-4xl
+              text-white text-center
+              transform
+              translate-y-24
+              z-10
+            "
+          >
+            {{ $t('section_slogan.title') }}
+          </h2>
           <div
             class="
               relative
@@ -226,26 +556,54 @@
           >
             <div
               class="
+                absolute
+                top-0
+                left-1/2
+                h-60
+                transform
+                -translate-x-1/2
+                translate-y-[calc(-100%+1px)]
                 bg-gradient-to-r
                 from-white
                 to-burj-khalifa-fountain
                 divider-section-slogan
               "
             ></div>
-            <div class="relative px-40 pb-20">
-              <div class="flex relative w-full">
-                <div class="flex justify-center items-center py-20">
+            <div
+              class="
+                relative
+                px-10
+                md:px-20
+                lg:px-40
+                transform
+                -translate-y-20
+                md:translate-y-0 md:pb-20
+                z-10
+              "
+            >
+              <div
+                class="
+                  flex flex-col
+                  xl:flex-row xl:items-center
+                  relative
+                  w-full
+                "
+              >
+                <div
+                  class="
+                    flex-shrink-0
+                    w-[16.32rem]
+                    h-[13.73rem]
+                    md:w-[20.40rem] md:h-[17.17rem]
+                    xl:w-[25.51rem] xl:h-[21.47rem]
+                    2xl:w-[31.89rem] 2xl:h-[26.84rem]
+                    py-20
+                  "
+                >
                   <nuxt-img
                     src="/images/section-slogan-no-compromises.png"
-                    class="
-                      w-[43.75rem]
-                      transform
-                      -translate-x-2
-                      translate-y-16
-                      scale-110
-                      z-10
-                    "
                     :alt="$t('section_slogan.no_compromises.title')"
+                    class="transform translate-x-[-20%]"
                     provider="netlify"
                   />
                 </div>
@@ -255,42 +613,90 @@
                     justify-center
                     w-full
                     py-20
-                    pl-44
+                    xl:pl-44
                     2xl:pl-56
                   "
                 >
-                  <h3 class="text-4xl text-obsidian-shard">
+                  <h3
+                    class="
+                      text-2xl
+                      md:text-4xl
+                      xl:text-right
+                      text-obsidian-shard
+                    "
+                  >
                     {{ $t('section_slogan.no_compromises.title') }}
                   </h3>
-                  <p class="mt-10 text-lg text-patriot-blue">
+                  <p class="mt-10 md:text-lg xl:text-right text-patriot-blue">
                     {{ $t('section_slogan.no_compromises.description.one') }}
                   </p>
-                  <p class="mt-5 text-lg text-patriot-blue">
+                  <p class="mt-5 md:text-lg xl:text-right text-patriot-blue">
                     {{ $t('section_slogan.no_compromises.description.two') }}
                   </p>
                 </div>
               </div>
-              <div class="flex relative w-full">
+              <div
+                class="
+                  flex flex-col-reverse
+                  items-end
+                  xl:flex-row xl:items-center
+                  relative
+                  w-full
+                  xl:mt-24
+                "
+              >
                 <div
                   class="
                     flex flex-col
                     justify-center
                     w-full
                     py-20
-                    pr-44
+                    xl:pr-44
                     2xl:pr-56
                   "
                 >
-                  <h3 class="text-4xl text-obsidian-shard">
+                  <h3
+                    class="
+                      text-2xl
+                      md:text-4xl
+                      text-right
+                      xl:text-left
+                      text-obsidian-shard
+                    "
+                  >
                     {{ $t('section_slogan.multi_platform.title') }}
                   </h3>
-                  <p class="mt-10 text-lg text-patriot-blue">
+                  <p
+                    class="
+                      mt-10
+                      md:text-lg
+                      text-right
+                      xl:text-left
+                      text-patriot-blue
+                    "
+                  >
                     {{ $t('section_slogan.multi_platform.description') }}
                   </p>
-                  <div class="relative w-44 h-12 mt-14 mr-6">
+                  <div
+                    class="
+                      relative
+                      w-40
+                      h-10
+                      md:w-44 md:h-12
+                      mt-14
+                      ml-auto
+                      xl:ml-0
+                    "
+                  >
                     <nuxt-img
                       src="/images/shadow-button-green.png"
-                      class="absolute w-96 transform -translate-y-3 scale-150"
+                      class="
+                        absolute
+                        w-96
+                        transform
+                        -translate-y-4
+                        scale-[1.55]
+                      "
                       alt="shadow"
                       provider="netlify"
                     />
@@ -307,7 +713,8 @@
                         h-full
                         rounded-3xl
                         bg-cool-green
-                        text-white
+                        text-white text-sm
+                        md:text-base
                         font-bold
                         text-center
                         transition
@@ -322,18 +729,21 @@
                     </a>
                   </div>
                 </div>
-                <div class="flex justify-center items-center py-20">
+                <div
+                  class="
+                    flex-shrink-0
+                    w-[16.32rem]
+                    h-[14.496rem]
+                    md:w-[20.40rem] md:h-[18.12rem]
+                    xl:w-[25.51rem] xl:h-[22.65rem]
+                    2xl:w-[31.89rem] 2xl:h-[28.32rem]
+                    py-20
+                  "
+                >
                   <nuxt-img
                     src="/images/section-slogan-multi-platform.png"
-                    class="
-                      w-[43.75rem]
-                      transform
-                      -translate-x-10
-                      translate-y-20
-                      scale-110
-                      z-10
-                    "
                     :alt="$t('section_slogan.multi_platform.title')"
+                    class="transform translate-x-[5%]"
                     provider="netlify"
                   />
                 </div>
@@ -342,70 +752,87 @@
           </div>
         </div>
         <div id="features" class="relative w-full pt-20 z-10 overflow-hidden">
-          <nuxt-img
-            src="/images/section-features-spotlight.png"
-            class="spotlight-features"
-            alt="spotlight"
-            provider="netlify"
-          />
-          <h2 class="mt-10 text-4xl text-center text-white">
+          <h2 class="mt-10 text-3xl md:text-4xll text-center text-white">
             {{ $t('section_features.title') }}
           </h2>
-          <div class="flex justify-center relative mt-20 px-40">
+          <div
+            class="
+              flex
+              justify-center
+              relative
+              mt-20
+              mb-32
+              2xl:mb-0
+              px-10
+              md:px-20
+              lg:px-40
+            "
+          >
+            <div
+              class="
+                absolute
+                bottom-0
+                w-[189rem]
+                h-[144.26rem]
+                transform
+                translate-y-[40%]
+              "
+            >
+              <nuxt-img
+                src="/images/section-features-spotlight.png"
+                class="opacity-50"
+                alt="spotlight"
+                provider="netlify"
+              />
+            </div>
             <ul class="flex flex-col">
               <li
                 v-for="feature in features"
                 :key="feature.key"
-                :class="`flex items-center w-full min-w-[28.125rem] max-w-[37.5rem] h-24 mt-5 pl-20 pr-5 rounded-lg ${
+                :class="`relative flex flex-col justify-center w-full min-w-md max-w-xl h-24 md:h-28 mt-5 pl-20 pr-5 rounded-lg ${
                   feature.isActive
                     ? 'bg-gradient-to-l from-white to-burj-khalifa-fountain'
                     : ''
-                }`"
+                } before:absolute before:left-0 before:top-1/2 before:block before:w-3 before:h-3 md:before:w-4 md:before:h-4 before:rounded-full before:transform before:translate-x-8 before:-translate-y-1/2 ${
+                  feature.isActive ? 'before:bg-retro-blue' : 'before:bg-white'
+                } `"
               >
-                <div
-                  :class="`relative before:absolute before:top-1/2 before:block before:w-4 before:h-4 before:rounded-full before:rounded-full before:transform before:-translate-x-12 before:-translate-y-1/2 ${
-                    feature.isActive
-                      ? 'before:bg-retro-blue'
-                      : 'before:bg-white'
+                <h3
+                  :class="`text-lg md:text-xl ${
+                    feature.isActive ? 'text-obsidian-shard' : 'text-white'
                   }`"
                 >
-                  <h3
-                    :class="`text-xl ${
-                      feature.isActive ? 'text-obsidian-shard' : 'text-white'
-                    }`"
-                  >
-                    {{ feature.title }}
-                  </h3>
-                  <p
-                    :class="`mt-2 text-lg ${
-                      feature.isActive ? 'text-patriot-blue' : 'text-accolade'
-                    }`"
-                  >
-                    {{ feature.description }}
-                  </p>
-                </div>
+                  {{ feature.title }}
+                </h3>
+                <p
+                  :class="`mt-2 md:text-lg ${
+                    feature.isActive ? 'text-patriot-blue' : 'text-accolade'
+                  }`"
+                >
+                  {{ feature.description }}
+                </p>
               </li>
             </ul>
             <div
+              v-if="$viewport.isGreaterThan('lg')"
               class="
-                flex
+                flex flex-shrink-0
                 justify-center
                 items-center
-                w-[37.5rem]
-                2xl:w-[43.75rem]
-                pl-20
-                flex-shrink-0
+                w-[34.09rem]
+                h-[47.21rem]
+                2xl:w-[42.62rem] 2xl:h-[59.02rem]
               "
             >
               <nuxt-img
                 src="images/section_features_illustration.png"
                 :alt="$t('section_features.features.sharing.title')"
                 class="
+                  scale-110
+                  2xl:scale-100
                   transform
                   translate-y-24
-                  2xl:translate-y-5
-                  scale-[1.2]
-                  2xl:scale-110
+                  2xl:translate-y-10
                 "
                 provider="netlify"
               />
@@ -416,52 +843,76 @@
               w-full
               mt-20
               pt-20
-              px-40
+              px-10
+              md:px-20
+              lg:px-40
               bg-gradient-to-r
               from-white
               to-burj-khalifa-fountain
             "
           >
-            <div id="access" class="flex relative w-full">
+            <div
+              id="access"
+              class="
+                flex flex-col
+                items-start
+                xl:flex-row xl:items-center
+                relative
+                w-full
+                -translate-y-20
+                md:translate-y-0
+              "
+            >
               <div class="flex justify-center items-center py-20">
-                <nuxt-img
-                  src="/images/section_team_early_access.png"
+                <div
                   class="
-                    w-[43.75rem]
-                    transform
-                    -translate-x-2
-                    translate-y-16
-                    scale-125
+                    w-[17.61rem]
+                    h-[15.80rem]
+                    md:w-[22.02rem] md:h-[19.76rem]
+                    xl:w-[27.53rem] xl:h-[24.71rem]
+                    2xl:w-[34.42rem] 2xl:h-[30.89rem]
                     z-10
                   "
-                  :alt="$t('section_slogan.no_compromises.title')"
-                  provider="netlify"
-                />
+                >
+                  <nuxt-img
+                    src="/images/section_team_early_access.png"
+                    class="ransform translate-x-[-25%] translate-y-10"
+                    :alt="$t('section_slogan.no_compromises.title')"
+                    provider="netlify"
+                  />
+                </div>
               </div>
               <div
                 class="
                   flex flex-col
                   justify-center
                   w-full
-                  py-20
-                  pl-44
+                  xl:py-20 xl:pl-44
                   2xl:pl-56
                 "
               >
-                <h3 class="text-4xl text-obsidian-shard">
+                <h3
+                  class="text-2xl md:text-4xl xl:text-right text-obsidian-shard"
+                >
                   {{ $t('section_early_access.title') }}
                 </h3>
-                <p class="mt-10 text-lg text-patriot-blue">
+                <p class="mt-10 md:text-lg xl:text-right text-patriot-blue">
                   {{ $t('section_early_access.description.one') }}
                 </p>
-                <p class="mt-5 text-lg text-patriot-blue">
+                <p class="mt-5 md:text-lg xl:text-right text-patriot-blue">
                   {{ $t('section_early_access.description.two') }}
                 </p>
-                <div class="flex items-center flex-wrap mt-12">
-                  <div class="relative w-44 h-12 mt-4 mr-6">
+                <div class="flex mt-4 xl:ml-auto">
+                  <div class="relative w-40 h-10 md:w-44 md:h-12 mt-14">
                     <nuxt-img
                       src="/images/shadow-button-green.png"
-                      class="absolute w-96 transform -translate-y-3 scale-150"
+                      class="
+                        absolute
+                        w-96
+                        transform
+                        -translate-y-4
+                        scale-[1.55]
+                      "
                       alt="shadow"
                       provider="netlify"
                     />
@@ -478,7 +929,8 @@
                         h-full
                         rounded-3xl
                         bg-cool-green
-                        text-white
+                        text-white text-sm
+                        md:text-base
                         font-bold
                         text-center
                         transition
@@ -500,12 +952,15 @@
                       flex
                       justify-center
                       items-center
-                      w-52
-                      h-12
-                      mt-4
+                      w-48
+                      h-10
+                      md:w-52 md:h-12
+                      mt-14
+                      ml-6
                       rounded-3xl
                       bg-white
-                      text-retro-blue
+                      text-retro-blue text-sm
+                      md:text-base
                       font-bold
                       text-center
                       transition
@@ -522,12 +977,12 @@
                 </div>
               </div>
             </div>
-            <div id="team" class="max-w-[45%] mt-20 py-20">
+            <div id="team" class="relative md:max-w-[45%] mt-10 md:mt-20 py-20">
               <div class="w-full">
-                <h3 class="text-4xl text-obsidian-shard">
+                <h3 class="text-2xl md:text-4xl text-obsidian-shard">
                   {{ $t('section_team.title') }}
                 </h3>
-                <p class="mt-10 text-lg text-patriot-blue">
+                <p class="mt-10 md:text-lg text-patriot-blue">
                   {{ $t('section_team.description') }}
                 </p>
                 <a
@@ -538,12 +993,14 @@
                     flex
                     justify-center
                     items-center
-                    w-44
-                    h-12
+                    w-48
+                    h-10
+                    md:w-52 md:h-12
                     mt-14
                     rounded-3xl
                     bg-white
-                    text-retro-blue
+                    text-retro-blue text-sm
+                    md:text-base
                     font-bold
                     text-center
                     transition
@@ -559,21 +1016,27 @@
                 </a>
               </div>
             </div>
-            <div class="relative">
-              <div v-if="swiper" class="flex absolute right-0">
-                <nuxt-img
-                  src="/images/section-team-shape.svg"
-                  class="absolute section-team-shape"
-                  alt="shape"
-                  provider="netlify"
-                />
+            <div class="relative mt-20 md:mt-0">
+              <div
+                v-if="swiper"
+                class="
+                  flex
+                  absolute
+                  right-0
+                  transform
+                  -translate-y-20
+                  md:-translate-y-36
+                "
+              >
                 <button
                   :class="`
                     flex
                     justify-center
                     items-center
-                    w-20
-                    h-20
+                    w-14
+                    h-14
+                    md:w-20
+                    md:h-20
                     mr-5
                     rounded-full
                     bg-white
@@ -591,13 +1054,11 @@
                         ? 'focus:bg-extraordinary-abundance-of-tinge'
                         : ''
                     }
-                    shadow-sm
-                    transform
-                    -translate-y-48`"
+                    shadow-sm`"
                   @click="prev"
                 >
                   <Arrow
-                    :class="`w-9 h-9 stroke-current text-accolade  ${
+                    :class="`w-6 h-6 md:w-9 md:h-9 stroke-current text-accolade  ${
                       swiper.activeIndex !== 0 ? 'text-retro-blue' : ''
                     }`"
                   />
@@ -607,8 +1068,10 @@
                     flex
                     justify-center
                     items-center
-                    w-20
-                    h-20
+                    w-14
+                    h-14
+                    md:w-20
+                    md:h-20
                     rounded-full
                     bg-white
                     transition
@@ -625,13 +1088,11 @@
                         ? 'focus:bg-extraordinary-abundance-of-tinge'
                         : ''
                     }
-                    shadow-sm
-                    transform
-                    -translate-y-48`"
+                    shadow-sm`"
                   @click="next"
                 >
                   <Arrow
-                    :class="`w-9 h-9 stroke-current text-accolade rotate-180 ${
+                    :class="`w-6 h-6 md:w-9 md:h-9 stroke-current text-accolade rotate-180 ${
                       swiper.activeIndex !== team.length - slidesPerView
                         ? 'text-retro-blue'
                         : ''
@@ -639,7 +1100,7 @@
                   />
                 </button>
               </div>
-              <div ref="swiper" class="swiper mt-40">
+              <div ref="swiper" class="swiper transform translate-y-10">
                 <div class="swiper-wrapper">
                   <div
                     v-for="teamMember in team"
@@ -651,22 +1112,33 @@
                     >
                       <nuxt-img
                         :src="teamMember.image"
-                        class="w-64 h-64"
+                        class="
+                          w-40
+                          h-40
+                          md:w-48 md:h-48
+                          xl:w-56 xl:h-56
+                          2xl:w-64 2xl:h-64
+                        "
                         :alt="teamMember.name"
                         provider="netlify"
                       />
                       <h2
                         class="
-                          text-xl
+                          text-lg
+                          md:text-xl
                           font-medium
                           text-center text-obsidian-shard
                         "
                       >
                         {{ teamMember.name }}
                       </h2>
-                      <p class="mt-2 text-lg text-center text-patriot-blue">
-                        {{ teamMember.occupation }}
-                      </p>
+                      <div class="flex justify-center h-16">
+                        <p
+                          class="mt-2 md:text-lg text-center text-patriot-blue"
+                        >
+                          {{ teamMember.occupation }}
+                        </p>
+                      </div>
                       <ul class="flex justify-center items-center">
                         <li
                           v-for="social in teamMember.socials"
@@ -677,7 +1149,7 @@
                             :href="social.link"
                             target="_blank"
                             rel="noreferrer"
-                            class="p-4"
+                            class="p-2"
                           >
                             <Github
                               v-if="social.key === 'github'"
@@ -696,10 +1168,30 @@
               </div>
             </div>
             <div class="relative w-full h-[10rem] mt-56">
-              <div class="divider-footer">
+              <div
+                class="
+                  absolute
+                  left-1/2
+                  h-40
+                  transform
+                  -translate-x-1/2
+                  translate-y-[1px]
+                  bg-obsidian-shard
+                  overflow-hidden
+                  divider-footer
+                "
+              >
                 <nuxt-img
                   src="/images/footer-spotlight.png"
-                  class="scale-75 transform -translate-y-16"
+                  class="
+                    scale-75
+                    transform
+                    -translate-y-6 -translate-x-20
+                    xs:-translate-y-8 xs:-translate-x-32
+                    md:-translate-y-14 md:-translate-x-56
+                    lg:-translate-y-16 lg:-translate-x-40
+                    2xl:-translate-x-20
+                  "
                   alt="spotlight"
                   provider="netlify"
                 />
@@ -707,68 +1199,114 @@
             </div>
           </div>
         </div>
-        <footer class="relative pb-40 px-40 2xl:px-72">
-          <div class="flex justify-between items-center">
-            <div class="flex items-center">
-              <nuxt-img
-                src="/images/logo.png"
-                :alt="$t('satellite_logo')"
-                class="w-60 z-10"
-                provider="netlify"
-              />
-              <nav class="ml-20 transform translate-y-3">
-                <ul class="flex items-center">
-                  <li class="mr-14">
-                    <a
-                      href="https://satellite.one/"
-                      target="_blank"
-                      rel="noreferrer"
-                      class="text-sm text-white link-hover"
-                      >{{ $t('footer.nav.app') }}</a
-                    >
-                  </li>
-                  <li class="mr-14">
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noreferrer"
-                      class="text-sm text-white link-hover"
-                      >{{ $t('footer.nav.careers') }}</a
-                    >
-                  </li>
-                  <li class="mr-14">
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noreferrer"
-                      class="text-sm text-white link-hover"
-                      >{{ $t('footer.nav.contact_us') }}</a
-                    >
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <ul class="flex items-center transform translate-y-2">
-              <li class="flex justify-center items-center w-10 mr-5 social">
+        <footer
+          class="
+            relative
+            pb-36
+            px-10
+            md:px-20
+            lg:px-40
+            2xl:px-72
+            transform
+            -translate-y-20
+            xl:-translate-y-10
+            z-10
+          "
+        >
+          <div class="flex flex-wrap items-end relative w-full">
+            <nuxt-img
+              src="/images/logo.png"
+              :alt="$t('satellite_logo')"
+              class="w-60 mr-20 mt-10 transform translate-y-2 z-10"
+              provider="netlify"
+            />
+            <nav class="w-full xl:w-auto mt-5 mr-auto">
+              <ul class="flex flex-wrap items-center">
+                <li class="mt-5 w-full xs:w-auto xs:mr-14">
+                  <a
+                    href="https://satellite.one/"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="text-sm text-white link-hover"
+                    >{{ $t('footer.nav.app') }}</a
+                  >
+                </li>
+                <li class="mt-5 w-full xs:w-auto xs:mr-14">
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="text-sm text-white link-hover"
+                    >{{ $t('footer.nav.careers') }}</a
+                  >
+                </li>
+                <li class="mt-5 w-full xs:w-auto xs:mr-14">
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="text-sm text-white link-hover"
+                    >{{ $t('footer.nav.contact_us') }}</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <ul class="flex items-center mt-10">
+              <li
+                class="
+                  flex
+                  justify-center
+                  items-center
+                  w-10
+                  mr-5
+                  transition
+                  duration-300
+                  ease-linear
+                  hover:brightness-0 hover:invert
+                "
+              >
                 <a
                   href="https://twitter.com/satellite_im"
                   target="_blank"
                   rel="noreferrer"
                   class="flex justify-center items-center w-full"
                 >
-                  <Twitter class="w-7 h-7" />
+                  <Twitter class="w-6 h-6 fill-current text-accolade" />
                 </a>
               </li>
-              <li class="flex justify-center items-center w-10 mr-5 social">
+              <li
+                class="
+                  flex
+                  justify-center
+                  items-center
+                  w-10
+                  mr-5
+                  transition
+                  duration-300
+                  ease-linear
+                  hover:brightness-0 hover:invert
+                "
+              >
                 <a
                   href="https://www.linkedin.com/company/satellite-im"
                   target="_blank"
                   rel="noreferrer"
                   class="flex justify-center items-center w-full"
-                  ><Linkedin class="w-6 h-6"
+                  ><Linkedin class="w-6 h-6 fill-current text-accolade"
                 /></a>
               </li>
-              <li class="flex justify-center items-center w-10 social">
+              <li
+                class="
+                  flex
+                  justify-center
+                  items-center
+                  w-10
+                  transition
+                  duration-300
+                  ease-linear
+                  hover:brightness-0 hover:invert
+                "
+              >
                 <a
                   href="https://github.com/Satellite-im"
                   target="_blank"
@@ -779,7 +1317,7 @@
               </li>
             </ul>
           </div>
-          <p class="mt-10 text-sm text-accolade">
+          <p class="mt-20 text-sm text-accolade">
             {{ $t('footer.copyright') }}
           </p>
         </footer>
@@ -799,6 +1337,8 @@ import Twitter from '~/static/icons/twitter.svg?inline'
 import Linkedin from '~/static/icons/linkedin.svg?inline'
 import Github from '~/static/icons/github.svg?inline'
 import Arrow from '~/static/icons/arrow.svg?inline'
+import Menu from '~/static/icons/menu.svg?inline'
+import Close from '~/static/icons/close.svg?inline'
 
 import 'simplebar/dist/simplebar.min.css'
 import 'swiper/swiper-bundle.css'
@@ -813,6 +1353,8 @@ export default {
     Linkedin,
     Github,
     Arrow,
+    Menu,
+    Close,
   },
   data() {
     return {
@@ -1014,6 +1556,11 @@ export default {
       slidesPerView: 1,
     }
   },
+  computed: {
+    isSidebarOpen() {
+      return this.$store.state.isSidebarOpen
+    },
+  },
   mounted() {
     const vm = this
 
@@ -1022,13 +1569,13 @@ export default {
     this.swiper = new Swiper(vm.$refs.swiper, {
       slidesPerView: this.slidesPerView,
       breakpoints: {
-        768: {
+        420: {
           slidesPerView: 2,
         },
         1024: {
           slidesPerView: 3,
         },
-        1480: {
+        1600: {
           slidesPerView: 4,
         },
       },
@@ -1055,6 +1602,12 @@ export default {
           behavior: 'smooth',
         })
       }
+    },
+    openSidebar() {
+      this.$store.commit('openSidebar')
+    },
+    closeSidebar() {
+      this.$store.commit('closeSidebar')
     },
   },
 }
