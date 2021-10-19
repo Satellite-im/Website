@@ -122,7 +122,7 @@ export default {
   },
   viewport: {
     breakpoints: {
-      xs: 320,
+      xs: 420,
       sm: 640,
       md: 768,
       lg: 1024,
