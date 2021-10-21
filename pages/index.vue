@@ -21,16 +21,16 @@
               "
             >
               <nuxt-img
-                src="/images/logo.png"
+                src="/images/logo.svg"
                 :alt="$t('satellite_logo')"
-                class="w-44 z-10"
+                class="w-[11.98rem] z-10"
                 provider="netlify"
               />
               <nav
                 v-if="$viewport.isGreaterThan('md')"
                 class="relative w-full h-full px-16 text-white"
               >
-                <ul class="flex absolute bottom-0 mb-1.5">
+                <ul class="flex absolute bottom-0 mb-2">
                   <li
                     v-for="item in navItems"
                     :key="item.key"
@@ -144,7 +144,14 @@
                       class="flex justify-center items-center w-full"
                     >
                       <Twitter
-                        class="w-5 h-5 fill-current text-obsidian-shard"
+                        class="
+                          w-5
+                          h-5
+                          fill-current
+                          text-obsidian-shard
+                          transform
+                          translate-y-[1px]
+                        "
                       />
                     </a>
                   </li>
@@ -359,20 +366,13 @@
                   :href="partner.link"
                   target="_blank"
                   rel="noreferrer"
-                  class="
-                    transition
-                    duration-300
-                    ease-linear
-                    hover:brightness-0 hover:invert
-                    flex-shrink-0
-                  "
+                  :class="`flex-shrink-0 cursor-pointer partner-${partner.key}-link`"
                 >
-                  <nuxt-img
-                    :src="partner.logo"
-                    :class="`partner-${partner.key}`"
-                    :alt="partner.key"
-                    provider="netlify"
-                  />
+                  <component
+                    :is="partner.icon"
+                    :class="`partner-${partner.key}-img`"
+                  >
+                  </component>
                 </a>
               </li>
             </ul>
@@ -1143,23 +1143,42 @@
                         <li
                           v-for="social in teamMember.socials"
                           :key="social.key"
-                          class="mx-2"
+                          class="mx-4 w-10 h-10"
                         >
                           <a
                             :href="social.link"
                             target="_blank"
                             rel="noreferrer"
-                            class="p-2"
+                            class="w-full h-full"
                           >
-                            <Github
-                              v-if="social.key === 'github'"
+                            <Linkedin
+                              v-if="social.key === 'linkedin'"
                               class="
-                                w-10
-                                h-10
+                                w-7
+                                h-7
                                 fill-current
                                 text-obsidian-shard
+                                transform
+                                -translate-y-[1px]
                               "
-                          /></a>
+                            />
+                            <Github
+                              v-if="social.key === 'github'"
+                              class="w-7 h-7 fill-current text-obsidian-shard"
+                            />
+                            <Website
+                              v-if="social.key === 'website'"
+                              class="
+                                w-7
+                                h-7
+                                fill-current
+                                text-obsidian-shard
+                                scale-110
+                                transform
+                                translate-y-[2px]
+                              "
+                            />
+                          </a>
                         </li>
                       </ul>
                     </div>
@@ -1215,9 +1234,9 @@
         >
           <div class="flex flex-wrap items-end relative w-full">
             <nuxt-img
-              src="/images/logo.png"
+              src="/images/logo.svg"
               :alt="$t('satellite_logo')"
-              class="w-60 mr-20 mt-10 transform translate-y-2 z-10"
+              class="w-[14.37rem] mr-20 mt-10 transform translate-y-2 z-10"
               provider="netlify"
             />
             <nav class="w-full xl:w-auto mt-5 mr-auto">
@@ -1271,7 +1290,16 @@
                   rel="noreferrer"
                   class="flex justify-center items-center w-full"
                 >
-                  <Twitter class="w-6 h-6 fill-current text-accolade" />
+                  <Twitter
+                    class="
+                      w-6
+                      h-6
+                      fill-current
+                      text-accolade
+                      transform
+                      translate-y-[1px]
+                    "
+                  />
                 </a>
               </li>
               <li
@@ -1330,6 +1358,14 @@
 import simplebar from 'simplebar-vue'
 import Swiper from 'swiper/swiper-bundle'
 
+import PartnerMulticoinCapital from '~/static/icons/partner-multicoin-capital.svg?inline'
+import PartnerIdeoColab from '~/static/icons/partner-ideo-colab.svg?inline'
+import PartnerFramework from '~/static/icons/partner-framework.svg?inline'
+import PartnerSolana from '~/static/icons/partner-solana.svg?inline'
+import PartnerTextile from '~/static/icons/partner-textile.svg?inline'
+import PartnerJacketRiver from '~/static/icons/partner-jacket-river.svg?inline'
+import PartnerKnobs from '~/static/icons/partner-knobs.svg?inline'
+
 import StatStream from '~/static/icons/stat-stream.svg?inline'
 import StatChat from '~/static/icons/stat-chat.svg?inline'
 import StatFileShares from '~/static/icons/stat-file-shares.svg?inline'
@@ -1339,6 +1375,7 @@ import Github from '~/static/icons/github.svg?inline'
 import Arrow from '~/static/icons/arrow.svg?inline'
 import Menu from '~/static/icons/menu.svg?inline'
 import Close from '~/static/icons/close.svg?inline'
+import Website from '~/static/icons/website.svg?inline'
 
 import 'simplebar/dist/simplebar.min.css'
 import 'swiper/swiper-bundle.css'
@@ -1355,6 +1392,7 @@ export default {
     Arrow,
     Menu,
     Close,
+    Website,
   },
   data() {
     return {
@@ -1384,37 +1422,37 @@ export default {
         {
           key: 'multicoin-capital',
           logo: '/images/partner-multicoin-capital.svg',
-          link: 'https://multicoin.capital/',
+          icon: PartnerMulticoinCapital,
         },
         {
           key: 'ideo-colab',
           logo: '/images/partner-ideo-colab.svg',
-          link: 'https://www.ideocolab.com/',
+          icon: PartnerIdeoColab,
         },
         {
           key: 'framework',
           logo: '/images/partner-framework.svg',
-          link: 'https://framework.ventures/',
+          icon: PartnerFramework,
         },
         {
           key: 'solana',
           logo: '/images/partner-solana.svg',
-          link: 'https://solana.com/',
+          icon: PartnerSolana,
         },
         {
           key: 'textile',
           logo: '/images/partner-textile.svg',
-          link: 'https://www.textile.io/',
+          icon: PartnerTextile,
         },
         {
           key: 'jacket-river',
           logo: '/images/partner-jacket-river.svg',
-          link: 'https://www.jacketriver.com/',
+          icon: PartnerJacketRiver,
         },
         {
           key: 'knobs',
           logo: '/images/partner-knobs.svg',
-          link: 'https://knobs.it/en/knobs-en/',
+          icon: PartnerKnobs,
         },
       ],
       slogans: [
@@ -1484,8 +1522,16 @@ export default {
           occupation: this.$t('section_team.team.matt_occupation'),
           socials: [
             {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/matthew-wisniewski-a959a041/',
+            },
+            {
               key: 'github',
               link: 'https://github.com/RetroPronghorn',
+            },
+            {
+              key: 'website',
+              link: 'https://retropronghorn.github.io/',
             },
           ],
         },
@@ -1494,35 +1540,58 @@ export default {
           image: '/images/team_manuel.png',
           name: 'Manuel Tumiati',
           occupation: this.$t('section_team.team.manuel_occupation'),
-          socials: [{ key: 'github', link: 'https://github.com/iltumio' }],
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/manuel-tumiati/',
+            },
+            { key: 'github', link: 'https://github.com/iltumio' },
+            { key: 'website', link: 'https://iltumio.dev/' },
+          ],
         },
         {
           key: 'kathy',
           image: '/images/team_kathy.png',
           name: 'Kathy Chan',
           occupation: this.$t('section_team.team.kathy_occupation'),
-          socials: [{ key: 'github', link: 'https://github.com/KemoPaw' }],
+          socials: [
+            { key: 'linkedin', link: 'https://www.linkedin.com/in/kemopaw/' },
+            { key: 'github', link: 'https://github.com/KemoPaw' },
+          ],
         },
         {
           key: 'lauren',
           image: '/images/team_lauren.png',
           name: 'Lauren Harrington',
           occupation: this.$t('section_team.team.lauren_occupation'),
-          socials: [{ key: 'github', link: '' }],
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/lauren-harrington-022430160/',
+            },
+            { key: 'website', link: 'https://imeatincookies.artstation.com/' },
+          ],
         },
         {
           key: 'jason',
           image: '/images/team_jason.png',
           name: 'Jason Panay',
           occupation: this.$t('section_team.team.jason_occupation'),
-          socials: [{ key: 'github', link: 'https://github.com/jpanay' }],
+          socials: [
+            { key: 'linkedin', link: 'https://www.linkedin.com/in/jpanay/' },
+            { key: 'github', link: 'https://github.com/jpanay' },
+          ],
         },
         {
           key: 'chris',
           image: '/images/team_chris.png',
-          name: 'Chris',
+          name: 'Chris Hogan',
           occupation: this.$t('section_team.team.chris_occupation'),
           socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/wanderinghogan/',
+            },
             {
               key: 'github',
               link: 'https://github.com/wanderinghogan',
@@ -1532,23 +1601,39 @@ export default {
         {
           key: 'dina',
           image: '/images/team_dina.png',
-          name: 'Dina',
+          name: 'Dina Brodsky',
           occupation: this.$t('section_team.team.dina_occupation'),
-          socials: [{ key: 'github', link: '' }],
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/dina-brodsky-015931ab/',
+            },
+            { key: 'website', link: 'https://www.dinabrodsky.com/' },
+          ],
         },
         {
           key: 'tom',
           image: '/images/team_tom.png',
-          name: 'Tom',
+          name: 'Tom McArdle',
           occupation: this.$t('section_team.team.tom_occupation'),
-          socials: [{ key: 'github', link: '' }],
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/tom-m-47b39a2a/',
+            },
+          ],
         },
         {
           key: 'jerome',
           image: '/images/team_jerome.png',
-          name: 'Jerome',
+          name: 'Jerome Aceti',
           occupation: this.$t('section_team.team.jerome_occupation'),
-          socials: [{ key: 'github', link: '' }],
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/jeromeaceti/',
+            },
+          ],
         },
       ],
       simplebar: null,

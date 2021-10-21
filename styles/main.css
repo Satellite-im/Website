@@ -58,12 +58,16 @@ body {
   animation: slideIn 300ms ease;
 }
 
-.partner-multicoin-capital,
-.partner-ideo-colab,
-.partner-framework,
-.partner-solana,
-.partner-jacket-river,
-.partner-knobs {
+.partner-multicoin-capital-img,
+.partner-ideo-colab-img,
+.partner-framework-img,
+.partner-solana-img,
+.partner-jacket-river-img,
+.partner-knobs-img,
+.partner-textile-img {
+  transition-property: filter;
+  transition-duration: 300ms;
+  transition-timing-function: linear;
   transform: scale(0.5);
 
   @media screen and (min-width: 768px) {
@@ -75,16 +79,39 @@ body {
   }
 }
 
-.partner-textile {
-  transform: scale(0.25);
-
+.partner-textile-img {
+  transform: scale(0.4);
   @media screen and (min-width: 768px) {
-    transform: scale(0.35);
+    transform: scale(0.5);
   }
 
   @media screen and (min-width: 1280px) {
-    transform: scale(0.45);
+    transform: scale(0.7);
   }
+}
+
+.partner-multicoin-capital-link,
+.partner-ideo-colab-link,
+.partner-framework-link,
+.partner-jacket-river-link,
+.partner-knobs-link,
+.partner-solana-link {
+  &:hover {
+    filter: brightness(0) invert(1);
+  }
+}
+
+.partner-solana-link,
+.partner-textile-link {
+  &:hover {
+    .text {
+      filter: brightness(0) invert(1);
+    }
+  }
+}
+
+.partner-textile-link:hover .text {
+  filter: brightness(0) invert(1);
 }
 
 .divider {
