@@ -1,5 +1,13 @@
 {
   "name": "Satellite.im",
+  "short_name": "Satellite.im",
+  "display": "standalone",
+  "background_color": "#16161f",
+  "theme_color": "#ffffff",
+  "description": "Satellite.im - Multiplatform Messaging, Trackers Not Included.",
+  "scope": "https://satellite.im/",
+  "start_url": "https://satellite.im/",
+  "categories": ["chat", "social", "nft", "blockchain"],
   "icons": [
     {
       "src": "/android-icon-36x36.png",
