@@ -1,24 +1,22 @@
 <template>
   <div id="app">
-    <main class="w-full h-screen bg-obsidian-shard overflow-hidden">
+    <main class="w-full h-screen overflow-hidden bg-obsidian-shard">
       <simplebar ref="simplebar" class="absolute w-full h-full">
-        <div class="w-full overflow-hidden z-10">
+        <div class="z-10 w-full overflow-hidden">
           <nuxt-img
             src="/images/page-start-spotlight.png"
-            class="absolute transform translate-y-[-35%] translate-x-[-35%]"
+            class="
+              absolute
+              transform
+              translate-y-[-35%] translate-x-[-35%]
+              pointer-events-none
+            "
             alt="spotlight"
             provider="netlify"
           />
           <header class="flex items-center w-full h-24 px-10 md:px-20 lg:px-40">
             <div
-              class="
-                flex
-                justify-between
-                lg:justify-start
-                items-center
-                w-full
-                h-12
-              "
+              class="flex items-center justify-between w-full h-12  lg:justify-start"
             >
               <nuxt-img
                 src="/images/logo.svg"
@@ -30,17 +28,11 @@
                 v-if="$viewport.isGreaterThan('md')"
                 class="relative w-full h-full px-16 text-white"
               >
-                <ul class="flex absolute bottom-0 mb-2">
+                <ul class="absolute bottom-0 flex mb-2">
                   <li
                     v-for="item in navItems"
                     :key="item.key"
-                    class="
-                      mx-8
-                      first:ml-0
-                      last:mr-0
-                      text-sm text-center
-                      align-middle
-                    "
+                    class="mx-8 text-sm text-center align-middle  first:ml-0 last:mr-0"
                   >
                     <button class="link-hover" @click="scroll(item.anchor)">
                       {{ item.label }}
@@ -49,33 +41,20 @@
                 </ul>
               </nav>
               <button v-if="$viewport.isLessThan('lg')" @click="openSidebar()">
-                <Menu class="w-8 h-8 fill-current text-white" />
+                <Menu class="w-8 h-8 text-white fill-current" />
               </button>
             </div>
           </header>
           <div
             v-if="isSidebarOpen && $viewport.isLessThan('lg')"
-            class="fixed top-0 left-0 w-full h-full z-10"
+            class="fixed top-0 left-0 z-10 w-full h-full"
           >
             <div
-              class="absolute w-full h-full opacity-90 bg-black sidebar-overlay"
+              class="absolute w-full h-full bg-black opacity-90 sidebar-overlay"
               @click="closeSidebar()"
             ></div>
             <aside
-              class="
-                absolute
-                top-0
-                right-0
-                w-10/12
-                max-w-sm
-                h-full
-                px-10
-                md:px-20
-                bg-gradient-to-r
-                from-white
-                to-burj-khalifa-fountain
-                sidebar
-              "
+              class="absolute top-0 right-0 w-10/12 h-full max-w-sm px-10  md:px-20 bg-gradient-to-r from-white to-burj-khalifa-fountain sidebar"
             >
               <header class="flex items-center w-full h-24">
                 <button class="ml-auto" @click="closeSidebar()">
@@ -124,7 +103,7 @@
                 </ul>
               </simplebar>
               <footer class="flex items-center w-full h-24">
-                <ul class="flex justify-between items-center w-full">
+                <ul class="flex items-center justify-between w-full">
                   <li
                     class="
                       flex
@@ -141,7 +120,7 @@
                       href="https://twitter.com/satellite_im"
                       target="_blank"
                       rel="noreferrer"
-                      class="flex justify-center items-center w-full"
+                      class="flex items-center justify-center w-full"
                     >
                       <Twitter
                         class="
@@ -171,7 +150,7 @@
                       href="https://www.linkedin.com/company/satellite-im"
                       target="_blank"
                       rel="noreferrer"
-                      class="flex justify-center items-center w-full"
+                      class="flex items-center justify-center w-full"
                       ><Linkedin
                         class="w-5 h-5 fill-current text-obsidian-shard"
                     /></a>
@@ -192,7 +171,7 @@
                       href="https://github.com/Satellite-im"
                       target="_blank"
                       rel="noreferrer"
-                      class="flex justify-center items-center w-full"
+                      class="flex items-center justify-center w-full"
                       ><Github class="w-5 h-5 fill-current text-obsidian-shard"
                     /></a>
                   </li>
@@ -201,15 +180,7 @@
             </aside>
           </div>
           <div
-            class="
-              flex
-              justify-between
-              py-14
-              md:py-28
-              px-10
-              md:px-20 md:pl-20
-              lg:pr-0 lg:pl-40
-            "
+            class="flex justify-between px-10  py-14 md:py-28 md:px-20 md:pl-20 lg:pr-0 lg:pl-40"
           >
             <div
               class="
@@ -222,22 +193,29 @@
                 2xl:pr-4
               "
             >
-              <h1 class="text-4xl md:text-6xl text-white">
+              <h1 class="text-4xl text-white md:text-6xl">
                 {{ $t('section_hero.title') }}
               </h1>
-              <p class="mt-6 md:text-lg text-justify text-accolade">
+              <p class="mt-6 text-justify md:text-lg text-accolade">
                 {{ $t('section_hero.description') }}
               </p>
-              <div class="flex justify-between items-center flex-wrap">
-                <StatStream class="w-12 md:w-16 mt-10 mr-10" />
-                <StatChat class="w-36 md:w-44 mt-10 mr-10" />
-                <StatFileShares class="w-20 md:w-24 mt-10" />
+              <div class="flex flex-wrap items-center justify-between">
+                <StatStream class="w-12 mt-10 mr-10 md:w-16" />
+                <StatChat class="mt-10 mr-10 w-36 md:w-44" />
+                <StatFileShares class="w-20 mt-10 md:w-24" />
               </div>
               <div class="flex items-center mt-12">
-                <div class="relative w-40 h-10 md:w-44 md:h-12 mt-4 mr-6">
+                <div class="relative w-40 h-10 mt-4 mr-6 md:w-44 md:h-12">
                   <nuxt-img
                     src="/images/shadow-button-green.png"
-                    class="absolute w-96 transform -translate-y-4 scale-[1.55]"
+                    class="
+                      absolute
+                      w-96
+                      transform
+                      -translate-y-4
+                      scale-[1.55]
+                      pointer-events-none
+                    "
                     alt="shadow"
                     provider="netlify"
                   />
@@ -245,26 +223,7 @@
                     href="https://satellite.us1.list-manage.com/subscribe?u=271ef1cd37ac53b33d0c41e8a&id=7f7b767432"
                     target="_blank"
                     rel="noreferrer"
-                    class="
-                      absolute
-                      flex
-                      justify-center
-                      items-center
-                      w-full
-                      h-full
-                      rounded-3xl
-                      bg-cool-green
-                      text-white text-sm
-                      md:text-base
-                      font-bold
-                      text-center
-                      transition
-                      duration-300
-                      ease-linear
-                      outline-none
-                      hover:bg-spandex-green
-                      focus:bg-spandex-green
-                    "
+                    class="absolute flex items-center justify-center w-full h-full text-sm font-bold text-center text-white transition duration-300 ease-linear outline-none  rounded-3xl bg-cool-green md:text-base hover:bg-spandex-green focus:bg-spandex-green"
                   >
                     {{ $t('sign_up') }}
                   </a>
@@ -273,28 +232,7 @@
                   href="https://satellite.one/"
                   target="_blank"
                   rel="noreferrer"
-                  class="
-                    flex
-                    justify-center
-                    items-center
-                    w-48
-                    h-10
-                    md:w-52 md:h-12
-                    mt-4
-                    rounded-3xl
-                    bg-white
-                    text-retro-blue text-sm
-                    md:text-base
-                    font-bold
-                    text-center
-                    transition
-                    duration-300
-                    ease-linear
-                    outline-none
-                    shadow-lg
-                    hover:bg-extraordinary-abundance-of-tinge
-                    focus:bg-extraordinary-abundance-of-tinge
-                  "
+                  class="flex items-center justify-center w-48 h-10 mt-4 text-sm font-bold text-center transition duration-300 ease-linear bg-white shadow-lg outline-none  md:w-52 md:h-12 rounded-3xl text-retro-blue md:text-base hover:bg-extraordinary-abundance-of-tinge focus:bg-extraordinary-abundance-of-tinge"
                 >
                   {{ $t('open_in_browser') }}
                 </a>
@@ -343,24 +281,16 @@
             </div>
           </div>
           <div
-            class="w-full text-white mt-20 2xl:mt-40 px-10 md:px-20 lg:px-40"
+            class="w-full px-10 mt-20 text-white 2xl:mt-40 md:px-20 lg:px-40"
           >
             <h2 class="text-lg md:text-xl">
               {{ $t('our_partners').toUpperCase() }}
             </h2>
-            <ul class="flex justify-center items-center flex-wrap w-full mt-4">
+            <ul class="flex flex-wrap items-center justify-center w-full mt-4">
               <li
                 v-for="partner in partners"
                 :key="partner.key"
-                class="
-                  flex
-                  justify-center
-                  w-1/2
-                  sm:w-1/3
-                  lg:w-1/4
-                  my-5
-                  md:my-10
-                "
+                class="flex justify-center w-1/2 my-5  sm:w-1/3 lg:w-1/4 md:my-10"
               >
                 <a
                   :href="partner.link"
@@ -391,44 +321,20 @@
           "
         ></div>
         <div
-          class="
-            w-full
-            pt-40
-            px-10
-            md:px-20
-            lg:px-40
-            bg-gradient-to-r
-            from-white
-            to-burj-khalifa-fountain
-          "
+          class="w-full px-10 pt-40  md:px-20 lg:px-40 bg-gradient-to-r from-white to-burj-khalifa-fountain"
         >
           <div class="w-full py-20">
-            <h2 class="text-3xl md:text-4xl text-center text-obsidian-shard">
+            <h2 class="text-3xl text-center md:text-4xl text-obsidian-shard">
               {{ $t('section_meet.title') }}
             </h2>
-            <ul class="flex justify-center items-center flex-wrap w-full">
+            <ul class="flex flex-wrap items-center justify-center w-full">
               <li
                 v-for="slogan in slogans"
                 :key="slogan.key"
-                class="
-                  flex flex-col
-                  justify-center
-                  items-center
-                  w-full
-                  sm:w-1/2
-                  xl:w-1/4
-                  mt-20
-                "
+                class="flex flex-col items-center justify-center w-full mt-20  sm:w-1/2 xl:w-1/4"
               >
                 <div
-                  class="
-                    flex
-                    justify-center
-                    items-center
-                    w-36
-                    h-36
-                    md:w-48 md:h-48
-                  "
+                  class="flex items-center justify-center  w-36 h-36 md:w-48 md:h-48"
                 >
                   <nuxt-img
                     :src="`/images/section-meet-feature-${slogan.key}.png`"
@@ -438,13 +344,7 @@
                   />
                 </div>
                 <p
-                  class="
-                    text-lg
-                    md:text-xl
-                    text-center
-                    font-medium
-                    text-obsidian-shard
-                  "
+                  class="text-lg font-medium text-center  md:text-xl text-obsidian-shard"
                 >
                   {{ slogan.label }}
                 </p>
@@ -452,7 +352,7 @@
             </ul>
           </div>
         </div>
-        <div id="about" class="relative w-full pt-40 z-10 overflow-hidden">
+        <div id="about" class="relative z-10 w-full pt-40 overflow-hidden">
           <div
             v-if="$viewport.isLessThan('md')"
             class="
@@ -504,7 +404,9 @@
               z-10
             "
           >
-            <div class="absolute transform translate-x-[-50%]">
+            <div
+              class="absolute transform translate-x-[-50%] pointer-events-none"
+            >
               <nuxt-img
                 src="/images/section-slogan-spotlight.png"
                 class="scale-[1.65] transform translate-y-16 lg:translate-y-24"
@@ -514,45 +416,18 @@
             </div>
             <nuxt-img
               src="/images/section-slogan-illustration.png"
-              class="
-                relative
-                w-full
-                h-full
-                transform
-                -translate-x-10
-                translate-y-5
-              "
+              class="relative w-full h-full transform -translate-x-10 translate-y-5 "
               :alt="$t('app_illustration')"
               provider="netlify"
             />
           </div>
           <h2
-            class="
-              absolute
-              top-0
-              w-full
-              px-10
-              md:px-20
-              lg:px-40
-              m-auto
-              text-3xl
-              md:text-4xl
-              text-white text-center
-              transform
-              translate-y-24
-              z-10
-            "
+            class="absolute top-0 z-10 w-full px-10 m-auto text-3xl text-center text-white transform translate-y-24  md:px-20 lg:px-40 md:text-4xl"
           >
             {{ $t('section_slogan.title') }}
           </h2>
           <div
-            class="
-              relative
-              w-full
-              bg-gradient-to-r
-              from-white
-              to-burj-khalifa-fountain
-            "
+            class="relative w-full  bg-gradient-to-r from-white to-burj-khalifa-fountain"
           >
             <div
               class="
@@ -570,24 +445,10 @@
               "
             ></div>
             <div
-              class="
-                relative
-                px-10
-                md:px-20
-                lg:px-40
-                transform
-                -translate-y-20
-                md:translate-y-0 md:pb-20
-                z-10
-              "
+              class="relative z-10 px-10 transform -translate-y-20  md:px-20 lg:px-40 md:translate-y-0 md:pb-20"
             >
               <div
-                class="
-                  flex flex-col
-                  xl:flex-row xl:items-center
-                  relative
-                  w-full
-                "
+                class="relative flex flex-col w-full  xl:flex-row xl:items-center"
               >
                 <div
                   class="
@@ -608,22 +469,10 @@
                   />
                 </div>
                 <div
-                  class="
-                    flex flex-col
-                    justify-center
-                    w-full
-                    py-20
-                    xl:pl-44
-                    2xl:pl-56
-                  "
+                  class="flex flex-col justify-center w-full py-20  xl:pl-44 2xl:pl-56"
                 >
                   <h3
-                    class="
-                      text-2xl
-                      md:text-4xl
-                      xl:text-right
-                      text-obsidian-shard
-                    "
+                    class="text-2xl  md:text-4xl xl:text-right text-obsidian-shard"
                   >
                     {{ $t('section_slogan.no_compromises.title') }}
                   </h3>
@@ -636,57 +485,23 @@
                 </div>
               </div>
               <div
-                class="
-                  flex flex-col-reverse
-                  items-end
-                  xl:flex-row xl:items-center
-                  relative
-                  w-full
-                  xl:mt-24
-                "
+                class="relative flex flex-col-reverse items-end w-full  xl:flex-row xl:items-center xl:mt-24"
               >
                 <div
-                  class="
-                    flex flex-col
-                    justify-center
-                    w-full
-                    py-20
-                    xl:pr-44
-                    2xl:pr-56
-                  "
+                  class="flex flex-col justify-center w-full py-20  xl:pr-44 2xl:pr-56"
                 >
                   <h3
-                    class="
-                      text-2xl
-                      md:text-4xl
-                      text-right
-                      xl:text-left
-                      text-obsidian-shard
-                    "
+                    class="text-2xl text-right  md:text-4xl xl:text-left text-obsidian-shard"
                   >
                     {{ $t('section_slogan.multi_platform.title') }}
                   </h3>
                   <p
-                    class="
-                      mt-10
-                      md:text-lg
-                      text-right
-                      xl:text-left
-                      text-patriot-blue
-                    "
+                    class="mt-10 text-right  md:text-lg xl:text-left text-patriot-blue"
                   >
                     {{ $t('section_slogan.multi_platform.description') }}
                   </p>
                   <div
-                    class="
-                      relative
-                      w-40
-                      h-10
-                      md:w-44 md:h-12
-                      mt-14
-                      ml-auto
-                      xl:ml-0
-                    "
+                    class="relative w-40 h-10 ml-auto  md:w-44 md:h-12 mt-14 xl:ml-0"
                   >
                     <nuxt-img
                       src="/images/shadow-button-green.png"
@@ -696,6 +511,7 @@
                         transform
                         -translate-y-4
                         scale-[1.55]
+                        pointer-events-none
                       "
                       alt="shadow"
                       provider="netlify"
@@ -704,26 +520,7 @@
                       href="#"
                       target="_blank"
                       rel="noreferrer"
-                      class="
-                        absolute
-                        flex
-                        justify-center
-                        items-center
-                        w-full
-                        h-full
-                        rounded-3xl
-                        bg-cool-green
-                        text-white text-sm
-                        md:text-base
-                        font-bold
-                        text-center
-                        transition
-                        duration-300
-                        ease-linear
-                        outline-none
-                        hover:bg-spandex-green
-                        focus:bg-spandex-green
-                      "
+                      class="absolute flex items-center justify-center w-full h-full text-sm font-bold text-center text-white transition duration-300 ease-linear outline-none  rounded-3xl bg-cool-green md:text-base hover:bg-spandex-green focus:bg-spandex-green"
                     >
                       {{ $t('try_alpha') }}
                     </a>
@@ -751,22 +548,12 @@
             </div>
           </div>
         </div>
-        <div id="features" class="relative w-full pt-20 z-10 overflow-hidden">
-          <h2 class="mt-10 text-3xl md:text-4xll text-center text-white">
+        <div id="features" class="relative z-10 w-full pt-20 overflow-hidden">
+          <h2 class="mt-10 text-3xl text-center text-white md:text-4xll">
             {{ $t('section_features.title') }}
           </h2>
           <div
-            class="
-              flex
-              justify-center
-              relative
-              mt-20
-              mb-32
-              2xl:mb-0
-              px-10
-              md:px-20
-              lg:px-40
-            "
+            class="relative flex justify-center px-10 mt-20 mb-32  2xl:mb-0 md:px-20 lg:px-40"
           >
             <div
               class="
@@ -780,7 +567,7 @@
             >
               <nuxt-img
                 src="/images/section-features-spotlight.png"
-                class="opacity-50"
+                class="opacity-50 pointer-events-none"
                 alt="spotlight"
                 provider="netlify"
               />
@@ -825,45 +612,21 @@
               "
             >
               <nuxt-img
-                src="images/section_features_illustration.png"
+                src="images/section-features-illustration.png"
                 :alt="$t('section_features.features.sharing.title')"
-                class="
-                  scale-110
-                  2xl:scale-100
-                  transform
-                  translate-y-24
-                  2xl:translate-y-10
-                "
+                class="transform scale-110 translate-y-24  2xl:scale-100 2xl:translate-y-10"
                 provider="netlify"
               />
             </div>
           </div>
           <div
-            class="
-              w-full
-              mt-20
-              pt-20
-              px-10
-              md:px-20
-              lg:px-40
-              bg-gradient-to-r
-              from-white
-              to-burj-khalifa-fountain
-            "
+            class="w-full px-10 pt-20 mt-20  md:px-20 lg:px-40 bg-gradient-to-r from-white to-burj-khalifa-fountain"
           >
             <div
               id="access"
-              class="
-                flex flex-col
-                items-start
-                xl:flex-row xl:items-center
-                relative
-                w-full
-                -translate-y-20
-                md:translate-y-0
-              "
+              class="relative flex flex-col items-start w-full -translate-y-20  xl:flex-row xl:items-center md:translate-y-0"
             >
-              <div class="flex justify-center items-center py-20">
+              <div class="flex items-center justify-center py-20">
                 <div
                   class="
                     w-[17.61rem]
@@ -875,7 +638,7 @@
                   "
                 >
                   <nuxt-img
-                    src="/images/section_team_early_access.png"
+                    src="/images/section-team-early-access.png"
                     class="ransform translate-x-[-25%] translate-y-10"
                     :alt="$t('section_slogan.no_compromises.title')"
                     provider="netlify"
@@ -883,13 +646,7 @@
                 </div>
               </div>
               <div
-                class="
-                  flex flex-col
-                  justify-center
-                  w-full
-                  xl:py-20 xl:pl-44
-                  2xl:pl-56
-                "
+                class="flex flex-col justify-center w-full  xl:py-20 xl:pl-44 2xl:pl-56"
               >
                 <h3
                   class="text-2xl md:text-4xl xl:text-right text-obsidian-shard"
@@ -912,6 +669,7 @@
                         transform
                         -translate-y-4
                         scale-[1.55]
+                        pointer-events-none
                       "
                       alt="shadow"
                       provider="netlify"
@@ -920,26 +678,7 @@
                       href="https://satellite.us1.list-manage.com/subscribe?u=271ef1cd37ac53b33d0c41e8a&id=7f7b767432"
                       target="_blank"
                       rel="noreferrer"
-                      class="
-                        absolute
-                        flex
-                        justify-center
-                        items-center
-                        w-full
-                        h-full
-                        rounded-3xl
-                        bg-cool-green
-                        text-white text-sm
-                        md:text-base
-                        font-bold
-                        text-center
-                        transition
-                        duration-300
-                        ease-linear
-                        outline-none
-                        hover:bg-spandex-green
-                        focus:bg-spandex-green
-                      "
+                      class="absolute flex items-center justify-center w-full h-full text-sm font-bold text-center text-white transition duration-300 ease-linear outline-none  rounded-3xl bg-cool-green md:text-base hover:bg-spandex-green focus:bg-spandex-green"
                     >
                       {{ $t('sign_up') }}
                     </a>
@@ -948,29 +687,7 @@
                     href="#"
                     target="_blank"
                     rel="noreferrer"
-                    class="
-                      flex
-                      justify-center
-                      items-center
-                      w-48
-                      h-10
-                      md:w-52 md:h-12
-                      mt-14
-                      ml-6
-                      rounded-3xl
-                      bg-white
-                      text-retro-blue text-sm
-                      md:text-base
-                      font-bold
-                      text-center
-                      transition
-                      duration-300
-                      ease-linear
-                      outline-none
-                      shadow-lg
-                      hover:bg-extraordinary-abundance-of-tinge
-                      focus:bg-extraordinary-abundance-of-tinge
-                    "
+                    class="flex items-center justify-center w-48 h-10 ml-6 text-sm font-bold text-center transition duration-300 ease-linear bg-white shadow-lg outline-none  md:w-52 md:h-12 mt-14 rounded-3xl text-retro-blue md:text-base hover:bg-extraordinary-abundance-of-tinge focus:bg-extraordinary-abundance-of-tinge"
                   >
                     {{ $t('try_release') }}
                   </a>
@@ -989,201 +706,82 @@
                   href="https://github.com/Satellite-im"
                   target="_blank"
                   rel="noreferrer"
-                  class="
-                    flex
-                    justify-center
-                    items-center
-                    w-48
-                    h-10
-                    md:w-52 md:h-12
-                    mt-14
-                    rounded-3xl
-                    bg-white
-                    text-retro-blue text-sm
-                    md:text-base
-                    font-bold
-                    text-center
-                    transition
-                    duration-300
-                    ease-linear
-                    outline-none
-                    shadow-lg
-                    hover:bg-extraordinary-abundance-of-tinge
-                    focus:bg-extraordinary-abundance-of-tinge
-                  "
+                  class="flex items-center justify-center w-48 h-10 text-sm font-bold text-center transition duration-300 ease-linear bg-white shadow-lg outline-none  md:w-52 md:h-12 mt-14 rounded-3xl text-retro-blue md:text-base hover:bg-extraordinary-abundance-of-tinge focus:bg-extraordinary-abundance-of-tinge"
                 >
                   {{ $t('github') }}
                 </a>
               </div>
             </div>
-            <div class="relative mt-20 md:mt-0">
+            <div
+              class="relative flex flex-wrap items-center justify-center  md:mt-0"
+            >
               <div
-                v-if="swiper"
-                class="
-                  flex
-                  absolute
-                  right-0
-                  transform
-                  -translate-y-20
-                  md:-translate-y-36
-                "
+                v-for="teamMember in team"
+                :key="teamMember.key"
+                class="flex flex-col items-center justify-center w-full mt-20  xs:w-1/2 lg:w-1/3 3xl:w-1/4"
               >
-                <button
-                  :class="`
-                    flex
-                    justify-center
-                    items-center
-                    w-14
-                    h-14
-                    md:w-20
-                    md:h-20
-                    mr-5
-                    rounded-full
-                    bg-white
-                    transition
-                    duration-300
-                    ease-linear
-                    outline-none
-                    ${
-                      swiper.activeIndex !== 0
-                        ? 'hover:bg-extraordinary-abundance-of-tinge'
-                        : ''
-                    }
-                    ${
-                      swiper.activeIndex !== 0
-                        ? 'focus:bg-extraordinary-abundance-of-tinge'
-                        : ''
-                    }
-                    shadow-sm`"
-                  @click="prev"
+                <nuxt-img
+                  :src="teamMember.image"
+                  class="w-40 h-40  md:w-48 md:h-48 xl:w-56 xl:h-56 2xl:w-64 2xl:h-64"
+                  :alt="teamMember.name"
+                  provider="netlify"
+                />
+                <h2
+                  class="text-lg font-medium text-center  md:text-xl text-obsidian-shard"
                 >
-                  <Arrow
-                    :class="`w-6 h-6 md:w-9 md:h-9 stroke-current text-accolade  ${
-                      swiper.activeIndex !== 0 ? 'text-retro-blue' : ''
-                    }`"
-                  />
-                </button>
-                <button
-                  :class="`
-                    flex
-                    justify-center
-                    items-center
-                    w-14
-                    h-14
-                    md:w-20
-                    md:h-20
-                    rounded-full
-                    bg-white
-                    transition
-                    duration-300
-                    ease-linear
-                    outline-none
-                    ${
-                      swiper.activeIndex !== team.length - slidesPerView
-                        ? 'hover:bg-extraordinary-abundance-of-tinge'
-                        : ''
-                    }
-                    ${
-                      swiper.activeIndex !== team.length - slidesPerView
-                        ? 'focus:bg-extraordinary-abundance-of-tinge'
-                        : ''
-                    }
-                    shadow-sm`"
-                  @click="next"
-                >
-                  <Arrow
-                    :class="`w-6 h-6 md:w-9 md:h-9 stroke-current text-accolade rotate-180 ${
-                      swiper.activeIndex !== team.length - slidesPerView
-                        ? 'text-retro-blue'
-                        : ''
-                    }`"
-                  />
-                </button>
-              </div>
-              <div ref="swiper" class="swiper transform translate-y-10">
-                <div class="swiper-wrapper">
-                  <div
-                    v-for="teamMember in team"
-                    :key="teamMember.key"
-                    class="swiper-slide"
-                  >
-                    <div
-                      class="flex flex-col justify-center items-center w-full"
-                    >
-                      <nuxt-img
-                        :src="teamMember.image"
-                        class="
-                          w-40
-                          h-40
-                          md:w-48 md:h-48
-                          xl:w-56 xl:h-56
-                          2xl:w-64 2xl:h-64
-                        "
-                        :alt="teamMember.name"
-                        provider="netlify"
-                      />
-                      <h2
-                        class="
-                          text-lg
-                          md:text-xl
-                          font-medium
-                          text-center text-obsidian-shard
-                        "
-                      >
-                        {{ teamMember.name }}
-                      </h2>
-                      <div class="flex justify-center h-16">
-                        <p
-                          class="mt-2 md:text-lg text-center text-patriot-blue"
-                        >
-                          {{ teamMember.occupation }}
-                        </p>
-                      </div>
-                      <ul class="flex justify-center items-center">
-                        <li
-                          v-for="social in teamMember.socials"
-                          :key="social.key"
-                          class="mx-4 w-10 h-10"
-                        >
-                          <a
-                            :href="social.link"
-                            target="_blank"
-                            rel="noreferrer"
-                            class="w-full h-full"
-                          >
-                            <Linkedin
-                              v-if="social.key === 'linkedin'"
-                              class="
-                                w-7
-                                h-7
-                                fill-current
-                                text-obsidian-shard
-                                transform
-                                -translate-y-[1px]
-                              "
-                            />
-                            <Github
-                              v-if="social.key === 'github'"
-                              class="w-7 h-7 fill-current text-obsidian-shard"
-                            />
-                            <Website
-                              v-if="social.key === 'website'"
-                              class="
-                                w-7
-                                h-7
-                                fill-current
-                                text-obsidian-shard
-                                scale-110
-                                transform
-                                translate-y-[2px]
-                              "
-                            />
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+                  {{ teamMember.name }}
+                </h2>
+                <div class="flex justify-center h-16">
+                  <p class="mt-2 text-center md:text-lg text-patriot-blue">
+                    {{ teamMember.occupation }}
+                  </p>
                 </div>
+                <ul class="flex items-center justify-center h-10">
+                  <li
+                    v-for="social in teamMember.socials"
+                    :key="social.key"
+                    class="w-10 h-full mx-4"
+                  >
+                    <a
+                      :href="social.link"
+                      target="_blank"
+                      rel="noreferrer"
+                      class="flex items-center justify-center w-full h-full"
+                    >
+                      <Linkedin
+                        v-if="social.key === 'linkedin'"
+                        class="
+                          w-6
+                          2xl:w-7
+                          h-6
+                          2xl:h-7
+                          fill-current
+                          text-obsidian-shard
+                          transform
+                          -translate-y-[1px]
+                        "
+                      />
+                      <Github
+                        v-if="social.key === 'github'"
+                        class="w-6 h-6 fill-current  2xl:w-7 2xl:h-7 text-obsidian-shard"
+                      />
+                      <Website
+                        v-if="social.key === 'website'"
+                        class="
+                          w-6
+                          2xl:w-7
+                          h-6
+                          2xl:h-7
+                          fill-current
+                          text-obsidian-shard
+                          scale-110
+                          transform
+                          translate-y-[2px]
+                        "
+                      />
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
             <div class="relative w-full h-[10rem] mt-56">
@@ -1202,15 +800,7 @@
               >
                 <nuxt-img
                   src="/images/footer-spotlight.png"
-                  class="
-                    scale-75
-                    transform
-                    -translate-y-6 -translate-x-20
-                    xs:-translate-y-8 xs:-translate-x-32
-                    md:-translate-y-14 md:-translate-x-56
-                    lg:-translate-y-16 lg:-translate-x-40
-                    2xl:-translate-x-20
-                  "
+                  class="transform scale-75 -translate-x-20 -translate-y-6  xs:-translate-y-8 xs:-translate-x-32 md:-translate-y-14 md:-translate-x-56 lg:-translate-y-16 lg:-translate-x-40 2xl:-translate-x-20"
                   alt="spotlight"
                   provider="netlify"
                 />
@@ -1219,29 +809,18 @@
           </div>
         </div>
         <footer
-          class="
-            relative
-            pb-36
-            px-10
-            md:px-20
-            lg:px-40
-            2xl:px-72
-            transform
-            -translate-y-20
-            xl:-translate-y-10
-            z-10
-          "
+          class="relative z-10 px-10 transform -translate-y-20  pb-36 md:px-20 lg:px-40 2xl:px-72 xl:-translate-y-10"
         >
-          <div class="flex flex-wrap items-end relative w-full">
+          <div class="relative flex flex-wrap items-end w-full">
             <nuxt-img
               src="/images/logo.svg"
               :alt="$t('satellite_logo')"
               class="w-[14.37rem] mr-20 mt-10 transform translate-y-2 z-10"
               provider="netlify"
             />
-            <nav class="w-full xl:w-auto mt-5 mr-auto">
+            <nav class="w-full mt-5 mr-auto xl:w-auto">
               <ul class="flex flex-wrap items-center">
-                <li class="mt-5 w-full xs:w-auto xs:mr-14">
+                <li class="w-full mt-5 xs:w-auto xs:mr-14">
                   <a
                     href="https://satellite.one/"
                     target="_blank"
@@ -1250,7 +829,7 @@
                     >{{ $t('footer.nav.app') }}</a
                   >
                 </li>
-                <li class="mt-5 w-full xs:w-auto xs:mr-14">
+                <li class="w-full mt-5 xs:w-auto xs:mr-14">
                   <a
                     href="#"
                     target="_blank"
@@ -1259,7 +838,7 @@
                     >{{ $t('footer.nav.careers') }}</a
                   >
                 </li>
-                <li class="mt-5 w-full xs:w-auto xs:mr-14">
+                <li class="w-full mt-5 xs:w-auto xs:mr-14">
                   <a
                     href="#"
                     target="_blank"
@@ -1272,23 +851,13 @@
             </nav>
             <ul class="flex items-center mt-10">
               <li
-                class="
-                  flex
-                  justify-center
-                  items-center
-                  w-10
-                  mr-5
-                  transition
-                  duration-300
-                  ease-linear
-                  hover:brightness-0 hover:invert
-                "
+                class="flex items-center justify-center w-10 mr-5 transition duration-300 ease-linear  hover:brightness-0 hover:invert"
               >
                 <a
                   href="https://twitter.com/satellite_im"
                   target="_blank"
                   rel="noreferrer"
-                  class="flex justify-center items-center w-full"
+                  class="flex items-center justify-center w-full"
                 >
                   <Twitter
                     class="
@@ -1303,43 +872,24 @@
                 </a>
               </li>
               <li
-                class="
-                  flex
-                  justify-center
-                  items-center
-                  w-10
-                  mr-5
-                  transition
-                  duration-300
-                  ease-linear
-                  hover:brightness-0 hover:invert
-                "
+                class="flex items-center justify-center w-10 mr-5 transition duration-300 ease-linear  hover:brightness-0 hover:invert"
               >
                 <a
                   href="https://www.linkedin.com/company/satellite-im"
                   target="_blank"
                   rel="noreferrer"
-                  class="flex justify-center items-center w-full"
+                  class="flex items-center justify-center w-full"
                   ><Linkedin class="w-6 h-6 fill-current text-accolade"
                 /></a>
               </li>
               <li
-                class="
-                  flex
-                  justify-center
-                  items-center
-                  w-10
-                  transition
-                  duration-300
-                  ease-linear
-                  hover:brightness-0 hover:invert
-                "
+                class="flex items-center justify-center w-10 transition duration-300 ease-linear  hover:brightness-0 hover:invert"
               >
                 <a
                   href="https://github.com/Satellite-im"
                   target="_blank"
                   rel="noreferrer"
-                  class="flex justify-center items-center w-full"
+                  class="flex items-center justify-center w-full"
                   ><Github class="w-6 h-6 fill-current text-accolade"
                 /></a>
               </li>
@@ -1356,7 +906,6 @@
 
 <script>
 import simplebar from 'simplebar-vue'
-import Swiper from 'swiper/swiper-bundle'
 
 import PartnerMulticoinCapital from '~/static/icons/partner-multicoin-capital.svg?inline'
 import PartnerIdeoColab from '~/static/icons/partner-ideo-colab.svg?inline'
@@ -1378,7 +927,6 @@ import Close from '~/static/icons/close.svg?inline'
 import Website from '~/static/icons/website.svg?inline'
 
 import 'simplebar/dist/simplebar.min.css'
-import 'swiper/swiper-bundle.css'
 
 export default {
   components: {
@@ -1517,7 +1065,7 @@ export default {
       team: [
         {
           key: 'matt',
-          image: '/images/team_matt.png',
+          image: '/images/team-matt.png',
           name: 'Matt Wisniewski',
           occupation: this.$t('section_team.team.matt_occupation'),
           socials: [
@@ -1537,7 +1085,7 @@ export default {
         },
         {
           key: 'manuel',
-          image: '/images/team_manuel.png',
+          image: '/images/team-manuel.png',
           name: 'Manuel Tumiati',
           occupation: this.$t('section_team.team.manuel_occupation'),
           socials: [
@@ -1551,7 +1099,7 @@ export default {
         },
         {
           key: 'kathy',
-          image: '/images/team_kathy.png',
+          image: '/images/team-kathy.png',
           name: 'Kathy Chan',
           occupation: this.$t('section_team.team.kathy_occupation'),
           socials: [
@@ -1560,21 +1108,8 @@ export default {
           ],
         },
         {
-          key: 'lauren',
-          image: '/images/team_lauren.png',
-          name: 'Lauren Harrington',
-          occupation: this.$t('section_team.team.lauren_occupation'),
-          socials: [
-            {
-              key: 'linkedin',
-              link: 'https://www.linkedin.com/in/lauren-harrington-022430160/',
-            },
-            { key: 'website', link: 'https://imeatincookies.artstation.com/' },
-          ],
-        },
-        {
           key: 'jason',
-          image: '/images/team_jason.png',
+          image: '/images/team-jason.png',
           name: 'Jason Panay',
           occupation: this.$t('section_team.team.jason_occupation'),
           socials: [
@@ -1584,7 +1119,7 @@ export default {
         },
         {
           key: 'chris',
-          image: '/images/team_chris.png',
+          image: '/images/team-chris.png',
           name: 'Chris Hogan',
           occupation: this.$t('section_team.team.chris_occupation'),
           socials: [
@@ -1600,7 +1135,7 @@ export default {
         },
         {
           key: 'dina',
-          image: '/images/team_dina.png',
+          image: '/images/team-dina.png',
           name: 'Dina Brodsky',
           occupation: this.$t('section_team.team.dina_occupation'),
           socials: [
@@ -1613,7 +1148,7 @@ export default {
         },
         {
           key: 'tom',
-          image: '/images/team_tom.png',
+          image: '/images/team-tom.png',
           name: 'Tom McArdle',
           occupation: this.$t('section_team.team.tom_occupation'),
           socials: [
@@ -1625,7 +1160,7 @@ export default {
         },
         {
           key: 'jerome',
-          image: '/images/team_jerome.png',
+          image: '/images/team-jerome.png',
           name: 'Jerome Aceti',
           occupation: this.$t('section_team.team.jerome_occupation'),
           socials: [
@@ -1635,9 +1170,167 @@ export default {
             },
           ],
         },
+        {
+          key: 'mauro',
+          image: '/images/team-mauro.png',
+          name: 'Mauro Molinari',
+          occupation: this.$t('section_team.team.mauro_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/mauro-molinari-4ab566168/',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/molimauro',
+            },
+          ],
+        },
+        {
+          key: 'mattia',
+          image: '/images/team-mattia.png',
+          name: 'Mattia Bianchi',
+          occupation: this.$t('section_team.team.mattia_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/mattiabianchi/',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/Matt8white',
+            },
+          ],
+        },
+        {
+          key: 'samir',
+          image: '/images/team-samir.png',
+          name: 'Samir Vimercati',
+          occupation: this.$t('section_team.team.samir_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/samir-vimercati-331a8918a',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/vimercati-samir',
+            },
+          ],
+        },
+        {
+          key: 'miru',
+          image: '/images/team-miru.png',
+          name: 'Miru Shim',
+          occupation: this.$t('section_team.team.miru_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/miru-shim-16769a91/',
+            },
+            {
+              key: 'website',
+              link: 'https://www.mirushimcreative.com/copy-of-branding-promotion',
+            },
+          ],
+        },
+        {
+          key: 'nick',
+          image: '/images/team-nick.png',
+          name: 'Nick Jang',
+          occupation: this.$t('section_team.team.nick_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://linkedin.com/in/nickjjang',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/nickjjang',
+            },
+          ],
+        },
+        {
+          key: 'wendy',
+          image: '/images/team-wendy.png',
+          name: 'Wendy Morgan',
+          occupation: this.$t('section_team.team.wendy_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/wendy-morgan-0a1100224/',
+            },
+          ],
+        },
+        {
+          key: 'jeff',
+          image: '/images/team-jeff.png',
+          name: 'Jeff Morris',
+          occupation: this.$t('section_team.team.jeff_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/jeffrey-morris-2417a177/',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/Jekrimo',
+            },
+          ],
+        },
+        {
+          key: 'kevin',
+          image: '/images/team-kevin.png',
+          name: 'Kevin McComas',
+          occupation: this.$t('section_team.team.kevin_occupation'),
+          socials: [],
+        },
+        {
+          key: 'elizabeth',
+          image: '/images/team-elizabeth.png',
+          name: 'Elizabeth Brown',
+          occupation: this.$t('section_team.team.elizabeth_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/lizasherdesign/',
+            },
+            {
+              key: 'website',
+              link: 'https://www.lizasherdesign.com/projects',
+            },
+          ],
+        },
+        {
+          key: 'eric',
+          image: '/images/team-eric.png',
+          name: 'Eric Lee',
+          occupation: this.$t('section_team.team.eric_occupation'),
+          socials: [
+            {
+              key: 'github',
+              link: 'https://github.com/genie-magic',
+            },
+            {
+              key: 'website',
+              link: 'https://genie-magic.github.io/myportal/',
+            },
+          ],
+        },
+        {
+          key: 'phill',
+          image: '/images/team-phill.png',
+          name: 'Phill Wisniewski',
+          occupation: this.$t('section_team.team.phill_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/phillip-wisniewski-9472aa224/',
+            },
+          ],
+        },
       ],
       simplebar: null,
-      swiper: null,
       slidesPerView: 1,
     }
   },
@@ -1650,34 +1343,8 @@ export default {
     const vm = this
 
     this.simplebar = vm.$refs.simplebar.scrollElement
-
-    this.swiper = new Swiper(vm.$refs.swiper, {
-      slidesPerView: this.slidesPerView,
-      breakpoints: {
-        420: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-        },
-        1600: {
-          slidesPerView: 4,
-        },
-      },
-      allowTouchMove: false,
-    })
   },
   methods: {
-    prev() {
-      if (this.swiper.activeIndex !== 0) {
-        this.swiper.slidePrev()
-      }
-    },
-    next() {
-      if (this.swiper.activeIndex !== this.team.length - this.slidesPerView) {
-        this.swiper.slideNext()
-      }
-    },
     scroll(anchorId) {
       const anchor = document.querySelector(anchorId)
 

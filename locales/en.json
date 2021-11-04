@@ -89,13 +89,24 @@
     "team": {
       "matt_occupation": "President & Lead Developer",
       "manuel_occupation": "Blockchain Developer",
-      "kathy_occupation": "Front-End Developer",
+      "kathy_occupation": "Software Engineer",
       "lauren_occupation": "Digital Design",
-      "jason_occupation": "Front-End Developer",
-      "chris_occupation": "Software engineer",
+      "jason_occupation": "Software Engineer",
+      "chris_occupation": "Software Engineer",
       "dina_occupation": "Art director",
       "tom_occupation": "Advisor",
-      "jerome_occupation": "Advisor"
+      "jerome_occupation": "Advisor",
+      "mauro_occupation": "Front-End Developer",
+      "mattia_occupation": "Blockchain Engineer",
+      "samir_occupation": "Front-End Developer",
+      "miru_occupation": "Creative Director",
+      "nick_occupation": "Software/Blockchain Engineer",
+      "wendy_occupation": "Project Manager/Administrative",
+      "jeff_occupation": "Software Engineer",
+      "kevin_occupation": "Community and Events Manager",
+      "elizabeth_occupation": "UI/UX Designer & Illustrator",
+      "eric_occupation": "Software Engineer",
+      "phill_occupation": "Software QA Analyst"
     }
   },
   "footer": {
