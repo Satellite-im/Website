@@ -517,7 +517,7 @@
                       provider="netlify"
                     />
                     <a
-                      href="#"
+                      href="https://satellite.one/"
                       target="_blank"
                       rel="noreferrer"
                       class="absolute flex items-center justify-center w-full h-full text-sm font-bold text-center text-white transition duration-300 ease-linear outline-none  rounded-3xl bg-cool-green md:text-base hover:bg-spandex-green focus:bg-spandex-green"
@@ -684,7 +684,7 @@
                     </a>
                   </div>
                   <a
-                    href="#"
+                    href="https://dev.satellite.one/"
                     target="_blank"
                     rel="noreferrer"
                     class="flex items-center justify-center w-48 h-10 ml-6 text-sm font-bold text-center transition duration-300 ease-linear bg-white shadow-lg outline-none  md:w-52 md:h-12 mt-14 rounded-3xl text-retro-blue md:text-base hover:bg-extraordinary-abundance-of-tinge focus:bg-extraordinary-abundance-of-tinge"
@@ -1326,6 +1326,22 @@ export default {
             {
               key: 'linkedin',
               link: 'https://www.linkedin.com/in/phillip-wisniewski-9472aa224/',
+            },
+          ],
+        },
+        {
+          key: 'sara',
+          image: '/images/team-sara.png',
+          name: 'Sara Tavares',
+          occupation: this.$t('section_team.team.sara_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/sara-t-3545a0126/',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/stavares843',
             },
           ],
         },
