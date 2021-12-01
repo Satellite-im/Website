@@ -1345,6 +1345,46 @@ export default {
             },
           ],
         },
+        {
+          key: 'david',
+          image: '/images/team-david.png',
+          name: 'David Chan',
+          occupation: this.$t('section_team.team.david_occupation'),
+          socials: [
+            {
+              key: 'github',
+              link: 'https://github.com/davidchan1219',
+            },
+          ],
+        },
+        {
+          key: 'lauren',
+          image: '/images/team-lauren.png',
+          name: 'Lauren Harrington',
+          occupation: this.$t('section_team.team.lauren_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/lauren-harrington-022430160/',
+            },
+          ],
+        },
+        {
+          key: 'joe',
+          image: '/images/team-joe.png',
+          name: 'Joe McGrath',
+          occupation: this.$t('section_team.team.joe_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/josephmcg',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/josephmcg',
+            },
+          ],
+        },
       ],
       simplebar: null,
       slidesPerView: 1,

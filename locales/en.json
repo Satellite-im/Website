@@ -90,7 +90,6 @@
       "matt_occupation": "President & Lead Developer",
       "manuel_occupation": "Blockchain Developer",
       "kathy_occupation": "Software Engineer",
-      "lauren_occupation": "Digital Design",
       "jason_occupation": "Software Engineer",
       "chris_occupation": "Software Engineer",
       "dina_occupation": "Art director",
@@ -107,7 +106,10 @@
       "elizabeth_occupation": "UI/UX Designer & Illustrator",
       "eric_occupation": "Software Engineer",
       "phill_occupation": "Software QA Analyst",
-      "sara_occupation": "Lead QA Engineer"
+      "sara_occupation": "Lead QA Engineer",
+      "david_occupation": "Software Engineer",
+      "lauren_occupation": "Marketing Design",
+      "joe_occupation": "Software Engineer"
     }
   },
   "footer": {
