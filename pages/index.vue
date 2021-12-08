@@ -200,8 +200,8 @@
                 {{ $t('section_hero.description') }}
               </p>
               <div class="flex flex-wrap items-center justify-between">
-                <StatStream class="w-12 mt-10 mr-10 md:w-16" />
-                <StatChat class="mt-10 mr-10 w-36 md:w-44" />
+                <StatStream class="w-20 mt-10 mr-10 md:w-24" />
+                <StatChat class="mt-10 mr-10 w-44 md:w-52" />
                 <StatFileShares class="w-20 mt-10 md:w-24" />
               </div>
               <div class="flex items-center mt-12">
@@ -849,17 +849,22 @@
                 </li>
               </ul>
             </nav>
-            <ul class="flex items-center mt-10">
+            <ul class="flex flex-wrap items-center mt-5">
               <li
-                class="flex items-center justify-center w-10 mr-5 transition duration-300 ease-linear  hover:brightness-0 hover:invert"
+                v-for="(footerSocial, index) in footerSocials"
+                :key="footerSocial.key"
+                :class="`flex items-center justify-center w-10 mt-5 ${
+                  index !== footerSocials.length - 1 ? 'mr-5' : 'mr-0'
+                } transition duration-300 ease-linear  hover:brightness-0 hover:invert`"
               >
                 <a
-                  href="https://twitter.com/satellite_im"
+                  :href="footerSocial.link"
                   target="_blank"
                   rel="noreferrer"
                   class="flex items-center justify-center w-full"
                 >
-                  <Twitter
+                  <component
+                    :is="footerSocial.icon"
                     class="
                       w-6
                       h-6
@@ -868,30 +873,9 @@
                       transform
                       translate-y-[1px]
                     "
-                  />
+                  >
+                  </component>
                 </a>
-              </li>
-              <li
-                class="flex items-center justify-center w-10 mr-5 transition duration-300 ease-linear  hover:brightness-0 hover:invert"
-              >
-                <a
-                  href="https://www.linkedin.com/company/satellite-im"
-                  target="_blank"
-                  rel="noreferrer"
-                  class="flex items-center justify-center w-full"
-                  ><Linkedin class="w-6 h-6 fill-current text-accolade"
-                /></a>
-              </li>
-              <li
-                class="flex items-center justify-center w-10 transition duration-300 ease-linear  hover:brightness-0 hover:invert"
-              >
-                <a
-                  href="https://github.com/Satellite-im"
-                  target="_blank"
-                  rel="noreferrer"
-                  class="flex items-center justify-center w-full"
-                  ><Github class="w-6 h-6 fill-current text-accolade"
-                /></a>
               </li>
             </ul>
           </div>
@@ -921,6 +905,8 @@ import StatFileShares from '~/static/icons/stat-file-shares.svg?inline'
 import Twitter from '~/static/icons/twitter.svg?inline'
 import Linkedin from '~/static/icons/linkedin.svg?inline'
 import Github from '~/static/icons/github.svg?inline'
+import Slack from '~/static/icons/slack.svg?inline'
+import Telegram from '~/static/icons/telegram.svg?inline'
 import Arrow from '~/static/icons/arrow.svg?inline'
 import Menu from '~/static/icons/menu.svg?inline'
 import Close from '~/static/icons/close.svg?inline'
@@ -937,6 +923,8 @@ export default {
     Twitter,
     Linkedin,
     Github,
+    Slack,
+    Telegram,
     Arrow,
     Menu,
     Close,
@@ -1384,6 +1372,33 @@ export default {
               link: 'https://github.com/josephmcg',
             },
           ],
+        },
+      ],
+      footerSocials: [
+        {
+          key: 'twitter',
+          link: 'https://twitter.com/satellite_im',
+          icon: Twitter,
+        },
+        {
+          key: 'linkedin',
+          link: 'https://www.linkedin.com/company/satellite-im',
+          icon: Linkedin,
+        },
+        {
+          key: 'github',
+          link: 'https://github.com/Satellite-im',
+          icon: Github,
+        },
+        {
+          key: 'telegram',
+          link: 'https://t.me/+JQOXeHsPFQNkNTQx',
+          icon: Telegram,
+        },
+        {
+          key: 'slack',
+          link: 'https://join.slack.com/t/satelliteim/shared_invite/zt-yxaji12d-wM7jIck_kmC0z9nI3AyEsw',
+          icon: Slack,
         },
       ],
       simplebar: null,
