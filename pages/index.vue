@@ -1373,6 +1373,54 @@ export default {
             },
           ],
         },
+        {
+          key: 'clayton',
+          image: '/images/team-clayton.png',
+          name: 'Clayton Peeples',
+          occupation: this.$t('section_team.team.clayton_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/clayton-peeples-20743b229/',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/Clayton215',
+            },
+          ],
+        },
+        {
+          key: 'david-lee',
+          image: '/images/team-david-lee.png',
+          name: 'David Lee',
+          occupation: this.$t('section_team.team.david_lee_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/david-lee-a26237227/',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/baymax-codecare',
+            },
+          ],
+        },
+        {
+          key: 'sheldon',
+          image: '/images/team-sheldon.png',
+          name: 'Sheldon McGee',
+          occupation: this.$t('section_team.team.sheldon_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/tooshel/',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/tooshel',
+            },
+          ],
+        },
       ],
       footerSocials: [
         {
