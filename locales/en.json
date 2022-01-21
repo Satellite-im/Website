@@ -89,8 +89,8 @@
     "team": {
       "matt_occupation": "President & Lead Developer",
       "manuel_occupation": "Blockchain Developer",
-      "kathy_occupation": "Software Engineer",
-      "jason_occupation": "Software Engineer",
+      "kathy_occupation": "Junior Software Engineer",
+      "jason_occupation": "Junior Software Engineer",
       "chris_occupation": "Software Engineer",
       "dina_occupation": "Art director",
       "tom_occupation": "Advisor",
@@ -109,7 +109,10 @@
       "sara_occupation": "Lead QA Engineer",
       "david_occupation": "Software Engineer",
       "lauren_occupation": "Marketing Design",
-      "joe_occupation": "Software Engineer"
+      "joe_occupation": "Software Engineer",
+      "clayton_occupation": "Junior Software Engineer",
+      "david_lee_occupation": "Software Engineer",
+      "sheldon_occupation": "Head of Engineering Management"
     }
   },
   "footer": {
