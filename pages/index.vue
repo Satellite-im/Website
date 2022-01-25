@@ -84,7 +84,7 @@
                   </li>
                   <li class="mt-5">
                     <a
-                      href="#"
+                      href="https://www.linkedin.com/company/satellite-im/jobs/"
                       target="_blank"
                       rel="noreferrer"
                       class="link-hover black"
@@ -93,7 +93,7 @@
                   </li>
                   <li class="mt-5">
                     <a
-                      href="#"
+                      href="https://satelliteim.helpjuice.com/"
                       target="_blank"
                       rel="noreferrer"
                       class="link-hover black"
@@ -831,7 +831,7 @@
                 </li>
                 <li class="w-full mt-5 xs:w-auto xs:mr-14">
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/company/satellite-im/jobs/"
                     target="_blank"
                     rel="noreferrer"
                     class="text-sm text-white link-hover"
@@ -840,7 +840,7 @@
                 </li>
                 <li class="w-full mt-5 xs:w-auto xs:mr-14">
                   <a
-                    href="#"
+                    href="https://satelliteim.helpjuice.com/"
                     target="_blank"
                     rel="noreferrer"
                     class="text-sm text-white link-hover"
