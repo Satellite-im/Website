@@ -77,7 +77,7 @@
                     <a
                       href="https://satellite.one/"
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       class="link-hover black"
                       >{{ $t('footer.nav.app') }}</a
                     >
@@ -86,7 +86,7 @@
                     <a
                       href="https://www.linkedin.com/company/satellite-im/jobs/"
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       class="link-hover black"
                       >{{ $t('footer.nav.careers') }}</a
                     >
@@ -95,7 +95,7 @@
                     <a
                       href="https://satelliteim.helpjuice.com/"
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       class="link-hover black"
                       >{{ $t('footer.nav.contact_us') }}</a
                     >
@@ -119,7 +119,7 @@
                     <a
                       href="https://twitter.com/satellite_im"
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       class="flex items-center justify-center w-full"
                     >
                       <Twitter
@@ -149,7 +149,7 @@
                     <a
                       href="https://www.linkedin.com/company/satellite-im"
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       class="flex items-center justify-center w-full"
                       ><Linkedin
                         class="w-5 h-5 fill-current text-obsidian-shard"
@@ -170,7 +170,7 @@
                     <a
                       href="https://github.com/Satellite-im"
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       class="flex items-center justify-center w-full"
                       ><Github class="w-5 h-5 fill-current text-obsidian-shard"
                     /></a>
@@ -222,7 +222,7 @@
                   <a
                     href="https://satellite.us1.list-manage.com/subscribe?u=271ef1cd37ac53b33d0c41e8a&id=7f7b767432"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     class="absolute flex items-center justify-center w-full h-full text-sm font-bold text-center text-white transition duration-300 ease-linear outline-none  rounded-3xl bg-cool-green md:text-base hover:bg-spandex-green focus:bg-spandex-green"
                   >
                     {{ $t('sign_up') }}
@@ -231,7 +231,7 @@
                 <a
                   href="https://satellite.one/"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   class="flex items-center justify-center w-48 h-10 mt-4 text-sm font-bold text-center transition duration-300 ease-linear bg-white shadow-lg outline-none  md:w-52 md:h-12 rounded-3xl text-retro-blue md:text-base hover:bg-extraordinary-abundance-of-tinge focus:bg-extraordinary-abundance-of-tinge"
                 >
                   {{ $t('open_in_browser') }}
@@ -295,7 +295,7 @@
                 <a
                   :href="partner.link"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   :class="`flex-shrink-0 cursor-pointer partner-${partner.key}-link`"
                 >
                   <component
@@ -519,7 +519,7 @@
                     <a
                       href="https://satellite.one/"
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       class="absolute flex items-center justify-center w-full h-full text-sm font-bold text-center text-white transition duration-300 ease-linear outline-none  rounded-3xl bg-cool-green md:text-base hover:bg-spandex-green focus:bg-spandex-green"
                     >
                       {{ $t('try_alpha') }}
@@ -677,7 +677,7 @@
                     <a
                       href="https://satellite.us1.list-manage.com/subscribe?u=271ef1cd37ac53b33d0c41e8a&id=7f7b767432"
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       class="absolute flex items-center justify-center w-full h-full text-sm font-bold text-center text-white transition duration-300 ease-linear outline-none  rounded-3xl bg-cool-green md:text-base hover:bg-spandex-green focus:bg-spandex-green"
                     >
                       {{ $t('sign_up') }}
@@ -686,7 +686,7 @@
                   <a
                     href="https://dev.satellite.one/"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     class="flex items-center justify-center w-48 h-10 ml-6 text-sm font-bold text-center transition duration-300 ease-linear bg-white shadow-lg outline-none  md:w-52 md:h-12 mt-14 rounded-3xl text-retro-blue md:text-base hover:bg-extraordinary-abundance-of-tinge focus:bg-extraordinary-abundance-of-tinge"
                   >
                     {{ $t('try_release') }}
@@ -705,7 +705,7 @@
                 <a
                   href="https://github.com/Satellite-im"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   class="flex items-center justify-center w-48 h-10 text-sm font-bold text-center transition duration-300 ease-linear bg-white shadow-lg outline-none  md:w-52 md:h-12 mt-14 rounded-3xl text-retro-blue md:text-base hover:bg-extraordinary-abundance-of-tinge focus:bg-extraordinary-abundance-of-tinge"
                 >
                   {{ $t('github') }}
@@ -745,7 +745,7 @@
                     <a
                       :href="social.link"
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       class="flex items-center justify-center w-full h-full"
                     >
                       <Linkedin
@@ -824,7 +824,7 @@
                   <a
                     href="https://satellite.one/"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     class="text-sm text-white link-hover"
                     >{{ $t('footer.nav.app') }}</a
                   >
@@ -833,7 +833,7 @@
                   <a
                     href="https://www.linkedin.com/company/satellite-im/jobs/"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     class="text-sm text-white link-hover"
                     >{{ $t('footer.nav.careers') }}</a
                   >
@@ -842,7 +842,7 @@
                   <a
                     href="https://satelliteim.helpjuice.com/"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     class="text-sm text-white link-hover"
                     >{{ $t('footer.nav.contact_us') }}</a
                   >
@@ -860,7 +860,7 @@
                 <a
                   :href="footerSocial.link"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   class="flex items-center justify-center w-full"
                 >
                   <component
