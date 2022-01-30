@@ -17,7 +17,7 @@ $ npm run start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+For a detailed explanation of how things work, check out the [documentation](https://nuxtjs.org).
 
 ## Special Directories
 
@@ -31,7 +31,7 @@ More information about the usage of this directory in [the documentation](https:
 
 ### `components`
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts, and even other components.
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
 
@@ -43,7 +43,7 @@ More information about the usage of this directory in [the documentation](https:
 
 ### `pages`
 
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
+This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and set up Vue Router automatically.
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
 
