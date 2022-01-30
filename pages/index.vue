@@ -1421,6 +1421,34 @@ export default {
             },
           ],
         },
+        {
+          key: 'matteo',
+          image: '/images/team-matteo.png',
+          name: 'Matteo Gigli',
+          occupation: this.$t('section_team.team.matteo_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/matteo-gigli-868728202/',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/Matteo-Gigli',
+            },
+          ],
+        },
+        {
+          key: 'thomas',
+          image: '/images/team-thomas.png',
+          name: 'Thomas Bosatelli',
+          occupation: this.$t('section_team.team.thomas_occupation'),
+          socials: [
+            {
+              key: 'github',
+              link: 'https://github.com/ThomBos',
+            },
+          ],
+        },
       ],
       footerSocials: [
         {

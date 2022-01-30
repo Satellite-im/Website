@@ -112,7 +112,9 @@
       "joe_occupation": "Software Engineer",
       "clayton_occupation": "Junior Software Engineer",
       "david_lee_occupation": "Software Engineer",
-      "sheldon_occupation": "Head of Engineering Management"
+      "sheldon_occupation": "Head of Engineering Management",
+      "matteo_occupation": "Junior Back-End Developer",
+      "thomas_occupation": "Front-End Developer"
     }
   },
   "footer": {
