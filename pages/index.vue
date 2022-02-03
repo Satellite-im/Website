@@ -1449,6 +1449,22 @@ export default {
             },
           ],
         },
+        {
+          key: 'andre',
+          image: '/images/team-andre.png',
+          name: 'Andre Pramaditya',
+          occupation: this.$t('section_team.team.andre_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/drepram/',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/drepram/',
+            },
+          ],
+        },
       ],
       footerSocials: [
         {
