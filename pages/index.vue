@@ -93,11 +93,20 @@
                   </li>
                   <li class="mt-5">
                     <a
-                      href="https://satelliteim.helpjuice.com/"
+                      href="https://help.satellite.one/en_US/contact-us"
                       target="_blank"
                       rel="noopener noreferrer"
                       class="link-hover black"
                       >{{ $t('footer.nav.contact_us') }}</a
+                    >
+                  </li>
+                  <li class="mt-5">
+                    <a
+                      href="https://help.satellite.one/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="link-hover black"
+                      >{{ $t('footer.nav.help') }}</a
                     >
                   </li>
                 </ul>
@@ -840,11 +849,20 @@
                 </li>
                 <li class="w-full mt-5 xs:w-auto xs:mr-14">
                   <a
-                    href="https://satelliteim.helpjuice.com/"
+                    href="https://help.satellite.one/en_US/contact-us"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="text-sm text-white link-hover"
                     >{{ $t('footer.nav.contact_us') }}</a
+                  >
+                </li>
+                <li class="w-full mt-5 xs:w-auto xs:mr-14">
+                  <a
+                    href="https://help.satellite.one/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-sm text-white link-hover"
+                    >{{ $t('footer.nav.help') }}</a
                   >
                 </li>
               </ul>
@@ -905,6 +923,7 @@ import StatFileShares from '~/static/icons/stat-file-shares.svg?inline'
 import Twitter from '~/static/icons/twitter.svg?inline'
 import Linkedin from '~/static/icons/linkedin.svg?inline'
 import Github from '~/static/icons/github.svg?inline'
+import Discord from '~/static/icons/discord.svg?inline'
 import Slack from '~/static/icons/slack.svg?inline'
 import Telegram from '~/static/icons/telegram.svg?inline'
 import Arrow from '~/static/icons/arrow.svg?inline'
@@ -923,6 +942,7 @@ export default {
     Twitter,
     Linkedin,
     Github,
+    Discord,
     Slack,
     Telegram,
     Arrow,
@@ -1481,6 +1501,11 @@ export default {
           key: 'github',
           link: 'https://github.com/Satellite-im',
           icon: Github,
+        },
+        {
+          key: 'discord',
+          link: 'https://discord.gg/satellite',
+          icon: Discord,
         },
         {
           key: 'telegram',

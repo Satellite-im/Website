@@ -122,7 +122,8 @@
     "nav": {
       "app": "The App",
       "careers": "Careers",
-      "contact_us": "Contact Us"
+      "contact_us": "Contact Us",
+      "help": "Help"
     },
     "copyright": "© 2022 Satellite.im. All rights reserved."
   },
