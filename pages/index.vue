@@ -75,20 +75,11 @@
                 <ul class="flex flex-col mt-5">
                   <li class="mt-5">
                     <a
-                      href="https://satellite.one/"
+                      href="https://dev.satellite.one/#/"
                       target="_blank"
                       rel="noopener noreferrer"
                       class="link-hover black"
                       >{{ $t('footer.nav.app') }}</a
-                    >
-                  </li>
-                  <li class="mt-5">
-                    <a
-                      href="https://www.linkedin.com/company/satellite-im/jobs/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="link-hover black"
-                      >{{ $t('footer.nav.careers') }}</a
                     >
                   </li>
                   <li class="mt-5">
@@ -831,20 +822,11 @@
               <ul class="flex flex-wrap items-center">
                 <li class="w-full mt-5 xs:w-auto xs:mr-14">
                   <a
-                    href="https://satellite.one/"
+                    href="https://dev.satellite.one/#/"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="text-sm text-white link-hover"
                     >{{ $t('footer.nav.app') }}</a
-                  >
-                </li>
-                <li class="w-full mt-5 xs:w-auto xs:mr-14">
-                  <a
-                    href="https://www.linkedin.com/company/satellite-im/jobs/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-sm text-white link-hover"
-                    >{{ $t('footer.nav.careers') }}</a
                   >
                 </li>
                 <li class="w-full mt-5 xs:w-auto xs:mr-14">
