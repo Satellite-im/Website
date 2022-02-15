@@ -1467,6 +1467,22 @@ export default {
             },
           ],
         },
+        {
+          key: 'luis',
+          image: '/images/team-luis.png',
+          name: 'Luis Cardeña',
+          occupation: this.$t('section_team.team.luis_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/luiscardenamaldonado',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/luisecm',
+            },
+          ],
+        },
       ],
       footerSocials: [
         {
