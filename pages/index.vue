@@ -726,11 +726,11 @@
                   :alt="teamMember.name"
                   provider="netlify"
                 />
-                <h2
+                <p
                   class="text-lg font-medium text-center  md:text-xl text-obsidian-shard"
                 >
                   {{ teamMember.name }}
-                </h2>
+                </p>
                 <div class="flex justify-center h-16">
                   <p class="mt-2 text-center md:text-lg text-patriot-blue">
                     {{ teamMember.occupation }}
