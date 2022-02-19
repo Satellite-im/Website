@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <head>
+      <meta name="description" content="P2P Chat, Voice &#38; Video Open-source, stored on IPFS. End to end encryption, serverless... trackers not included.">
+    </head>
     <main class="w-full h-screen overflow-hidden bg-obsidian-shard">
       <simplebar ref="simplebar" class="absolute w-full h-full">
         <div class="z-10 w-full overflow-hidden">
