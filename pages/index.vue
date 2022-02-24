@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <head>
-      <meta name="description" content="P2P Chat, Voice &#38; Video Open-source, stored on IPFS. End to end encryption, serverless... trackers not included.">
+      <meta name="keywords" content="Chat, Peer-2-Peer, Encrypted Chat, Encrypted, Open-Source, Video and Video, Satellite.im, Video Call, Voice Call, Messaging, Encrypted Messaging, Cross-Platform Application">
     </head>
     <main class="w-full h-screen overflow-hidden bg-obsidian-shard">
       <simplebar ref="simplebar" class="absolute w-full h-full">
