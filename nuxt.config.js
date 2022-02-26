@@ -12,6 +12,8 @@ export default {
       { name: 'msapplication-TileColor', content: '#ffffff' },
       { name: 'theme-color', content: '#ffffff' },
       { name: 'msapplication-TileImage', content: '/ms-icon-144x144.png' },
+      { name: 'description', content: 'P2P Chat, Voice &#38; Video Open-source, stored on IPFS. End to end encryption, serverless... trackers not included.'},
+      { name: 'keywords', content: 'Chat, Peer-2-Peer, Encrypted Chat, Encrypted, Open-Source, Video and Video, Satellite.im, Video Call, Voice Call, Messaging, Encrypted Messaging, Cross-Platform Application' },
     ],
     link: [
       {
