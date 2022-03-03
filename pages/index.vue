@@ -1484,6 +1484,22 @@ export default {
           ],
         },
         {
+          key: 'pavel',
+          image: '/images/team-pavel.png',
+          name: 'Pavel Lozka',
+          occupation: this.$t('section_team.team.pavel_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/pavel-lozka-563031113/',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/pavlzk',
+            },
+          ],
+        },
+        {
           key: 'darius',
           image: '/images/team-darius.png',
           name: 'Darius Clark',
@@ -1496,6 +1512,22 @@ export default {
             {
               key: 'github',
               link: 'https://github.com/dariusc93',
+            },
+          ],
+        },
+        {
+          key: 'alex',
+          image: '/images/team-alex.png',
+          name: 'Alex Zakablukov',
+          occupation: this.$t('section_team.team.alex_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/alex-zakablukov-55a921160/',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/AlexZakablukov',
             },
           ],
         },
