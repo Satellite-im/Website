@@ -1483,6 +1483,54 @@ export default {
             },
           ],
         },
+        {
+          key: 'darius',
+          image: '/images/team-darius.png',
+          name: 'Darius Clark',
+          occupation: this.$t('section_team.team.darius_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/darius-clark-21b02671',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/dariusc93',
+            },
+          ],
+        },
+        {
+          key: 'calogero',
+          image: '/images/team-calogero.png',
+          name: 'Calogero Cimino',
+          occupation: this.$t('section_team.team.calogero_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/calogero-cimino-6b0264105',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/calogero93',
+            },
+          ],
+        },
+        {
+          key: 'drew',
+          image: '/images/team-drew.png',
+          name: 'Drew Ewing',
+          occupation: this.$t('section_team.team.drew_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/apewing',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/aewing',
+            },
+          ],
+        },
       ],
       footerSocials: [
         {
