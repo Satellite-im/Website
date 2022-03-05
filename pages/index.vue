@@ -1008,7 +1008,7 @@ export default {
         },
         {
           key: 'payments',
-          label: this.$t('section_meet.features.chat'),
+          label: this.$t('section_meet.features.payments'),
         },
       ],
       features: [
