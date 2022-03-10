@@ -1550,7 +1550,7 @@ export default {
         {
           key: 'nicholas',
           image: '/images/team-nicholas.png',
-          name: 'Drew Ewing',
+          name: 'Nicholas Zaccagnino',
           occupation: this.$t('section_team.team.nicholas_occupation'),
           socials: [
             {
