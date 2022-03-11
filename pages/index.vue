@@ -1424,22 +1424,6 @@ export default {
           ],
         },
         {
-          key: 'matteo',
-          image: '/images/team-matteo.png',
-          name: 'Matteo Gigli',
-          occupation: this.$t('section_team.team.matteo_occupation'),
-          socials: [
-            {
-              key: 'linkedin',
-              link: 'https://www.linkedin.com/in/matteo-gigli-868728202/',
-            },
-            {
-              key: 'github',
-              link: 'https://github.com/Matteo-Gigli',
-            },
-          ],
-        },
-        {
           key: 'thomas',
           image: '/images/team-thomas.png',
           name: 'Thomas Bosatelli',
@@ -1560,6 +1544,22 @@ export default {
             {
               key: 'github',
               link: 'https://github.com/aewing',
+            },
+          ],
+        },
+        {
+          key: 'nicholas',
+          image: '/images/team-nicholas.png',
+          name: 'Nicholas Zaccagnino',
+          occupation: this.$t('section_team.team.nicholas_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/zaccagnino-nicholas/',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/JustZacca',
             },
           ],
         },
