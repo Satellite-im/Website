@@ -1336,18 +1336,6 @@ export default {
           ],
         },
         {
-          key: 'david',
-          image: '/images/team-david.png',
-          name: 'David Chan',
-          occupation: this.$t('section_team.team.david_occupation'),
-          socials: [
-            {
-              key: 'github',
-              link: 'https://github.com/davidchan1219',
-            },
-          ],
-        },
-        {
           key: 'lauren',
           image: '/images/team-lauren.png',
           name: 'Lauren Harrington',
