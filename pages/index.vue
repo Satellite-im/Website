@@ -1098,16 +1098,6 @@ export default {
           ],
         },
         {
-          key: 'jason',
-          image: '/images/team-jason.png',
-          name: 'Jason Panay',
-          occupation: this.$t('section_team.team.jason_occupation'),
-          socials: [
-            { key: 'linkedin', link: 'https://www.linkedin.com/in/jpanay/' },
-            { key: 'github', link: 'https://github.com/jpanay' },
-          ],
-        },
-        {
           key: 'chris',
           image: '/images/team-chris.png',
           name: 'Chris Hogan',
