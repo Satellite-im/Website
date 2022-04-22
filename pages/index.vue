@@ -207,7 +207,7 @@
               <div class="flex items-center mt-12">
                 <div class="relative w-40 h-10 mt-4 mr-6 md:w-44 md:h-12">
                   <nuxt-img
-                    src="/images/shadow-button-green.png"
+                    src="/images/shadow-button-green.webp"
                     class="
                       absolute
                       w-96
