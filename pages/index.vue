@@ -1552,7 +1552,7 @@ export default {
   methods: {
     scroll(anchorId) {
       const anchor = document.querySelector(anchorId)
-      window.history.pushState(null, null, `#${anchorId}`);
+      window.history.pushState(null, null, anchorId);
       if (anchor) {
         this.simplebar.scrollTo({
           top: anchor.getBoundingClientRect().top,
