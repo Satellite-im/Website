@@ -1031,13 +1031,6 @@ export default {
       ],
       features: [
         {
-          key: 'installation',
-          title: this.$t('section_features.features.installation.title'),
-          description: this.$t(
-            'section_features.features.installation.description'
-          ),
-        },
-        {
           key: 'chat',
           title: this.$t('section_features.features.chat.title'),
           description: this.$t('section_features.features.chat.description'),
