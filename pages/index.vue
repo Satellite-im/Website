@@ -100,6 +100,15 @@
                       >{{ $t('footer.nav.help') }}</a
                     >
                   </li>
+                  <li class="mt-5">
+                    <a
+                      href="https://satellite-im.medium.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="link-hover black"
+                      >{{ $t('footer.nav.blog') }}</a
+                    >
+                  </li>
                 </ul>
               </simplebar>
               <footer class="flex items-center w-full h-24">
@@ -1543,7 +1552,7 @@ export default {
   methods: {
     scroll(anchorId) {
       const anchor = document.querySelector(anchorId)
-      window.location.hash = `#${anchorId}`
+      window.location.hash = anchorId
       if (anchor) {
         this.simplebar.scrollTo({
           top: anchor.getBoundingClientRect().top,
