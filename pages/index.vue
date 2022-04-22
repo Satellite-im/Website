@@ -1552,12 +1552,12 @@ export default {
   methods: {
     scroll(anchorId) {
       const anchor = document.querySelector(anchorId)
-      window.location.hash = anchorId
       if (anchor) {
         this.simplebar.scrollTo({
           top: anchor.getBoundingClientRect().top,
           behavior: 'smooth',
         })
+        window.location.hash = anchorId
       }
     },
     openSidebar() {
