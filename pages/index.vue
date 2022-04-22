@@ -856,6 +856,15 @@
                     >{{ $t('footer.nav.help') }}</a
                   >
                 </li>
+                <li class="w-full mt-5 xs:w-auto xs:mr-14">
+                  <a
+                    href="https://satellite-im.medium.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-sm text-white link-hover"
+                    >{{ $t('footer.nav.blog') }}</a
+                  >
+                </li>
               </ul>
             </nav>
             <ul class="flex flex-wrap items-center mt-5">
