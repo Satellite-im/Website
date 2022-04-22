@@ -49,10 +49,6 @@
   "section_features": {
     "title": "Key Features",
     "features": {
-      "installation": {
-        "title": "Easy Installation",
-        "description": "Satellite.im installs with one click."
-      },
       "chat": {
         "title": "Multi Platform chat",
         "description": "Chat anywhere with our cross platform app."
@@ -62,7 +58,7 @@
         "description": "Share up to 4GB files instantly with friends."
       },
       "payments": {
-        "title": "Built-in Payments",
+        "title": "Built-in Payments (Coming Soon)",
         "description": "Send money between friends instantly."
       },
       "streaming": {
@@ -70,7 +66,7 @@
         "description": "Stream at up to 4k."
       },
       "serverless": {
-        "title": "Serverless",
+        "title": "Decentralized and Peer-to-peer",
         "description": "Your data goes straight to your friends, nobody tracking in the middle."
       }
     }
