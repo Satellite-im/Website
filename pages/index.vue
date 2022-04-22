@@ -4,7 +4,7 @@
       <simplebar ref="simplebar" class="absolute w-full h-full">
         <div class="z-10 w-full overflow-hidden">
           <nuxt-img
-            src="/images/page-start-spotlight.png"
+            src="/images/page-start-spotlight.webp"
             class="
               absolute
               transform
@@ -19,7 +19,7 @@
               class="flex items-center justify-between w-full h-12  lg:justify-start"
             >
               <nuxt-img
-                src="/images/logo.svg"
+                src="/images/logo.webp"
                 :alt="$t('satellite_logo')"
                 class="w-[11.98rem] z-10"
                 provider="netlify"
@@ -248,7 +248,7 @@
               "
             >
               <nuxt-img
-                src="/images/section-hero-spotlight.png"
+                src="/images/section-hero-spotlight.webp"
                 :alt="$t('app_illustration')"
                 class="
                   absolute
@@ -266,7 +266,7 @@
               />
               <nuxt-img
                 v-if="$viewport.isGreaterThan('lg')"
-                src="/images/section-hero-illustration.png"
+                src="/images/section-hero-illustration.webp"
                 :alt="$t('app_illustration')"
                 class="
                   absolute
@@ -337,7 +337,7 @@
                   class="flex items-center justify-center  w-36 h-36 md:w-48 md:h-48"
                 >
                   <nuxt-img
-                    :src="`/images/section-meet-feature-${slogan.key}.png`"
+                    :src="`/images/section-meet-feature-${slogan.key}.webp`"
                     class="w-full transform -translate-x-4"
                     :alt="slogan.label"
                     provider="netlify"
@@ -376,14 +376,14 @@
               "
             >
               <nuxt-img
-                src="/images/section-slogan-spotlight.png"
+                src="/images/section-slogan-spotlight.webp"
                 class="scale-[3.5] transform translate-y-[40%]"
                 alt="spotlight"
                 provider="netlify"
               />
             </div>
             <nuxt-img
-              src="/images/section-slogan-illustration-mobile.png"
+              src="/images/section-slogan-illustration-mobile.webp"
               class="relative w-full h-full"
               :alt="$t('app_illustration')"
               provider="netlify"
@@ -408,14 +408,14 @@
               class="absolute transform translate-x-[-50%] pointer-events-none"
             >
               <nuxt-img
-                src="/images/section-slogan-spotlight.png"
+                src="/images/section-slogan-spotlight.webp"
                 class="scale-[1.65] transform translate-y-16 lg:translate-y-24"
                 alt="spotlight"
                 provider="netlify"
               />
             </div>
             <nuxt-img
-              src="/images/section-slogan-illustration.png"
+              src="/images/section-slogan-illustration.webp"
               class="relative w-full h-full transform -translate-x-10 translate-y-5 "
               :alt="$t('app_illustration')"
               provider="netlify"
@@ -462,7 +462,7 @@
                   "
                 >
                   <nuxt-img
-                    src="/images/section-slogan-no-compromises.png"
+                    src="/images/section-slogan-no-compromises.webp"
                     :alt="$t('section_slogan.no_compromises.title')"
                     class="transform translate-x-[-20%]"
                     provider="netlify"
@@ -538,7 +538,7 @@
                   "
                 >
                   <nuxt-img
-                    src="/images/section-slogan-multi-platform.png"
+                    src="/images/section-slogan-multi-platform.webp"
                     :alt="$t('section_slogan.multi_platform.title')"
                     class="transform translate-x-[5%]"
                     provider="netlify"
@@ -566,7 +566,7 @@
               "
             >
               <nuxt-img
-                src="/images/section-features-spotlight.png"
+                src="/images/section-features-spotlight.webp"
                 class="opacity-50 pointer-events-none"
                 alt="spotlight"
                 provider="netlify"
@@ -612,7 +612,7 @@
               "
             >
               <nuxt-img
-                src="images/section-features-illustration.png"
+                src="images/section-features-illustration.webp"
                 :alt="$t('section_features.features.sharing.title')"
                 class="transform scale-110 translate-y-24  2xl:scale-100 2xl:translate-y-10"
                 provider="netlify"
@@ -638,7 +638,7 @@
                   "
                 >
                   <nuxt-img
-                    src="/images/section-team-early-access.png"
+                    src="/images/section-team-early-access.webp"
                     class="ransform translate-x-[-25%] translate-y-10"
                     :alt="$t('section_slogan.no_compromises.title')"
                     provider="netlify"
@@ -799,7 +799,7 @@
                 "
               >
                 <nuxt-img
-                  src="/images/footer-spotlight.png"
+                  src="/images/footer-spotlight.webp"
                   class="transform scale-75 -translate-x-20 -translate-y-6  xs:-translate-y-8 xs:-translate-x-32 md:-translate-y-14 md:-translate-x-56 lg:-translate-y-16 lg:-translate-x-40 2xl:-translate-x-20"
                   alt="spotlight"
                   provider="netlify"
@@ -813,7 +813,7 @@
         >
           <div class="relative flex flex-wrap items-end w-full">
             <nuxt-img
-              src="/images/logo.svg"
+              src="/images/logo.webp"
               :alt="$t('satellite_logo')"
               class="w-[14.37rem] mr-20 mt-10 transform translate-y-2 z-10"
               provider="netlify"
@@ -1055,7 +1055,7 @@ export default {
       team: [
         {
           key: 'matt',
-          image: '/images/team-matt.png',
+          image: '/images/team-matt.webp',
           name: 'Matt Wisniewski',
           occupation: this.$t('section_team.team.matt_occupation'),
           socials: [
@@ -1075,7 +1075,7 @@ export default {
         },
         {
           key: 'manuel',
-          image: '/images/team-manuel.png',
+          image: '/images/team-manuel.webp',
           name: 'Manuel Tumiati',
           occupation: this.$t('section_team.team.manuel_occupation'),
           socials: [
@@ -1089,7 +1089,7 @@ export default {
         },
         {
           key: 'kathy',
-          image: '/images/team-kathy.png',
+          image: '/images/team-kathy.webp',
           name: 'Kathy Chan',
           occupation: this.$t('section_team.team.kathy_occupation'),
           socials: [
@@ -1099,7 +1099,7 @@ export default {
         },
         {
           key: 'chris',
-          image: '/images/team-chris.png',
+          image: '/images/team-chris.webp',
           name: 'Chris Hogan',
           occupation: this.$t('section_team.team.chris_occupation'),
           socials: [
@@ -1115,7 +1115,7 @@ export default {
         },
         {
           key: 'dina',
-          image: '/images/team-dina.png',
+          image: '/images/team-dina.webp',
           name: 'Dina Brodsky',
           occupation: this.$t('section_team.team.dina_occupation'),
           socials: [
@@ -1128,7 +1128,7 @@ export default {
         },
         {
           key: 'tom',
-          image: '/images/team-tom.png',
+          image: '/images/team-tom.webp',
           name: 'Tom McArdle',
           occupation: this.$t('section_team.team.tom_occupation'),
           socials: [
@@ -1140,7 +1140,7 @@ export default {
         },
         {
           key: 'jerome',
-          image: '/images/team-jerome.png',
+          image: '/images/team-jerome.webp',
           name: 'Jerome Aceti',
           occupation: this.$t('section_team.team.jerome_occupation'),
           socials: [
@@ -1152,7 +1152,7 @@ export default {
         },
         {
           key: 'mauro',
-          image: '/images/team-mauro.png',
+          image: '/images/team-mauro.webp',
           name: 'Mauro Molinari',
           occupation: this.$t('section_team.team.mauro_occupation'),
           socials: [
@@ -1168,7 +1168,7 @@ export default {
         },
         {
           key: 'mattia',
-          image: '/images/team-mattia.png',
+          image: '/images/team-mattia.webp',
           name: 'Mattia Bianchi',
           occupation: this.$t('section_team.team.mattia_occupation'),
           socials: [
@@ -1184,7 +1184,7 @@ export default {
         },
         {
           key: 'samir',
-          image: '/images/team-samir.png',
+          image: '/images/team-samir.webp',
           name: 'Samir Vimercati',
           occupation: this.$t('section_team.team.samir_occupation'),
           socials: [
@@ -1200,7 +1200,7 @@ export default {
         },
         {
           key: 'miru',
-          image: '/images/team-miru.png',
+          image: '/images/team-miru.webp',
           name: 'Miru Shim',
           occupation: this.$t('section_team.team.miru_occupation'),
           socials: [
@@ -1215,24 +1215,8 @@ export default {
           ],
         },
         {
-          key: 'nick',
-          image: '/images/team-nick.png',
-          name: 'Nick Jang',
-          occupation: this.$t('section_team.team.nick_occupation'),
-          socials: [
-            {
-              key: 'linkedin',
-              link: 'https://linkedin.com/in/nickjjang',
-            },
-            {
-              key: 'github',
-              link: 'https://github.com/nickjjang',
-            },
-          ],
-        },
-        {
           key: 'wendy',
-          image: '/images/team-wendy.png',
+          image: '/images/team-wendy.webp',
           name: 'Wendy Morgan',
           occupation: this.$t('section_team.team.wendy_occupation'),
           socials: [
@@ -1244,7 +1228,7 @@ export default {
         },
         {
           key: 'jeff',
-          image: '/images/team-jeff.png',
+          image: '/images/team-jeff.webp',
           name: 'Jeff Morris',
           occupation: this.$t('section_team.team.jeff_occupation'),
           socials: [
@@ -1260,14 +1244,14 @@ export default {
         },
         {
           key: 'kevin',
-          image: '/images/team-kevin.png',
+          image: '/images/team-kevin.webp',
           name: 'Kevin McComas',
           occupation: this.$t('section_team.team.kevin_occupation'),
           socials: [],
         },
         {
           key: 'elizabeth',
-          image: '/images/team-elizabeth.png',
+          image: '/images/team-elizabeth.webp',
           name: 'Elizabeth Brown',
           occupation: this.$t('section_team.team.elizabeth_occupation'),
           socials: [
@@ -1282,24 +1266,8 @@ export default {
           ],
         },
         {
-          key: 'eric',
-          image: '/images/team-eric.png',
-          name: 'Eric Lee',
-          occupation: this.$t('section_team.team.eric_occupation'),
-          socials: [
-            {
-              key: 'github',
-              link: 'https://github.com/genie-magic',
-            },
-            {
-              key: 'website',
-              link: 'https://genie-magic.github.io/myportal/',
-            },
-          ],
-        },
-        {
           key: 'phill',
-          image: '/images/team-phill.png',
+          image: '/images/team-phill.webp',
           name: 'Phill Wisniewski',
           occupation: this.$t('section_team.team.phill_occupation'),
           socials: [
@@ -1311,7 +1279,7 @@ export default {
         },
         {
           key: 'sara',
-          image: '/images/team-sara.png',
+          image: '/images/team-sara.webp',
           name: 'Sara Tavares',
           occupation: this.$t('section_team.team.sara_occupation'),
           socials: [
@@ -1327,7 +1295,7 @@ export default {
         },
         {
           key: 'lauren',
-          image: '/images/team-lauren.png',
+          image: '/images/team-lauren.webp',
           name: 'Lauren Harrington',
           occupation: this.$t('section_team.team.lauren_occupation'),
           socials: [
@@ -1339,7 +1307,7 @@ export default {
         },
         {
           key: 'joe',
-          image: '/images/team-joe.png',
+          image: '/images/team-joe.webp',
           name: 'Joe McGrath',
           occupation: this.$t('section_team.team.joe_occupation'),
           socials: [
@@ -1355,7 +1323,7 @@ export default {
         },
         {
           key: 'clayton',
-          image: '/images/team-clayton.png',
+          image: '/images/team-clayton.webp',
           name: 'Clayton Peeples',
           occupation: this.$t('section_team.team.clayton_occupation'),
           socials: [
@@ -1370,24 +1338,8 @@ export default {
           ],
         },
         {
-          key: 'david-lee',
-          image: '/images/team-david-lee.png',
-          name: 'David Lee',
-          occupation: this.$t('section_team.team.david_lee_occupation'),
-          socials: [
-            {
-              key: 'linkedin',
-              link: 'https://www.linkedin.com/in/david-lee-a26237227/',
-            },
-            {
-              key: 'github',
-              link: 'https://github.com/baymax-codecare',
-            },
-          ],
-        },
-        {
           key: 'sheldon',
-          image: '/images/team-sheldon.png',
+          image: '/images/team-sheldon.webp',
           name: 'Sheldon McGee',
           occupation: this.$t('section_team.team.sheldon_occupation'),
           socials: [
@@ -1403,7 +1355,7 @@ export default {
         },
         {
           key: 'thomas',
-          image: '/images/team-thomas.png',
+          image: '/images/team-thomas.webp',
           name: 'Thomas Bosatelli',
           occupation: this.$t('section_team.team.thomas_occupation'),
           socials: [
@@ -1415,7 +1367,7 @@ export default {
         },
         {
           key: 'andre',
-          image: '/images/team-andre.png',
+          image: '/images/team-andre.webp',
           name: 'Andre Pramaditya',
           occupation: this.$t('section_team.team.andre_occupation'),
           socials: [
@@ -1431,7 +1383,7 @@ export default {
         },
         {
           key: 'luis',
-          image: '/images/team-luis.png',
+          image: '/images/team-luis.webp',
           name: 'Luis Cardeña',
           occupation: this.$t('section_team.team.luis_occupation'),
           socials: [
@@ -1447,7 +1399,7 @@ export default {
         },
         {
           key: 'pavel',
-          image: '/images/team-pavel.png',
+          image: '/images/team-pavel.webp',
           name: 'Pavel Lozka',
           occupation: this.$t('section_team.team.pavel_occupation'),
           socials: [
@@ -1463,7 +1415,7 @@ export default {
         },
         {
           key: 'darius',
-          image: '/images/team-darius.png',
+          image: '/images/team-darius.webp',
           name: 'Darius Clark',
           occupation: this.$t('section_team.team.darius_occupation'),
           socials: [
@@ -1479,7 +1431,7 @@ export default {
         },
         {
           key: 'alex',
-          image: '/images/team-alex.png',
+          image: '/images/team-alex.webp',
           name: 'Alex Zakablukov',
           occupation: this.$t('section_team.team.alex_occupation'),
           socials: [
@@ -1495,7 +1447,7 @@ export default {
         },
         {
           key: 'calogero',
-          image: '/images/team-calogero.png',
+          image: '/images/team-calogero.webp',
           name: 'Calogero Cimino',
           occupation: this.$t('section_team.team.calogero_occupation'),
           socials: [
@@ -1511,7 +1463,7 @@ export default {
         },
         {
           key: 'drew',
-          image: '/images/team-drew.png',
+          image: '/images/team-drew.webp',
           name: 'Drew Ewing',
           occupation: this.$t('section_team.team.drew_occupation'),
           socials: [
@@ -1527,7 +1479,7 @@ export default {
         },
         {
           key: 'nicholas',
-          image: '/images/team-nicholas.png',
+          image: '/images/team-nicholas.webp',
           name: 'Nicholas Zaccagnino',
           occupation: this.$t('section_team.team.nicholas_occupation'),
           socials: [
