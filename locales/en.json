@@ -36,7 +36,7 @@
     "no_compromises": {
       "title": "No Compromises",
       "description": {
-        "one": "Satellite.im is built using serverless technology with peer 2 peer workflows. Everything is encrypted so your data only gets read by who you intend it to. We store files on a distributed network so redundancy comes built in along with large file storage.",
+        "one": "Satellite.im is built using modern, decentralized technologies with peer 2 peer workflows. Everything is encrypted so your data only gets read by who you intend it to. We store files on a distributed network so redundancy comes built in along with large file storage.",
         "two": "All these things come without compromises to your experience."
       }
     },
@@ -79,7 +79,7 @@
     "title": "Early Access",
     "description": {
       "one": "Satellite.im is nearing our early access beta! If you'd like to get started ahead of the curve you can join our mailing list and get notified of releases. You can give Satellite.im a try right now but expect some bugs and please understand it is not representative of our final product.",
-      "two": "Satellite.im installs as a PWA which makes it very easy to get started, just navigate to https://app.satellite.im on your phone to get started."
+      "two": "Satellite.im installs as a PWA which makes it very easy to get started, just navigate to https://dev.satellite.im on your phone to get started."
     }
   },
   "try_release": "Try Pre-Release",
