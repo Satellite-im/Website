@@ -75,7 +75,7 @@
                 <ul class="flex flex-col mt-5">
                   <li class="mt-5">
                     <a
-                      href="https://dev.satellite.one/#/"
+                      href="https://test.satellite.one/#/"
                       target="_blank"
                       rel="noopener noreferrer"
                       class="link-hover black"
@@ -693,7 +693,7 @@
                     </a>
                   </div>
                   <a
-                    href="https://dev.satellite.one/"
+                    href="https://test.satellite.one/"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="flex items-center justify-center w-48 h-10 ml-6 text-sm font-bold text-center transition duration-300 ease-linear bg-white shadow-lg outline-none  md:w-52 md:h-12 mt-14 rounded-3xl text-retro-blue md:text-base hover:bg-extraordinary-abundance-of-tinge focus:bg-extraordinary-abundance-of-tinge"
@@ -831,7 +831,7 @@
               <ul class="flex flex-wrap items-center">
                 <li class="w-full mt-5 xs:w-auto xs:mr-14">
                   <a
-                    href="https://dev.satellite.one/#/"
+                    href="https://test.satellite.one/#/"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="text-sm text-white link-hover"
