@@ -75,7 +75,7 @@
     "title": "Early Access",
     "description": {
       "one": "Satellite.im is nearing our early access beta! If you'd like to get started ahead of the curve you can join our mailing list and get notified of releases. You can give Satellite.im a try right now but expect some bugs and please understand it is not representative of our final product.",
-      "two": "Satellite.im installs as a PWA which makes it very easy to get started, just navigate to https://dev.satellite.im on your phone to get started."
+      "two": "Satellite.im installs as a PWA which makes it very easy to get started, just navigate to https://test.satellite.one on your phone to get started."
     }
   },
   "try_release": "Try Pre-Release",
