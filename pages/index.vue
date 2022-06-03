@@ -1570,23 +1570,19 @@ export default {
               key: 'website',
               link: 'https://github.com/maljuburi',
             },
-            {
-          key: 'muhammad',
-          image: '/images/team-muhammad.png',
-          name: 'Muhammad Al Juburi',
-          occupation: this.$t('section_team.team.muhammad_occupation'),
+           {
+          key: 'nicholas',
+          image: '/images/team-nicholas.webp',
+          name: 'Nicholas Zaccagnino',
+          occupation: this.$t('section_team.team.nicholas_occupation'),
           socials: [
             {
               key: 'linkedin',
-              link: 'https://www.linkedin.com/in/maljuburi',
+              link: 'https://www.linkedin.com/in/zaccagnino-nicholas/',
             },
             {
               key: 'github',
-              link: 'https://github.com/maljuburi',
-            },
-            {
-              key: 'website',
-              link: 'https://github.com/maljuburi',
+              link: 'https://github.com/JustZacca',
             },
           ],
         },
