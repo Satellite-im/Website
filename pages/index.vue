@@ -1570,6 +1570,16 @@ export default {
               key: 'website',
               link: 'https://github.com/maljuburi',
             },
+            {
+              key: 'grace',
+              image: '/images/team-grace.png',
+              name: 'Grace Gaspardo',
+              occupation: this.$t('section_team.team.grace_occupation'),
+              socials: [
+            {
+              key: 'website',
+              link: 'https://www.gaspardo.io/',
+            },
           ],
         },
       ],
