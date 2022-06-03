@@ -1620,7 +1620,7 @@ export default {
         },
       ],
       simplebar: null,
-      slidesPerView: 1,
+      slidesPerView: 2,
     }
   },
   computed: {
