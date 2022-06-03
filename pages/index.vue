@@ -1570,20 +1570,6 @@ export default {
               key: 'website',
               link: 'https://github.com/maljuburi',
             },
-           {
-          key: 'nicholas',
-          image: '/images/team-nicholas.webp',
-          name: 'Nicholas Zaccagnino',
-          occupation: this.$t('section_team.team.nicholas_occupation'),
-          socials: [
-            {
-              key: 'linkedin',
-              link: 'https://www.linkedin.com/in/zaccagnino-nicholas/',
-            },
-            {
-              key: 'github',
-              link: 'https://github.com/JustZacca',
-            },
           ],
         },
       ],
@@ -1620,7 +1606,7 @@ export default {
         },
       ],
       simplebar: null,
-      slidesPerView: 2,
+      slidesPerView: 1,
     }
   },
   computed: {
