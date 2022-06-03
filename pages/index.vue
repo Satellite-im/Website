@@ -1524,6 +1524,8 @@ export default {
               key: 'github',
               link: 'https://github.com/lgmarchi',
             },
+          ],
+        },
         {
           key: 'muhammad',
           image: '/images/team-muhammad.png',
@@ -1542,6 +1544,8 @@ export default {
               key: 'website',
               link: 'https://github.com/maljuburi',
             },
+          ],
+        },
         {
           key: 'jason',
           image: '/images/team-jason.png',
@@ -1556,6 +1560,8 @@ export default {
               key: 'github',
               link: 'https://github.com/jasonwoodland',
             },
+          ],
+        },
         {
           key: 'grace',
           image: '/images/team-grace.png',
