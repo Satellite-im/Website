@@ -1504,6 +1504,38 @@ export default {
             },
           ],
         },
+        {
+          key: 'yijing',
+          image: '/images/team-yijing.png',
+          name: 'Yijing Huang',
+          occupation: this.$t('section_team.team.yijing_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/huangyijing/',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/hyj1204',
+            },
+          ],
+        },
+        {
+          key: 'lucas',
+          image: '/images/team-lucas.png',
+          name: 'Lucas Marchi',
+          occupation: this.$t('section_team.team.lucas_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/lgmarchi/',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/lgmarchi',
+            },
+          ],
+        },
       ],
       footerSocials: [
         {
