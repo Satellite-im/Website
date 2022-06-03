@@ -1526,54 +1526,6 @@ export default {
             },
           ],
         },
-        {
-          key: 'muhammad',
-          image: '/images/team-muhammad.png',
-          name: 'Muhammad Al Juburi',
-          occupation: this.$t('section_team.team.muhammad_occupation'),
-          socials: [
-            {
-              key: 'linkedin',
-              link: 'https://www.linkedin.com/in/maljuburi',
-            },
-            {
-              key: 'github',
-              link: 'https://github.com/maljuburi',
-            },
-            {
-              key: 'website',
-              link: 'https://github.com/maljuburi',
-            },
-          ],
-        },
-        {
-          key: 'jason',
-          image: '/images/team-jason.png',
-          name: 'Jason Woodland',
-          occupation: this.$t('section_team.team.jason_occupation'),
-          socials: [
-            {
-              key: 'website',
-              link: 'https://jasonwoodland.com/',
-            },
-            {
-              key: 'github',
-              link: 'https://github.com/jasonwoodland',
-            },
-          ],
-        },
-        {
-          key: 'grace',
-          image: '/images/team-grace.png',
-          name: 'Grace Gaspardo',
-          occupation: this.$t('section_team.team.grace_occupation'),
-          socials: [
-            {
-              key: 'website',
-              link: 'https://www.gaspardo.io/',
-            },
-          ],
-        },
       ],
       footerSocials: [
         {
