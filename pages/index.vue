@@ -1537,6 +1537,22 @@ export default {
           ],
         },
         {
+          key: 'jason',
+          image: '/images/team-jason.png',
+          name: 'Jason Woodland',
+          occupation: this.$t('section_team.team.jason_occupation'),
+          socials: [
+            {
+              key: 'website',
+              link: 'https://jasonwoodland.com/',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/jasonwoodland',
+            },
+          ],
+        },
+        {
           key: 'muhammad',
           image: '/images/team-muhammad.png',
           name: 'Muhammad Al Juburi',
