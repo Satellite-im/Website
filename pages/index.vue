@@ -1099,6 +1099,16 @@ export default {
           ],
         },
         {
+          key: 'kathy',
+          image: '/images/team-kathy.webp',
+          name: 'Kathy Chan',
+          occupation: this.$t('section_team.team.kathy_occupation'),
+          socials: [
+            { key: 'linkedin', link: 'https://www.linkedin.com/in/kemopaw/' },
+            { key: 'github', link: 'https://github.com/KemoPaw' },
+          ],
+        },
+        {
           key: 'chris',
           image: '/images/team-chris.webp',
           name: 'Chris Hogan',
