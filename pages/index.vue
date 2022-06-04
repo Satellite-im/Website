@@ -1496,7 +1496,7 @@ export default {
         },
         {
           key: 'yijing',
-          image: '/images/team-yijing.png',
+          image: '/images/team-yijing.webp',
           name: 'Yijing Huang',
           occupation: this.$t('section_team.team.yijing_occupation'),
           socials: [
@@ -1512,7 +1512,7 @@ export default {
         },
         {
           key: 'lucas',
-          image: '/images/team-lucas.png',
+          image: '/images/team-lucas.webp',
           name: 'Lucas Marchi',
           occupation: this.$t('section_team.team.lucas_occupation'),
           socials: [
@@ -1528,7 +1528,7 @@ export default {
         },
         {
           key: 'jason',
-          image: '/images/team-jason.png',
+          image: '/images/team-jason.webp',
           name: 'Jason Woodland',
           occupation: this.$t('section_team.team.jason_occupation'),
           socials: [
@@ -1544,7 +1544,7 @@ export default {
         },
         {
           key: 'muhammad',
-          image: '/images/team-muhammad.png',
+          image: '/images/team-muhammad.webp',
           name: 'Muhammad Al Juburi',
           occupation: this.$t('section_team.team.muhammad_occupation'),
           socials: [
@@ -1558,13 +1558,13 @@ export default {
             },
             {
               key: 'website',
-              link: 'https://github.com/maljuburi',
+              link: 'https://www.maljuburi.com/',
             },
           ],
         },
         {
           key: 'grace',
-          image: '/images/team-grace.png',
+          image: '/images/team-grace.webp',
           name: 'Grace Gaspardo',
           occupation: this.$t('section_team.team.grace_occupation'),
           socials: [
