@@ -1099,16 +1099,6 @@ export default {
           ],
         },
         {
-          key: 'kathy',
-          image: '/images/team-kathy.webp',
-          name: 'Kathy Chan',
-          occupation: this.$t('section_team.team.kathy_occupation'),
-          socials: [
-            { key: 'linkedin', link: 'https://www.linkedin.com/in/kemopaw/' },
-            { key: 'github', link: 'https://github.com/KemoPaw' },
-          ],
-        },
-        {
           key: 'chris',
           image: '/images/team-chris.webp',
           name: 'Chris Hogan',
@@ -1501,6 +1491,86 @@ export default {
             {
               key: 'github',
               link: 'https://github.com/JustZacca',
+            },
+          ],
+        },
+        {
+          key: 'yijing',
+          image: '/images/team-yijing.webp',
+          name: 'Yijing Huang',
+          occupation: this.$t('section_team.team.yijing_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/huangyijing/',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/hyj1204',
+            },
+          ],
+        },
+        {
+          key: 'lucas',
+          image: '/images/team-lucas.webp',
+          name: 'Lucas Marchi',
+          occupation: this.$t('section_team.team.lucas_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/lgmarchi/',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/lgmarchi',
+            },
+          ],
+        },
+        {
+          key: 'jason',
+          image: '/images/team-jason.webp',
+          name: 'Jason Woodland',
+          occupation: this.$t('section_team.team.jason_occupation'),
+          socials: [
+            {
+              key: 'website',
+              link: 'https://jasonwoodland.com/',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/jasonwoodland',
+            },
+          ],
+        },
+        {
+          key: 'muhammad',
+          image: '/images/team-muhammad.webp',
+          name: 'Muhammad Al Juburi',
+          occupation: this.$t('section_team.team.muhammad_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/maljuburi',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/maljuburi',
+            },
+            {
+              key: 'website',
+              link: 'https://www.maljuburi.com/',
+            },
+          ],
+        },
+        {
+          key: 'grace',
+          image: '/images/team-grace.webp',
+          name: 'Grace Gaspardo',
+          occupation: this.$t('section_team.team.grace_occupation'),
+          socials: [
+            {
+              key: 'website',
+              link: 'https://www.gaspardo.io/',
             },
           ],
         },

@@ -84,9 +84,8 @@
     "description": "Satellite.im is full of passionate open-source developers as well as our in house team which both work hard to build a different kind of chat platform.",
     "team": {
       "matt_occupation": "President & Lead Engineer",
-      "manuel_occupation": "CTO & Backend Lead Engineer",
-      "kathy_occupation": "Software Engineer",
-      "chris_occupation": "Fullstack Lead Engineer",
+      "manuel_occupation": "CTO",
+      "chris_occupation": "Head of Software Engineering",
       "dina_occupation": "Art director",
       "tom_occupation": "COO & Operations Lead",
       "jerome_occupation": "Advisor",
@@ -101,7 +100,7 @@
       "phill_occupation": "Software QA Analyst",
       "sara_occupation": "Lead QA Engineer",
       "lauren_occupation": "Marketing Design",
-      "joe_occupation": "Software Engineer",
+      "joe_occupation": "Senior Software Engineer",
       "clayton_occupation": "QA Intern",
       "sheldon_occupation": "Head of Engineering Management",
       "thomas_occupation": "Frontend Engineer",
@@ -112,7 +111,12 @@
       "drew_occupation": "Senior Staff Engineer",
       "alex_occupation": "Software Engineer",
       "pavel_occupation": "Senior Software Engineer",
-      "nicholas_occupation": "Software Engineer"
+      "nicholas_occupation": "Software Engineer",
+      "yijing_occupation": "Software Engineer",
+      "lucas_occupation": "Software Engineer",
+      "muhammad_occupation": "Software Engineer",
+      "jason_occupation": "Software Engineer",
+      "grace_occupation": "UX Researcher"
     }
   },
   "footer": {
