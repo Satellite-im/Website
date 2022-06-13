@@ -1401,7 +1401,7 @@ export default {
         {
           key: 'pavel',
           image: '/images/team-pavel.webp',
-          name: 'Pavel Lozka',
+          name: 'Pavel Lozko',
           occupation: this.$t('section_team.team.pavel_occupation'),
           socials: [
             {
