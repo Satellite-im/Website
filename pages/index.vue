@@ -1576,7 +1576,7 @@ export default {
         },
         {
           key: 'nathan',
-          image: '/images/team-nathan.webp',
+          image: '/images/team-nathan.png',
           name: 'Nathan Power',
           occupation: this.$t('section_team.team.nathan_occupation'),
           socials: [
@@ -1592,7 +1592,7 @@ export default {
         },
         {
           key: 'jhonny',
-          image: '/images/team-jhonny.webp',
+          image: '/images/team-jhonny.png',
           name: 'Jhonny Vargas',
           occupation: this.$t('section_team.team.jhonny_occupation'),
           socials: [
