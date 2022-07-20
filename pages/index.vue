@@ -1574,6 +1574,38 @@ export default {
             },
           ],
         },
+        {
+          key: 'nathan',
+          image: '/images/team-nathan.png',
+          name: 'Nathan Power',
+          occupation: this.$t('section_team.team.nathan_occupation'),
+          socials: [
+            {
+              key: 'website',
+              link: 'https://nathanpower.com.au',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/nathan-power',
+            },
+          ],
+        },
+        {
+          key: 'jhonny',
+          image: '/images/team-jhonny.png',
+          name: 'Jhonny Vargas',
+          occupation: this.$t('section_team.team.jhonny_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/jhonny-knaak-de-vargas-69467949/',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/jkvargas',
+            },
+          ],
+        },
       ],
       footerSocials: [
         {

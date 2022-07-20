@@ -89,7 +89,7 @@
       "dina_occupation": "Art director",
       "tom_occupation": "COO & Operations Lead",
       "jerome_occupation": "Advisor",
-      "mauro_occupation": "Frontend Lead Engineer",
+      "mauro_occupation": "Lead Engineer (Core)",
       "mattia_occupation": "Blockchain Engineer",
       "samir_occupation": "Frontend Engineer",
       "miru_occupation": "Creative Director",
@@ -115,8 +115,10 @@
       "yijing_occupation": "Software Engineer",
       "lucas_occupation": "Software Engineer",
       "muhammad_occupation": "Software Engineer",
-      "jason_occupation": "Software Engineer",
-      "grace_occupation": "UX Researcher"
+      "jason_occupation": "Senior Software Engineer",
+      "grace_occupation": "UX Researcher",
+      "nathan_occupation": "Software Engineer",
+      "jhonny_occupation": "Senior Systems Engineer"
     }
   },
   "footer": {
