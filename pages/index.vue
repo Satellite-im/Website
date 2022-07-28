@@ -1606,6 +1606,22 @@ export default {
             },
           ],
         },
+        {
+          key: 'sj',
+          image: '/images/team-sj.png',
+          name: 'SJ Kim',
+          occupation: this.$t('section_team.team.sj_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/bus710/',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/bus710',
+            },
+          ],
+        },
       ],
       footerSocials: [
         {
