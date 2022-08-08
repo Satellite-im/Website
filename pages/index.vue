@@ -242,6 +242,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   class="flex items-center justify-center w-48 h-10 mt-4 text-sm font-bold text-center transition duration-300 ease-linear bg-white shadow-lg outline-none  md:w-52 md:h-12 rounded-3xl text-retro-blue md:text-base hover:bg-extraordinary-abundance-of-tinge focus:bg-extraordinary-abundance-of-tinge"
+                  :disabled="disabled"
                 >
                   {{ $t('open_in_browser') }}
                 </a>
