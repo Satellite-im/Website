@@ -693,10 +693,9 @@
                     </a>
                   </div>
                   <a
-                    href="https://core.satellite.im/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="flex items-center justify-center w-48 h-10 ml-6 text-sm font-bold text-center transition duration-300 ease-linear bg-white shadow-lg outline-none  md:w-52 md:h-12 mt-14 rounded-3xl text-retro-blue md:text-base hover:bg-extraordinary-abundance-of-tinge focus:bg-extraordinary-abundance-of-tinge"
+                    class="flex items-center justify-center w-48 h-10 ml-6 text-sm font-bold text-center transition duration-300 ease-linear bg-secondary shadow-lg outline-none  md:w-52 md:h-12 mt-14 rounded-3xl text-retro-blue md:text-base hover:bg-extraordinary-abundance-of-tinge focus:bg-extraordinary-abundance-of-tinge"
                   >
                     {{ $t('try_release') }}
                   </a>
