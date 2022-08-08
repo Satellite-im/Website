@@ -9,7 +9,7 @@
       "team": "Team"
     },
     "title": "Universal messaging, with you at its core.",
-    "description": "Satellite.im gives you peace of mind with end-to-end encryption without sacrificing quality.",
+    "description": "Satellite gives you peace of mind with end-to-end encryption without sacrificing quality.",
     "partners": {
       "multicoin_capital": "Multicoin Capital",
       "ideo_colab": "IDEO CoLab",
@@ -23,7 +23,7 @@
   "open_in_browser": "Open in Browser",
   "our_partners": "Our Partners",
   "section_meet": {
-    "title": "Meet Satellite.im",
+    "title": "Meet Satellite",
     "features": {
       "chat": "Feature Rich Chat",
       "encryption": "E2E Encryption",
@@ -42,7 +42,7 @@
     },
     "multi_platform": {
       "title": "Multi-Platform",
-      "description": "Chat from anywhere, from desktop and beyond Satellite.im has you covered. Satellite.im is also built to be offline-first so whether you have a good connection or not you can be sure you get your message out there! Our mobile app installs as a PWA during Early Access so setup is quick, and you get updates immediately."
+      "description": "Chat from anywhere, from desktop and beyond Satellite has you covered. Satellite is also built to be offline-first so whether you have a good connection or not you can be sure you get your message out there! Our mobile app installs as a PWA during Early Access so setup is quick, and you get updates immediately."
     }
   },
   "try_alpha": "Try the Alpha",
@@ -74,14 +74,14 @@
   "section_early_access": {
     "title": "Early Access",
     "description": {
-      "one": "Satellite.im is nearing our early access beta! If you'd like to get started ahead of the curve you can join our mailing list and get notified of releases. You can give Satellite.im a try right now but expect some bugs and please understand it is not representative of our final product.",
-      "two": "Satellite.im installs as a PWA which makes it very easy to get started, just navigate to https://core.satellite.im on your phone to get started."
+      "one": "Satellite is nearing our early access beta! If you'd like to get started ahead of the curve you can join our mailing list and get notified of releases. You can give Satellite.im a try right now but expect some bugs and please understand it is not representative of our final product.",
+      "two": "Satellite installs as a PWA which makes it very easy to get started, just navigate to https://core.satellite.im on your phone to get started."
     }
   },
   "try_release": "Try Pre-Release",
   "section_team": {
     "title": "Our Team",
-    "description": "Satellite.im is full of passionate open-source developers as well as our in house team which both work hard to build a different kind of chat platform.",
+    "description": "Satellite is full of passionate open-source developers as well as our in house team which both work hard to build a different kind of chat platform.",
     "team": {
       "matt_occupation": "President & Lead Engineer",
       "manuel_occupation": "CTO",
