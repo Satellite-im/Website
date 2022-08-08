@@ -913,7 +913,7 @@ import PartnerMulticoinCapital from '~/static/icons/partner-multicoin-capital.sv
 import PartnerIdeoColab from '~/static/icons/partner-ideo-colab.svg?inline'
 import PartnerFramework from '~/static/icons/partner-framework.svg?inline'
 import PartnerSolana from '~/static/icons/partner-solana.svg?inline'
-import PartnerHashed from '~/static/icons/partner-hashed.svg?inline'
+import PartnerTextile from '~/static/icons/partner-hashed.svg?inline'
 import PartnerJacketRiver from '~/static/icons/partner-jacket-river.svg?inline'
 import PartnerKnobs from '~/static/icons/partner-knobs.svg?inline'
 
