@@ -14,7 +14,7 @@ module.exports = {
       'obsidian-shard': '#040415',
       'patriot-blue': '#35365C',
       accolade: '#8193B2',
-      'cool-green': '#39C661',
+      'cool-green': '#999999', // grey instead of green
       'spandex-green': '#33B257',
       'retro-blue': '#2D61F7',
     },
