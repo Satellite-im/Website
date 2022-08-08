@@ -999,6 +999,7 @@ export default {
           key: 'hashed',
           logo: '/images/partner-hashed.svg',
           icon: PartnerHashed,
+          link: 'https://multicoin.capital/',
         },
         {
           key: 'jacket-river',
