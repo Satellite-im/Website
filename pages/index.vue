@@ -529,7 +529,7 @@
                       href="https://core.satellite.im/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="absolute flex items-center justify-center w-full h-full text-sm font-bold text-center text-white transition duration-300 ease-linear outline-none  rounded-3xl bg-cool-green md:text-base hover:bg-spandex-green focus:bg-spandex-green"
+                      class="absolute flex items-center justify-center w-full h-full text-sm font-bold text-center text-white transition duration-300 ease-linear outline-none  rounded-3xl bg-grey md:text-base hover:bg-grey focus:bg-grey"
                     >
                       {{ $t('try_alpha') }}
                     </a>
