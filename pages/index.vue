@@ -670,19 +670,6 @@
                 </p>
                 <div class="flex mt-4 xl:ml-auto">
                   <div class="relative w-40 h-10 md:w-44 md:h-12 mt-14">
-                    <nuxt-img
-                      src="/images/shadow-button-green.webp"
-                      class="
-                        absolute
-                        w-96
-                        transform
-                        -translate-y-4
-                        scale-[1.55]
-                        pointer-events-none
-                      "
-                      alt="shadow"
-                      provider="netlify"
-                    />
                     <a
                       href="https://satellite.us1.list-manage.com/subscribe?u=271ef1cd37ac53b33d0c41e8a&id=7f7b767432"
                       target="_blank"
