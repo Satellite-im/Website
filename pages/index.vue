@@ -1115,19 +1115,6 @@ export default {
           ],
         },
         {
-          key: 'dina',
-          image: '/images/team-dina.webp',
-          name: 'Dina Brodsky',
-          occupation: this.$t('section_team.team.dina_occupation'),
-          socials: [
-            {
-              key: 'linkedin',
-              link: 'https://www.linkedin.com/in/dina-brodsky-015931ab/',
-            },
-            { key: 'website', link: 'https://www.dinabrodsky.com/' },
-          ],
-        },
-        {
           key: 'tom',
           image: '/images/team-tom.webp',
           name: 'Tom McArdle',
@@ -1136,18 +1123,6 @@ export default {
             {
               key: 'linkedin',
               link: 'https://www.linkedin.com/in/tom-m-47b39a2a/',
-            },
-          ],
-        },
-        {
-          key: 'jerome',
-          image: '/images/team-jerome.webp',
-          name: 'Jerome Aceti',
-          occupation: this.$t('section_team.team.jerome_occupation'),
-          socials: [
-            {
-              key: 'linkedin',
-              link: 'https://www.linkedin.com/in/jeromeaceti/',
             },
           ],
         },
@@ -1164,38 +1139,6 @@ export default {
             {
               key: 'github',
               link: 'https://github.com/molimauro',
-            },
-          ],
-        },
-        {
-          key: 'mattia',
-          image: '/images/team-mattia.webp',
-          name: 'Mattia Bianchi',
-          occupation: this.$t('section_team.team.mattia_occupation'),
-          socials: [
-            {
-              key: 'linkedin',
-              link: 'https://www.linkedin.com/in/mattiabianchi/',
-            },
-            {
-              key: 'github',
-              link: 'https://github.com/Matt8white',
-            },
-          ],
-        },
-        {
-          key: 'samir',
-          image: '/images/team-samir.webp',
-          name: 'Samir Vimercati',
-          occupation: this.$t('section_team.team.samir_occupation'),
-          socials: [
-            {
-              key: 'linkedin',
-              link: 'https://www.linkedin.com/in/samir-vimercati-331a8918a',
-            },
-            {
-              key: 'github',
-              link: 'https://github.com/vimercati-samir',
             },
           ],
         },
@@ -1323,22 +1266,6 @@ export default {
           ],
         },
         {
-          key: 'clayton',
-          image: '/images/team-clayton.webp',
-          name: 'Clayton Peeples',
-          occupation: this.$t('section_team.team.clayton_occupation'),
-          socials: [
-            {
-              key: 'linkedin',
-              link: 'https://www.linkedin.com/in/clayton-peeples-20743b229/',
-            },
-            {
-              key: 'github',
-              link: 'https://github.com/Clayton215',
-            },
-          ],
-        },
-        {
           key: 'sheldon',
           image: '/images/team-sheldon.webp',
           name: 'Sheldon McGee',
@@ -1427,22 +1354,6 @@ export default {
             {
               key: 'github',
               link: 'https://github.com/dariusc93',
-            },
-          ],
-        },
-        {
-          key: 'alex',
-          image: '/images/team-alex.webp',
-          name: 'Alex Zakablukov',
-          occupation: this.$t('section_team.team.alex_occupation'),
-          socials: [
-            {
-              key: 'linkedin',
-              link: 'https://www.linkedin.com/in/alex-zakablukov-55a921160/',
-            },
-            {
-              key: 'github',
-              link: 'https://github.com/AlexZakablukov',
             },
           ],
         },
