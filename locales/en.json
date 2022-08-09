@@ -36,8 +36,8 @@
     "no_compromises": {
       "title": "No Compromises",
       "description": {
-        "one": "Satellite is built using modern, decentralized technologies with peer 2 peer workflows. Everything is encrypted so your data only gets read by who you intend it to. We store files on a distributed network so redundancy comes built in along with large file storage.",
-        "two": "All these things come without compromises to your experience."
+        "one": "Satellite is to be secure down to its core. We utilize leading decentralization and encryption technology to provide a platform to build extensible apps you can tailor with custom mods and extensions to make them your own. All of this, coupled with top to bottom encryption, makes your journey in the digital world a bit less scary and frustrating.",
+        "two": "All of that, of course, comes with no compromises. Satellite ships with huge file sharing and stunning quality voice and video we know you'll love."
       }
     },
     "multi_platform": {
