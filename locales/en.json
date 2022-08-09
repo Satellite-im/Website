@@ -45,7 +45,7 @@
       "description": "Chat from anywhere, from desktop and beyond Satellite has you covered. Satellite is also built to be offline-first so whether you have a good connection or not you can be sure you get your message out there! Our mobile app installs as a PWA during Early Access so setup is quick, and you get updates immediately."
     }
   },
-  "try_alpha": "Try the Alpha",
+  "try_alpha": "Try Early Access",
   "section_features": {
     "title": "Key Features",
     "features": {
@@ -74,11 +74,11 @@
   "section_early_access": {
     "title": "Early Access",
     "description": {
-      "one": "Satellite is nearing our early access beta! If you'd like to get started ahead of the curve you can join our mailing list and get notified of releases. You can give Satellite.im a try right now but expect some bugs and please understand it is not representative of our final product.",
+      "one": "Satellite is nearing early access. If you'd like to be a part of building the future of messaging with us, give Satellite a try and join our journey. Satellite's test environment will be available soon!",
       "two": "Satellite installs as a PWA which makes it very easy to get started, just navigate to https://core.satellite.im on your phone to get started."
     }
   },
-  "try_release": "Try Pre-Release",
+  "try_release": "Try Early Access",
   "section_team": {
     "title": "Our Team",
     "description": "Satellite is full of passionate open-source developers as well as our in house team which both work hard to build a different kind of chat platform.",
