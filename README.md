@@ -17,6 +17,8 @@ $ npm run start
 $ npm run generate
 ```
 
+You can also just edit directly in a branch in github. All new branches are built on netlify and a comment is added with a link to the built site. 
+
 For a detailed explanation of how things work, check out the [documentation](https://nuxtjs.org).
 
 ## Special Directories
