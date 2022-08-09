@@ -238,10 +238,8 @@
                   </a>
                 </div>
                 <a
-                  href="https://core.satellite.im/"
-                  target="_blank"
                   rel="noopener noreferrer"
-                  class="flex items-center justify-center w-48 h-10 mt-4 text-sm font-bold text-center transition duration-300 ease-linear bg-white shadow-lg outline-none  md:w-52 md:h-12 rounded-3xl text-retro-blue md:text-base hover:bg-extraordinary-abundance-of-tinge focus:bg-extraordinary-abundance-of-tinge"
+                  class="flex items-center justify-center w-48 h-10 mt-4 text-sm font-bold text-center transition duration-300 ease-linear bg-grey shadow-lg outline-none  md:w-52 md:h-12 rounded-3xl text-white md:text-base hover:bg-extraordinary-abundance-of-tinge focus:bg-extraordinary-abundance-of-tinge"
                 >
                   {{ $t('open_in_browser') }}
                 </a>
@@ -512,24 +510,9 @@
                   <div
                     class="relative w-40 h-10 ml-auto  md:w-44 md:h-12 mt-14 xl:ml-0"
                   >
-                    <nuxt-img
-                      src="/images/shadow-button-green.webp"
-                      class="
-                        absolute
-                        w-96
-                        transform
-                        -translate-y-4
-                        scale-[1.55]
-                        pointer-events-none
-                      "
-                      alt="shadow"
-                      provider="netlify"
-                    />
                     <a
-                      href="https://core.satellite.im/"
-                      target="_blank"
                       rel="noopener noreferrer"
-                      class="absolute flex items-center justify-center w-full h-full text-sm font-bold text-center text-white transition duration-300 ease-linear outline-none  rounded-3xl bg-cool-green md:text-base hover:bg-spandex-green focus:bg-spandex-green"
+                      class="absolute flex items-center justify-center w-full h-full text-sm font-bold text-center text-white transition duration-300 ease-linear outline-none  rounded-3xl bg-grey md:text-base hover:bg-grey focus:bg-grey"
                     >
                       {{ $t('try_alpha') }}
                     </a>
@@ -670,19 +653,6 @@
                 </p>
                 <div class="flex mt-4 xl:ml-auto">
                   <div class="relative w-40 h-10 md:w-44 md:h-12 mt-14">
-                    <nuxt-img
-                      src="/images/shadow-button-green.webp"
-                      class="
-                        absolute
-                        w-96
-                        transform
-                        -translate-y-4
-                        scale-[1.55]
-                        pointer-events-none
-                      "
-                      alt="shadow"
-                      provider="netlify"
-                    />
                     <a
                       href="https://satellite.us1.list-manage.com/subscribe?u=271ef1cd37ac53b33d0c41e8a&id=7f7b767432"
                       target="_blank"
@@ -693,10 +663,8 @@
                     </a>
                   </div>
                   <a
-                    href="https://core.satellite.im/"
-                    target="_blank"
                     rel="noopener noreferrer"
-                    class="flex items-center justify-center w-48 h-10 ml-6 text-sm font-bold text-center transition duration-300 ease-linear bg-white shadow-lg outline-none  md:w-52 md:h-12 mt-14 rounded-3xl text-retro-blue md:text-base hover:bg-extraordinary-abundance-of-tinge focus:bg-extraordinary-abundance-of-tinge"
+                    class="flex items-center justify-center w-48 h-10 ml-6 text-sm font-bold text-center transition duration-300 ease-linear bg-grey shadow-lg outline-none  md:w-52 md:h-12 mt-14 rounded-3xl text-white md:text-base hover:bg-extraordinary-abundance-of-tinge focus:bg-extraordinary-abundance-of-tinge"
                   >
                     {{ $t('try_release') }}
                   </a>
