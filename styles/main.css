@@ -64,7 +64,7 @@ body {
 .partner-solana-img,
 .partner-jacket-river-img,
 .partner-knobs-img,
-.partner-textile-img {
+.partner-hashed-img {
   transition-property: filter;
   transition-duration: 300ms;
   transition-timing-function: linear;
@@ -79,7 +79,7 @@ body {
   }
 }
 
-.partner-textile-img {
+.partner-hashed-img {
   transform: scale(0.4);
   @media screen and (min-width: 768px) {
     transform: scale(0.5);
@@ -102,7 +102,7 @@ body {
 }
 
 .partner-solana-link,
-.partner-textile-link {
+.partner-hashed-link {
   &:hover {
     .text {
       filter: brightness(0) invert(1);
@@ -110,7 +110,7 @@ body {
   }
 }
 
-.partner-textile-link:hover .text {
+.partner-hashed-link:hover .text {
   filter: brightness(0) invert(1);
 }
 

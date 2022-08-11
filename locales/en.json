@@ -8,8 +8,8 @@
       "access": "Early Access",
       "team": "Team"
     },
-    "title": "Multiplatform Messaging, Trackers Not Included.",
-    "description": "Satellite.im gives you peace of mind with end-to-end encryption without sacrificing quality.",
+    "title": "Universal messaging, with you at its core.",
+    "description": "Satellite gives you peace of mind with end-to-end encryption without sacrificing quality.",
     "partners": {
       "multicoin_capital": "Multicoin Capital",
       "ideo_colab": "IDEO CoLab",
@@ -20,10 +20,10 @@
     }
   },
   "sign_up": "Sign Up",
-  "open_in_browser": "Open in Browser",
+  "open_in_browser": "Coming Soon",
   "our_partners": "Our Partners",
   "section_meet": {
-    "title": "Meet Satellite.im",
+    "title": "Meet Satellite",
     "features": {
       "chat": "Feature Rich Chat",
       "encryption": "E2E Encryption",
@@ -36,16 +36,16 @@
     "no_compromises": {
       "title": "No Compromises",
       "description": {
-        "one": "Satellite.im is built using modern, decentralized technologies with peer 2 peer workflows. Everything is encrypted so your data only gets read by who you intend it to. We store files on a distributed network so redundancy comes built in along with large file storage.",
-        "two": "All these things come without compromises to your experience."
+        "one": "Satellite is to be secure down to its core. We utilize leading decentralization and encryption technology to provide a platform to build extensible apps you can tailor with custom mods and extensions to make them your own. All of this, coupled with top to bottom encryption, makes your journey in the digital world a bit less scary and frustrating.",
+        "two": "All of that, of course, comes with no compromises. Satellite ships with huge file sharing and stunning quality voice and video we know you'll love."
       }
     },
     "multi_platform": {
       "title": "Multi-Platform",
-      "description": "Chat from anywhere, from desktop and beyond Satellite.im has you covered. Satellite.im is also built to be offline-first so whether you have a good connection or not you can be sure you get your message out there! Our mobile app installs as a PWA during Early Access so setup is quick, and you get updates immediately."
+      "description": "Satellite is about more than just a universal chat app. Satellite is built to be offline-first so your conversation is never left unheard. From mobile, desktop, your favorite games, and beyond, Satellite lets you take ownership of your digital identity, so all your comms move with you. Get ready for Early Access coming soon."
     }
   },
-  "try_alpha": "Try the Alpha",
+  "try_alpha": "Coming Soon",
   "section_features": {
     "title": "Key Features",
     "features": {
@@ -74,24 +74,20 @@
   "section_early_access": {
     "title": "Early Access",
     "description": {
-      "one": "Satellite.im is nearing our early access beta! If you'd like to get started ahead of the curve you can join our mailing list and get notified of releases. You can give Satellite.im a try right now but expect some bugs and please understand it is not representative of our final product.",
-      "two": "Satellite.im installs as a PWA which makes it very easy to get started, just navigate to https://core.satellite.im on your phone to get started."
+      "one": "Satellite is nearing early access. If you'd like to be a part of building the future of messaging with us, give Satellite a try and join our journey. Satellite's test environment will be available soon!",
+      "two": "Satellite installs as a PWA which makes it very easy to get started, just navigate to https://core.satellite.im on your phone to get started."
     }
   },
-  "try_release": "Try Pre-Release",
+  "try_release": "Coming Soon",
   "section_team": {
     "title": "Our Team",
-    "description": "Satellite.im is full of passionate open-source developers as well as our in house team which both work hard to build a different kind of chat platform.",
+    "description": "Satellite is full of passionate open-source developers as well as our in house team which both work hard to build a different kind of chat platform.",
     "team": {
       "matt_occupation": "President & Lead Engineer",
       "manuel_occupation": "CTO",
       "chris_occupation": "Head of Software Engineering",
-      "dina_occupation": "Art director",
-      "tom_occupation": "COO & Operations Lead",
-      "jerome_occupation": "Advisor",
+      "tom_occupation": "COO",
       "mauro_occupation": "Lead Engineer (Core)",
-      "mattia_occupation": "Blockchain Engineer",
-      "samir_occupation": "Frontend Engineer",
       "miru_occupation": "Creative Director",
       "wendy_occupation": "Project Manager/Administrative",
       "jeff_occupation": "Software Engineer",
@@ -101,7 +97,6 @@
       "sara_occupation": "Lead QA Engineer",
       "lauren_occupation": "Marketing Design",
       "joe_occupation": "Senior Software Engineer",
-      "clayton_occupation": "QA Intern",
       "sheldon_occupation": "Head of Engineering Management",
       "thomas_occupation": "Frontend Engineer",
       "andre_occupation": "Software Development Engineer In Test",
@@ -109,7 +104,6 @@
       "darius_occupation": "Senior Software Engineer",
       "calogero_occupation": "Software Engineer",
       "drew_occupation": "Senior Staff Engineer",
-      "alex_occupation": "Software Engineer",
       "pavel_occupation": "Senior Software Engineer",
       "nicholas_occupation": "Software Engineer",
       "yijing_occupation": "Software Engineer",

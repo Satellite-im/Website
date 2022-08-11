@@ -238,10 +238,8 @@
                   </a>
                 </div>
                 <a
-                  href="https://core.satellite.im/"
-                  target="_blank"
                   rel="noopener noreferrer"
-                  class="flex items-center justify-center w-48 h-10 mt-4 text-sm font-bold text-center transition duration-300 ease-linear bg-white shadow-lg outline-none  md:w-52 md:h-12 rounded-3xl text-retro-blue md:text-base hover:bg-extraordinary-abundance-of-tinge focus:bg-extraordinary-abundance-of-tinge"
+                  class="flex items-center justify-center w-48 h-10 mt-4 text-sm font-bold text-center transition duration-300 ease-linear bg-grey shadow-lg outline-none  md:w-52 md:h-12 rounded-3xl text-white md:text-base hover:bg-extraordinary-abundance-of-tinge focus:bg-extraordinary-abundance-of-tinge"
                 >
                   {{ $t('open_in_browser') }}
                 </a>
@@ -512,24 +510,9 @@
                   <div
                     class="relative w-40 h-10 ml-auto  md:w-44 md:h-12 mt-14 xl:ml-0"
                   >
-                    <nuxt-img
-                      src="/images/shadow-button-green.webp"
-                      class="
-                        absolute
-                        w-96
-                        transform
-                        -translate-y-4
-                        scale-[1.55]
-                        pointer-events-none
-                      "
-                      alt="shadow"
-                      provider="netlify"
-                    />
                     <a
-                      href="https://core.satellite.im/"
-                      target="_blank"
                       rel="noopener noreferrer"
-                      class="absolute flex items-center justify-center w-full h-full text-sm font-bold text-center text-white transition duration-300 ease-linear outline-none  rounded-3xl bg-cool-green md:text-base hover:bg-spandex-green focus:bg-spandex-green"
+                      class="absolute flex items-center justify-center w-full h-full text-sm font-bold text-center text-white transition duration-300 ease-linear outline-none  rounded-3xl bg-grey md:text-base hover:bg-grey focus:bg-grey"
                     >
                       {{ $t('try_alpha') }}
                     </a>
@@ -670,19 +653,6 @@
                 </p>
                 <div class="flex mt-4 xl:ml-auto">
                   <div class="relative w-40 h-10 md:w-44 md:h-12 mt-14">
-                    <nuxt-img
-                      src="/images/shadow-button-green.webp"
-                      class="
-                        absolute
-                        w-96
-                        transform
-                        -translate-y-4
-                        scale-[1.55]
-                        pointer-events-none
-                      "
-                      alt="shadow"
-                      provider="netlify"
-                    />
                     <a
                       href="https://satellite.us1.list-manage.com/subscribe?u=271ef1cd37ac53b33d0c41e8a&id=7f7b767432"
                       target="_blank"
@@ -693,10 +663,8 @@
                     </a>
                   </div>
                   <a
-                    href="https://core.satellite.im/"
-                    target="_blank"
                     rel="noopener noreferrer"
-                    class="flex items-center justify-center w-48 h-10 ml-6 text-sm font-bold text-center transition duration-300 ease-linear bg-white shadow-lg outline-none  md:w-52 md:h-12 mt-14 rounded-3xl text-retro-blue md:text-base hover:bg-extraordinary-abundance-of-tinge focus:bg-extraordinary-abundance-of-tinge"
+                    class="flex items-center justify-center w-48 h-10 ml-6 text-sm font-bold text-center transition duration-300 ease-linear bg-grey shadow-lg outline-none  md:w-52 md:h-12 mt-14 rounded-3xl text-white md:text-base hover:bg-extraordinary-abundance-of-tinge focus:bg-extraordinary-abundance-of-tinge"
                   >
                     {{ $t('try_release') }}
                   </a>
@@ -913,7 +881,7 @@ import PartnerMulticoinCapital from '~/static/icons/partner-multicoin-capital.sv
 import PartnerIdeoColab from '~/static/icons/partner-ideo-colab.svg?inline'
 import PartnerFramework from '~/static/icons/partner-framework.svg?inline'
 import PartnerSolana from '~/static/icons/partner-solana.svg?inline'
-import PartnerTextile from '~/static/icons/partner-textile.svg?inline'
+import PartnerHashed from '~/static/icons/partner-hashed.svg?inline'
 import PartnerJacketRiver from '~/static/icons/partner-jacket-river.svg?inline'
 import PartnerKnobs from '~/static/icons/partner-knobs.svg?inline'
 
@@ -979,36 +947,43 @@ export default {
           key: 'multicoin-capital',
           logo: '/images/partner-multicoin-capital.svg',
           icon: PartnerMulticoinCapital,
+          link: 'https://multicoin.capital/',
         },
         {
           key: 'ideo-colab',
           logo: '/images/partner-ideo-colab.svg',
           icon: PartnerIdeoColab,
+          link: 'https://www.ideocolab.com/',
         },
         {
           key: 'framework',
           logo: '/images/partner-framework.svg',
           icon: PartnerFramework,
+          link: 'https://framework.ventures/',
         },
         {
           key: 'solana',
           logo: '/images/partner-solana.svg',
           icon: PartnerSolana,
+          link: 'https://solana.com/',
         },
         {
-          key: 'textile',
-          logo: '/images/partner-textile.svg',
-          icon: PartnerTextile,
+          key: 'hashed',
+          logo: '/images/partner-hashed.svg',
+          icon: PartnerHashed,
+          link: 'https://www.hashed.com/',
         },
         {
           key: 'jacket-river',
           logo: '/images/partner-jacket-river.svg',
           icon: PartnerJacketRiver,
+          link: 'https://www.jacketriver.com/portfolio/',
         },
         {
           key: 'knobs',
           logo: '/images/partner-knobs.svg',
           icon: PartnerKnobs,
+          link: 'https://knobs.it/en/knobs-eng-home/',
         },
       ],
       slogans: [
@@ -1115,19 +1090,6 @@ export default {
           ],
         },
         {
-          key: 'dina',
-          image: '/images/team-dina.webp',
-          name: 'Dina Brodsky',
-          occupation: this.$t('section_team.team.dina_occupation'),
-          socials: [
-            {
-              key: 'linkedin',
-              link: 'https://www.linkedin.com/in/dina-brodsky-015931ab/',
-            },
-            { key: 'website', link: 'https://www.dinabrodsky.com/' },
-          ],
-        },
-        {
           key: 'tom',
           image: '/images/team-tom.webp',
           name: 'Tom McArdle',
@@ -1136,18 +1098,6 @@ export default {
             {
               key: 'linkedin',
               link: 'https://www.linkedin.com/in/tom-m-47b39a2a/',
-            },
-          ],
-        },
-        {
-          key: 'jerome',
-          image: '/images/team-jerome.webp',
-          name: 'Jerome Aceti',
-          occupation: this.$t('section_team.team.jerome_occupation'),
-          socials: [
-            {
-              key: 'linkedin',
-              link: 'https://www.linkedin.com/in/jeromeaceti/',
             },
           ],
         },
@@ -1164,38 +1114,6 @@ export default {
             {
               key: 'github',
               link: 'https://github.com/molimauro',
-            },
-          ],
-        },
-        {
-          key: 'mattia',
-          image: '/images/team-mattia.webp',
-          name: 'Mattia Bianchi',
-          occupation: this.$t('section_team.team.mattia_occupation'),
-          socials: [
-            {
-              key: 'linkedin',
-              link: 'https://www.linkedin.com/in/mattiabianchi/',
-            },
-            {
-              key: 'github',
-              link: 'https://github.com/Matt8white',
-            },
-          ],
-        },
-        {
-          key: 'samir',
-          image: '/images/team-samir.webp',
-          name: 'Samir Vimercati',
-          occupation: this.$t('section_team.team.samir_occupation'),
-          socials: [
-            {
-              key: 'linkedin',
-              link: 'https://www.linkedin.com/in/samir-vimercati-331a8918a',
-            },
-            {
-              key: 'github',
-              link: 'https://github.com/vimercati-samir',
             },
           ],
         },
@@ -1323,22 +1241,6 @@ export default {
           ],
         },
         {
-          key: 'clayton',
-          image: '/images/team-clayton.webp',
-          name: 'Clayton Peeples',
-          occupation: this.$t('section_team.team.clayton_occupation'),
-          socials: [
-            {
-              key: 'linkedin',
-              link: 'https://www.linkedin.com/in/clayton-peeples-20743b229/',
-            },
-            {
-              key: 'github',
-              link: 'https://github.com/Clayton215',
-            },
-          ],
-        },
-        {
           key: 'sheldon',
           image: '/images/team-sheldon.webp',
           name: 'Sheldon McGee',
@@ -1427,22 +1329,6 @@ export default {
             {
               key: 'github',
               link: 'https://github.com/dariusc93',
-            },
-          ],
-        },
-        {
-          key: 'alex',
-          image: '/images/team-alex.webp',
-          name: 'Alex Zakablukov',
-          occupation: this.$t('section_team.team.alex_occupation'),
-          socials: [
-            {
-              key: 'linkedin',
-              link: 'https://www.linkedin.com/in/alex-zakablukov-55a921160/',
-            },
-            {
-              key: 'github',
-              link: 'https://github.com/AlexZakablukov',
             },
           ],
         },
