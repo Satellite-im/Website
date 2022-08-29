@@ -229,7 +229,7 @@
                     provider="netlify"
                   />
                   <a
-                    href="https://satellite.us1.list-manage.com/subscribe?u=271ef1cd37ac53b33d0c41e8a&id=7f7b767432"
+                    href="https://satelliteim.eo.page/signup"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="absolute flex items-center justify-center w-full h-full text-sm font-bold text-center text-white transition duration-300 ease-linear outline-none  rounded-3xl bg-cool-green md:text-base hover:bg-spandex-green focus:bg-spandex-green"
@@ -654,7 +654,7 @@
                 <div class="flex mt-4 xl:ml-auto">
                   <div class="relative w-40 h-10 md:w-44 md:h-12 mt-14">
                     <a
-                      href="https://satellite.us1.list-manage.com/subscribe?u=271ef1cd37ac53b33d0c41e8a&id=7f7b767432"
+                      href="https://satelliteim.eo.page/signup"
                       target="_blank"
                       rel="noopener noreferrer"
                       class="absolute flex items-center justify-center w-full h-full text-sm font-bold text-center text-white transition duration-300 ease-linear outline-none  rounded-3xl bg-cool-green md:text-base hover:bg-spandex-green focus:bg-spandex-green"
@@ -1500,7 +1500,7 @@ export default {
         },
         {
           key: 'telegram',
-          link: 'https://t.me/+JQOXeHsPFQNkNTQx',
+          link: 'https://t.me/SatelliteIM',
           icon: Telegram,
         },
         {
