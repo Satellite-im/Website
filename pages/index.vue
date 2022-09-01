@@ -892,7 +892,6 @@ import Twitter from '~/static/icons/twitter.svg?inline'
 import Linkedin from '~/static/icons/linkedin.svg?inline'
 import Github from '~/static/icons/github.svg?inline'
 import Discord from '~/static/icons/discord.svg?inline'
-import Slack from '~/static/icons/slack.svg?inline'
 import Telegram from '~/static/icons/telegram.svg?inline'
 import Arrow from '~/static/icons/arrow.svg?inline'
 import Menu from '~/static/icons/menu.svg?inline'
@@ -911,7 +910,6 @@ export default {
     Linkedin,
     Github,
     Discord,
-    Slack,
     Telegram,
     Arrow,
     Menu,
@@ -1502,11 +1500,6 @@ export default {
           key: 'telegram',
           link: 'https://t.me/SatelliteIM',
           icon: Telegram,
-        },
-        {
-          key: 'slack',
-          link: 'https://join.slack.com/t/satelliteim/shared_invite/zt-yxaji12d-wM7jIck_kmC0z9nI3AyEsw',
-          icon: Slack,
         },
       ],
       simplebar: null,
