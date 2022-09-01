@@ -1198,7 +1198,7 @@ export default {
         },
         {
           key: 'sara',
-          image: '/images/team-sara.webp',
+          image: '/images/team-sara2.webp',
           name: 'Sara Tavares',
           occupation: this.$t('section_team.team.sara_occupation'),
           socials: [
