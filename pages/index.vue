@@ -1459,18 +1459,6 @@ export default {
           ],
         },
         {
-          key: 'grace',
-          image: '/images/team-grace.webp',
-          name: 'Grace Gaspardo',
-          occupation: this.$t('section_team.team.grace_occupation'),
-          socials: [
-            {
-              key: 'website',
-              link: 'https://www.gaspardo.io/',
-            },
-          ],
-        },
-        {
           key: 'nathan',
           image: '/images/team-nathan.png',
           name: 'Nathan Power',
