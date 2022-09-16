@@ -51,7 +51,7 @@
             </div>
           </header>
           <div
-            v-if="isSidebarOpen && $viewport.isLessThan('lg')"
+            v-if="$viewport.isLessThan('lg')"
             class="fixed top-0 left-0 z-10 w-full h-full"
           >
             <div
