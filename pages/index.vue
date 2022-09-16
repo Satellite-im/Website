@@ -21,19 +21,19 @@
                 class="flex md:order-1 w-[11.98rem] z-10 pr-25"
                 provider="netlify"
               />
-            <div class="flex md:order-2 pl-20">
+            <div v-if="!$viewport.isLessThan('lg')" class="flex md:order-2 pl-10">
               <a href="https://core.satellite.im">
                 <button type="button" class="text-white rounded-xl bg-cool-green md:text-base hover:bg-spandex-green focus:bg-spandex-green w-48 h-12">{{ $t('try_alpha') }}</button>
               </a>
             </div>
             <div
-              class="flex md:order-3 items-center justify-between w-full h-12 lg:justify-start"
+              class="flex md:order-3 items-center w-full h-12 justify-end"
             >
               <nav
                 v-if="$viewport.isGreaterThan('md')"
                 class="relative w-full h-full px-16 text-white"
               >
-                <ul class="absolute bottom-0 flex mb-2">
+                <ul class="absolute bottom-0 flex mb-2 right">
                   <li
                     v-for="item in navItems"
                     :key="item.key"
@@ -50,9 +50,14 @@
               </button>
             </div>
           </header>
+          <div v-if="$viewport.isLessThan('lg')" class="flex md:order-2 pl-10">
+              <a href="https://core.satellite.im">
+                <button type="button" class="text-white rounded-xl bg-cool-green md:text-base hover:bg-spandex-green focus:bg-spandex-green w-48 h-12">{{ $t('try_alpha') }}</button>
+              </a>
+            </div>
           <div
             v-if="isSidebarOpen && $viewport.isLessThan('lg')"
-            class="fixed top-0 left-0 z-10 w-full h-full"
+            class="fixed top-0 right-0 z-10 w-full h-full"
           >
             <div
               class="absolute w-full h-full bg-black opacity-90 sidebar-overlay"
