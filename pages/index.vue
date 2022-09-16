@@ -21,7 +21,7 @@
                 class="flex md:order-1 w-[11.98rem] z-10 pr-25"
                 provider="netlify"
               />
-         
+          
             <div
               class="flex md:order-3 items-center justify-between w-full h-12 lg:justify-start"
             >
@@ -46,6 +46,11 @@
               </button>
             </div>
           </header>
+            <div class="flex md:order-2 pl-10">
+              <a href="https://core.satellite.im">
+                <button type="button" class="text-white rounded-xl bg-cool-green md:text-base hover:bg-spandex-green focus:bg-spandex-green w-8 md:w-48 h-12">{{ $t('try_alpha') }}</button>
+              </a>
+            </div>
           <div
             v-if="isSidebarOpen && $viewport.isLessThan('lg')"
             class="fixed top-0 left-0 z-10 w-full h-full"
@@ -203,11 +208,6 @@
                 2xl:pr-4
               "
             >
-               <div class="flex md:order-2 pl-20">
-              <a href="https://core.satellite.im">
-                <button type="button" class="text-white rounded-xl bg-cool-green md:text-base hover:bg-spandex-green focus:bg-spandex-green w-28 md:w-48 h-12">{{ $t('try_alpha') }}</button>
-              </a>
-            </div>
               <h1 class="text-4xl text-white md:text-6xl">
                 {{ $t('section_hero.title') }}
               </h1>
