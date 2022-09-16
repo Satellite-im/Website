@@ -237,19 +237,21 @@
                     href="https://core.satellite.im"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="absolute flex items-center justify-center w-56 h-full text-sm font-bold text-center text-white transition duration-300 ease-linear outline-none  rounded-xl bg-cool-green md:text-base hover:bg-spandex-green focus:bg-spandex-green"
+                    class="absolute flex items-center justify-center w-36 md:w-56 md:h-12 h-full text-sm font-bold text-center text-white transition duration-300 ease-linear outline-none  rounded-xl bg-cool-green md:text-base hover:bg-spandex-green focus:bg-spandex-green"
                   >
                     {{ $t('try_alpha') }}
                   </a>
                 </div>
+                <div class="relative ">
                 <a
                   href="https://satelliteim.eo.page/signup"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="flex items-center justify-center w-56 h-10 mt-4 text-sm font-bold text-center transition duration-300 ease-linear bg-white shadow-lg outline-none  md:w-52 md:h-12 rounded-xl text-retro-blue md:text-base hover:bg-extraordinary-abundance-of-tinge focus:bg-extraordinary-abundance-of-tinge"
+                  class="flex items-center justify-center w-36 md:w-56 h-10 mt-4 text-sm font-bold text-center transition duration-300 ease-linear bg-white shadow-lg outline-none  md:w-56 md:h-12 rounded-xl text-retro-blue md:text-base hover:bg-extraordinary-abundance-of-tinge focus:bg-extraordinary-abundance-of-tinge"
                 >
                   {{ $t('sign_up') }}
                 </a>
+                </div>
               </div>
             </div>
             <div
@@ -521,7 +523,7 @@
                     href="https://core.satellite.im"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="absolute flex items-center justify-center w-56 h-full text-sm font-bold text-center text-white transition duration-300 ease-linear outline-none  rounded-xl bg-cool-green md:text-base hover:bg-spandex-green focus:bg-spandex-green"
+                    class="absolute flex items-center justify-center w-40 h-full text-sm font-bold text-center text-white transition duration-300 ease-linear outline-none  rounded-xl bg-cool-green md:text-base hover:bg-spandex-green focus:bg-spandex-green"
                   >
                     {{ $t('try_alpha') }}
                   </a>
