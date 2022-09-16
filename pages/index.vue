@@ -15,15 +15,20 @@
             provider="netlify"
           />
           <header class="flex items-center w-full h-24 px-10 md:px-20 lg:px-40">
-            <div
-              class="flex items-center justify-between w-full h-12  lg:justify-start"
-            >
-              <nuxt-img
+            <nuxt-img
                 src="/images/logo.webp"
                 :alt="$t('satellite_logo')"
-                class="w-[11.98rem] z-10"
+                class="flex md:order-1 w-[11.98rem] z-10 pr-25"
                 provider="netlify"
               />
+            <div class="flex md:order-2 pl-20">
+              <a href="https://core.satellite.im">
+                <button type="button" class="text-white rounded-xl bg-cool-green md:text-base hover:bg-spandex-green focus:bg-spandex-green w-48 h-12">{{ $t('try_alpha') }}</button>
+              </a>
+            </div>
+            <div
+              class="flex md:order-3 items-center justify-between w-full h-12 lg:justify-start"
+            >
               <nav
                 v-if="$viewport.isGreaterThan('md')"
                 class="relative w-full h-full px-16 text-white"
@@ -32,7 +37,7 @@
                   <li
                     v-for="item in navItems"
                     :key="item.key"
-                    class="mx-8 text-sm text-center align-middle  first:ml-0 last:mr-0"
+                    class="mx-8 text-center align-middle first:ml-0 last:mr-0"
                   >
                     <button class="link-hover" @click="scroll(item.anchor)">
                       {{ item.label }}
@@ -189,7 +194,7 @@
             </aside>
           </div>
           <div
-            class="flex justify-between px-10  py-14 md:py-28 md:px-20 md:pl-20 lg:pr-0 lg:pl-40"
+            class="flex justify-between px-10 py-14 md:py-28 md:px-20 md:pl-20 lg:pr-0 lg:pl-40"
           >
             <div
               class="
@@ -214,7 +219,7 @@
                 <StatFileShares class="w-20 mt-10 md:w-24" />
               </div>
               <div class="flex items-center mt-12">
-                <div class="relative w-40 h-10 mt-4 mr-6 md:w-44 md:h-12">
+                <div class="relative w-56 h-10 mt-4 mr-6 md:w-56 md:h-12">
                   <nuxt-img
                     src="/images/shadow-button-green.webp"
                     class="
@@ -229,19 +234,21 @@
                     provider="netlify"
                   />
                   <a
-                    href="https://satelliteim.eo.page/signup"
+                    href="https://core.satellite.im"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="absolute flex items-center justify-center w-full h-full text-sm font-bold text-center text-white transition duration-300 ease-linear outline-none  rounded-3xl bg-cool-green md:text-base hover:bg-spandex-green focus:bg-spandex-green"
+                    class="absolute flex items-center justify-center w-56 h-full text-sm font-bold text-center text-white transition duration-300 ease-linear outline-none  rounded-xl bg-cool-green md:text-base hover:bg-spandex-green focus:bg-spandex-green"
                   >
-                    {{ $t('sign_up') }}
+                    {{ $t('try_alpha') }}
                   </a>
                 </div>
                 <a
+                  href="https://satelliteim.eo.page/signup"
+                  target="_blank"
                   rel="noopener noreferrer"
-                  class="flex items-center justify-center w-48 h-10 mt-4 text-sm font-bold text-center transition duration-300 ease-linear bg-grey shadow-lg outline-none  md:w-52 md:h-12 rounded-3xl text-white md:text-base hover:bg-extraordinary-abundance-of-tinge focus:bg-extraordinary-abundance-of-tinge"
+                  class="flex items-center justify-center w-56 h-10 mt-4 text-sm font-bold text-center transition duration-300 ease-linear bg-white shadow-lg outline-none  md:w-52 md:h-12 rounded-xl text-retro-blue md:text-base hover:bg-extraordinary-abundance-of-tinge focus:bg-extraordinary-abundance-of-tinge"
                 >
-                  {{ $t('open_in_browser') }}
+                  {{ $t('sign_up') }}
                 </a>
               </div>
             </div>
@@ -510,12 +517,14 @@
                   <div
                     class="relative w-40 h-10 ml-auto  md:w-44 md:h-12 mt-14 xl:ml-0"
                   >
-                    <a
-                      rel="noopener noreferrer"
-                      class="absolute flex items-center justify-center w-full h-full text-sm font-bold text-center text-white transition duration-300 ease-linear outline-none  rounded-3xl bg-grey md:text-base hover:bg-grey focus:bg-grey"
-                    >
-                      {{ $t('try_alpha') }}
-                    </a>
+                  <a
+                    href="https://core.satellite.im"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="absolute flex items-center justify-center w-56 h-full text-sm font-bold text-center text-white transition duration-300 ease-linear outline-none  rounded-xl bg-cool-green md:text-base hover:bg-spandex-green focus:bg-spandex-green"
+                  >
+                    {{ $t('try_alpha') }}
+                  </a>
                   </div>
                 </div>
                 <div
@@ -652,19 +661,22 @@
                   {{ $t('section_early_access.description.two') }}
                 </p>
                 <div class="flex mt-4 xl:ml-auto">
-                  <div class="relative w-40 h-10 md:w-44 md:h-12 mt-14">
+                  <div class="relative w-52 h-10 md:w-52 md:h-12 mt-14">
                     <a
                       href="https://satelliteim.eo.page/signup"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="absolute flex items-center justify-center w-full h-full text-sm font-bold text-center text-white transition duration-300 ease-linear outline-none  rounded-3xl bg-cool-green md:text-base hover:bg-spandex-green focus:bg-spandex-green"
+                      class="absolute flex items-center justify-center w-full h-full text-sm font-bold text-center 
+                      transition duration-300 ease-linear bg-white shadow-lg outline-none  md:w-52 md:h-12 rounded-xl text-retro-blue md:text-base hover:bg-extraordinary-abundance-of-tinge focus:bg-extraordinary-abundance-of-tinge"
                     >
                       {{ $t('sign_up') }}
                     </a>
                   </div>
                   <a
+                    href="https://core.satellite.im"
+                    target="_blank"
                     rel="noopener noreferrer"
-                    class="flex items-center justify-center w-48 h-10 ml-6 text-sm font-bold text-center transition duration-300 ease-linear bg-grey shadow-lg outline-none  md:w-52 md:h-12 mt-14 rounded-3xl text-white md:text-base hover:bg-extraordinary-abundance-of-tinge focus:bg-extraordinary-abundance-of-tinge"
+                    class="flex items-center justify-center w-48 h-10 ml-6 text-sm font-bold text-center transition duration-300 ease-linear bg-cool-green shadow-lg outline-none  md:w-52 md:h-12 mt-14 rounded-xl text-white md:text-base hover:bg-spandex-green focus:bg-spandex-green"
                   >
                     {{ $t('try_release') }}
                   </a>
@@ -1196,7 +1208,7 @@ export default {
         },
         {
           key: 'sara',
-          image: '/images/team-sara.webp',
+          image: '/images/team-sara2.webp',
           name: 'Sara Tavares',
           occupation: this.$t('section_team.team.sara_occupation'),
           socials: [

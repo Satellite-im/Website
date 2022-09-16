@@ -19,7 +19,7 @@
       "knobs": "KNOBS"
     }
   },
-  "sign_up": "Sign Up",
+  "sign_up": "Sign Up for Email Updates",
   "open_in_browser": "Open in Browser",
   "our_partners": "Our Partners",
   "section_meet": {
@@ -42,7 +42,7 @@
     },
     "multi_platform": {
       "title": "Multi-Platform",
-      "description": "Satellite is about more than just a universal chat app. Satellite is built to be offline-first so your conversation is never left unheard. From mobile, desktop, your favorite games, and beyond, Satellite lets you take ownership of your digital identity, so all your comms move with you. Get ready for Early Access coming soon."
+      "description": "Satellite is about more than just a universal chat app. Satellite is built to be offline-first so your conversation is never left unheard. From mobile, desktop, your favorite games, and beyond, Satellite lets you take ownership of your digital identity, so all your comms move with you."
     }
   },
   "try_alpha": "Try Early Access",
@@ -74,8 +74,8 @@
   "section_early_access": {
     "title": "Early Access",
     "description": {
-      "one": "Satellite is nearing early access. If you'd like to be a part of building the future of messaging with us, give Satellite a try and join our journey. Satellite's test environment will be available soon!",
-      "two": "Satellite installs as a PWA which makes it very easy to get started, just navigate to https://core.satellite.im on your phone to get started."
+      "one": "Satellite is nearing early access. If you'd like to be a part of building the future of messaging with us, give Satellite a try and join our journey. Satellite's early access is available now!",
+      "two": "For this Early Access, we recommend using the desktop/browser version, just navigate to https://core.satellite.im to get started."
     }
   },
   "try_release": "Try Early Access",
