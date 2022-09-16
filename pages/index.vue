@@ -521,7 +521,7 @@
                     href="https://core.satellite.im"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="absolute flex items-center justify-center w-56 h-full text-sm font-bold text-center text-white transition duration-300 ease-linear outline-none  rounded-3xl bg-cool-green md:text-base hover:bg-spandex-green focus:bg-spandex-green"
+                    class="flex items-center justify-center w-48 h-10 ml-6 text-sm font-bold text-center transition duration-300 ease-linear bg-cool-green shadow-lg outline-none md:w-52 md:h-12 mt-14 rounded-3xl text-white md:text-base hover:bg-extraordinary-abundance-of-tinge focus:bg-extraordinary-abundance-of-tinge"
                   >
                     {{ $t('try_alpha') }}
                   </a>
