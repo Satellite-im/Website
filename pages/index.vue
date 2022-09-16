@@ -21,7 +21,7 @@
                 class="flex md:order-1 w-[11.98rem] z-10 pr-25"
                 provider="netlify"
               />
-            <div class="flex md:order-2 pl-0">
+            <div class="flex md:order-2 pl-20">
               <a href="https://core.satellite.im">
                 <button type="button" class="text-white rounded-xl bg-cool-green md:text-base hover:bg-spandex-green focus:bg-spandex-green w-16 md:w-48 h-20 md:h-12">{{ $t('try_alpha') }}</button>
               </a>
