@@ -1068,11 +1068,11 @@ export default {
             },
             {
               key: 'github',
-              link: 'https://github.com/RetroPronghorn',
+              link: 'https://github.com/infamousvague',
             },
             {
               key: 'website',
-              link: 'https://retropronghorn.github.io/',
+              link: 'https://infamousvague.github.io/',
             },
           ],
         },
