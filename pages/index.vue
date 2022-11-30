@@ -1186,22 +1186,6 @@ export default {
           socials: [],
         },
         {
-          key: 'elizabeth',
-          image: '/images/team-elizabeth.webp',
-          name: 'Elizabeth Brown',
-          occupation: this.$t('section_team.team.elizabeth_occupation'),
-          socials: [
-            {
-              key: 'linkedin',
-              link: 'https://www.linkedin.com/in/lizasherdesign/',
-            },
-            {
-              key: 'website',
-              link: 'https://www.lizasherdesign.com/projects',
-            },
-          ],
-        },
-        {
           key: 'phill',
           image: '/images/team-phill.webp',
           name: 'Phill Wisniewski',
