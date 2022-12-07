@@ -1465,6 +1465,22 @@ export default {
             },
           ],
         },
+        {
+          key: 'stuart',
+          image: '/images/team-stuart.png',
+          name: 'Stuart Woodbury',
+          occupation: this.$t('section_team.team.stuart_occupation'),
+          socials: [
+            {
+              key: 'linkedin',
+              link: 'https://www.linkedin.com/in/stuart-woodbury-139498100/',
+            },
+            {
+              key: 'github',
+              link: 'https://github.com/sdwoodbury',
+            },
+          ],
+        },
       ],
       footerSocials: [
         {
