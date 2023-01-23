@@ -1350,22 +1350,6 @@ export default {
           ],
         },
         {
-          key: 'drew',
-          image: '/images/team-drew.webp',
-          name: 'Drew Ewing',
-          occupation: this.$t('section_team.team.drew_occupation'),
-          socials: [
-            {
-              key: 'linkedin',
-              link: 'https://www.linkedin.com/in/apewing',
-            },
-            {
-              key: 'github',
-              link: 'https://github.com/aewing',
-            },
-          ],
-        },
-        {
           key: 'nicholas',
           image: '/images/team-nicholas.webp',
           name: 'Nicholas Zaccagnino',
@@ -1426,26 +1410,6 @@ export default {
             {
               key: 'github',
               link: 'https://github.com/jasonwoodland',
-            },
-          ],
-        },
-        {
-          key: 'muhammad',
-          image: '/images/team-muhammad.webp',
-          name: 'Muhammad Al Juburi',
-          occupation: this.$t('section_team.team.muhammad_occupation'),
-          socials: [
-            {
-              key: 'linkedin',
-              link: 'https://www.linkedin.com/in/maljuburi',
-            },
-            {
-              key: 'github',
-              link: 'https://github.com/maljuburi',
-            },
-            {
-              key: 'website',
-              link: 'https://www.maljuburi.com/',
             },
           ],
         },
