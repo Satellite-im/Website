@@ -135,3 +135,11 @@ body {
 .section-team-shape {
   transform: scale(4) translate(-1rem, -2rem);
 }
+
+#partners {
+  padding-bottom: 100px;
+}
+
+.mobile-image {
+  margin-bottom: 35px;
+}

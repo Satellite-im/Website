@@ -3,13 +3,12 @@
   "app_illustration": "App illustration",
   "section_hero": {
     "nav_items": {
-      "features": "Key Features",
-      "about": "About",
-      "access": "Early Access",
-      "team": "Team"
+      "uplink": "Uplink",
+      "warp": "Warp",
+      "blog": "Blog"
     },
     "title": "Universal messaging, with you at its core.",
-    "description": "Satellite gives you peace of mind with end-to-end encryption without sacrificing quality.",
+    "description": "We are hard at work experimenting, and finding the best way to build Uplink and Warp, our chat app and interface-driven, distributed data service. Our goal is to build a communication platform that give you peace of mind with end-to-end encryption, without sacrificing quality. Being peer-to-peer, your only limit is your network own connection.",
     "partners": {
       "multicoin_capital": "Multicoin Capital",
       "ideo_colab": "IDEO CoLab",
@@ -18,6 +17,16 @@
       "jacket_river": "Jacket River",
       "knobs": "KNOBS"
     }
+  },
+  "uplink_section": {
+    "title": "Learn More about Uplink",
+    "description": "Uplink is our chat app, utilizing Warp, which uses technologies like IPFS/libp2p and public key cryptography. It's the UI layer on top of Warp and it's built to make sure you are in control of your data. No trackers! It's a work in progress, but we are providing rolling updates.",
+    "call_to_action": "Try it Today!"
+  },
+  "warp_section": {
+    "title": "Check out Warp!",
+    "description": "Plug and Play for chat! Warp is our interface-first, platform agnostic, peer-driven architecture, distributed, encrypted data service. Phew. What a mouthful. Breaking it down we wanted a core spec that would define all of the features of our chat app that would work across platforms. And of course the actual implementation of that spec had to be as fast possible. So we chose a low level language, Rust, that happens to also compile across platforms (thanks LLVM!), including the web. Think of Warp as the 'back end' in a world where there are no back ends!",
+    "call_to_action": "Documentation"
   },
   "sign_up": "Join Mailing List",
   "open_in_browser": "Open in Browser",
@@ -45,7 +54,6 @@
       "description": "Satellite is about more than just a universal chat app. Satellite is built to be offline-first so your conversation is never left unheard. From mobile, desktop, your favorite games, and beyond, Satellite lets you take ownership of your digital identity, so all your comms move with you."
     }
   },
-  "try_alpha": "Try Early Access",
   "section_features": {
     "title": "Key Features",
     "features": {
@@ -55,7 +63,7 @@
       },
       "sharing": {
         "title": "Easy File sharing",
-        "description": "Share up to 4GB files instantly with friends."
+        "description": "Share files instantly with friends, with no file size limit (beyond your own local drive size)"
       },
       "payments": {
         "title": "Built-in Payments (Coming Soon)",
@@ -78,39 +86,6 @@
       "two": "For this Early Access, we recommend using the desktop/browser version, just navigate to https://core.satellite.im to get started."
     }
   },
-  "try_release": "Try Early Access",
-  "section_team": {
-    "title": "Our Team",
-    "description": "Satellite is full of passionate open-source developers as well as our in house team which both work hard to build a different kind of chat platform.",
-    "team": {
-      "matt_occupation": "President & Lead Engineer",
-      "manuel_occupation": "CTO",
-      "chris_occupation": "Head of Software Engineering",
-      "tom_occupation": "COO",
-      "mauro_occupation": "Lead Engineer (Core)",
-      "miru_occupation": "Creative Director",
-      "wendy_occupation": "Project Manager/Administrative",
-      "jeff_occupation": "Software Engineer",
-      "kevin_occupation": "Community and Events Manager",
-      "phill_occupation": "Software QA Analyst",
-      "sara_occupation": "Lead QA Engineer",
-      "lauren_occupation": "Marketing Design",
-      "joe_occupation": "Senior Software Engineer",
-      "sheldon_occupation": "Head of Engineering Management",
-      "thomas_occupation": "Frontend Engineer",
-      "andre_occupation": "Software Development Engineer In Test",
-      "luis_occupation": "Test Automation Engineer",
-      "darius_occupation": "Senior Software Engineer",
-      "calogero_occupation": "Software Engineer",
-      "pavel_occupation": "Senior Software Engineer",
-      "nicholas_occupation": "Software Engineer",
-      "yijing_occupation": "Software Engineer",
-      "lucas_occupation": "Software Engineer",
-      "jason_occupation": "Senior Software Engineer",
-      "nathan_occupation": "Software Engineer",
-      "stuart_occupation": "Software Engineer"
-    }
-  },
   "footer": {
     "nav": {
       "app": "The App",
@@ -118,7 +93,7 @@
       "help": "Help",
       "blog": "Blog"
     },
-    "copyright": "© 2022 Satellite.im. All rights reserved."
+    "copyright": "© 2023 Satellite.im. All rights reserved."
   },
   "github": "GitHub"
 }
