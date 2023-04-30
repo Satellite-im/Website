@@ -377,7 +377,7 @@ export default {
           key: 'knobs',
           logo: '/images/partner-knobs.svg',
           icon: PartnerKnobs,
-          link: 'https://knobs.it/en/knobs-eng-home/',
+          link: 'https://knobs.it/',
         },
       ],
       slogans: [
