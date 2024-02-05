@@ -292,7 +292,7 @@ import PartnerHashed from '~/static/icons/partner-hashed.svg?inline'
 import PartnerJacketRiver from '~/static/icons/partner-jacket-river.svg?inline'
 import PartnerKnobs from '~/static/icons/partner-knobs.svg?inline'
 
-import Twitter from '~/static/icons/twitter.svg?inline'
+import X from '~/static/icons/X.svg?inline'
 import Linkedin from '~/static/icons/linkedin.svg?inline'
 import Github from '~/static/icons/github.svg?inline'
 import Discord from '~/static/icons/discord.svg?inline'
@@ -307,7 +307,7 @@ import 'simplebar/dist/simplebar.min.css'
 export default {
   components: {
     simplebar,
-    Twitter,
+    X,
     Linkedin,
     Github,
     Discord,
@@ -434,9 +434,9 @@ export default {
       ],
       footerSocials: [
         {
-          key: 'twitter',
+          key: 'X',
           link: 'https://twitter.com/satellite_im',
-          icon: Twitter,
+          icon: X,
         },
         {
           key: 'github',
